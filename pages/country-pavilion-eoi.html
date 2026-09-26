@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Register a country's interest in hosting a Country Pavilion at the 11th World Water Forum Riyadh 2027.">
+    <title>Country Pavilion Expression of Interest | 11th World Water Forum</title>
+    <base href="../">
+
+    <link rel="stylesheet" href="theme/theme-layered.css">
+
+    <link rel="icon" type="image/png" href="theme/media/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="theme/media/favicon/favicon.svg">
+    <link rel="shortcut icon" href="theme/media/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="theme/media/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="11th World Water Forum">
+    <link rel="manifest" href="theme/media/favicon/site.webmanifest">
+
+    <style>
+        html:not([data-auth]) .nds-auth { display: none; }
+        html[data-auth] .nds-guest { display: none; }
+    </style>
+
+    <script>
+        (function () {
+            var t = localStorage.getItem('nds-theme');
+            if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+    <script>
+        (() => { try {
+            const s = JSON.parse(localStorage.getItem('nds-a11y') || '{}');
+            const R = {
+                'epilepsy-safe':        ['reduce-motion','low-saturation'],
+                'visually-impaired':    ['high-contrast'],
+                'cognitive-disability': ['highlight-titles','reduce-motion'],
+                'motor-impaired':       [],
+                'colorblind':           ['cvd-deutan'],
+                'dyslexia-friendly':    ['dyslexia','highlight-links'],
+                'adhd-friendly':        ['reduce-motion','highlight-titles','reading-mask'],
+            };
+            const t = new Set([
+                ...(s.modes || []),
+                ...(s.bundles || []).flatMap(b => b in R ? (R[b].length ? R[b] : [b]) : []),
+            ]);
+            (s.excluded || []).forEach(e => t.delete(e));
+            const c = s.settings || {};
+            const step = parseInt(c['font-step'], 10) || 0;
+            if (step > 0 && step < 4) t.add('font-step-' + step);
+            if (c['text-align'] && c['text-align'] !== 'default') t.add('text-align-' + c['text-align']);
+            if (t.size) document.documentElement.setAttribute('data-a11y', [...t].join(' '));
+        } catch {} })();
+    </script>
+    <script>
+        (function () {
+            if (document.cookie.indexOf('nds_auth=true') !== -1) {
+                document.documentElement.setAttribute('data-auth', 'true');
+            }
+        })();
+    </script>
+</head>
+
+<body class="wwf-registration-page wwf-country-pavilion-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header>
+        <div id="shell-topbar"></div>
+        <div id="shell-mainnav"></div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <div class="nds-content-layout nds-wSideInfo wwf-registration-layout">
+            <div class="nds-main-content">
+                <section class="nds-content-section nds-sideinfo-section wwf-registration-section"
+                    aria-labelledby="country-pavilion-title">
+                    <div class="nds-section-body">
+                        <div class="nds-info-content">
+                            <nav class="nds-breadcrumb-nav" aria-label="Breadcrumb" hidden>
+                                <ol class="nds-breadcrumb">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="pages/participation-opportunities.html">Participation Opportunities</a></li>
+                                    <li class="nds-truncate" aria-current="page">Expression of Interest</li>
+                                </ol>
+                            </nav>
+
+                            <div class="wwf-registration-intro">
+                                <h1 id="country-pavilion-title" class="nds-section-title">
+                                    11th World Water Forum Riyadh 2027 Country Pavilion Expression of Interest Form
+                                </h1>
+                                <p class="nds-section-description">
+                                    Register your country's interest in hosting a Country Pavilion at the 11th World Water Forum Riyadh
+                                    2027 (21–25 March 2027). Please answer all required fields. We look forward to welcoming your
+                                    country to Riyadh!
+                                </p>
+                            </div>
+
+                            <p class="nds-required-notice wwf-registration-required">
+                                <span class="nds-label">* Required information</span>
+                            </p>
+
+                            <form id="country-pavilion-form" class="nds-form wwf-registration-form" novalidate data-ajax
+                                data-success-url="pages/inquiry-successful.html">
+                                <section class="nds-card nds-stroke wwf-registration-card"
+                                    aria-labelledby="country-information-title">
+                                    <div class="wwf-registration-card__heading">
+                                        <h2 id="country-information-title" class="wwf-registration-card__title">
+                                            <i class="hgi hgi-stroke hgi-earth" aria-hidden="true"></i>
+                                            <span>Country Information</span>
+                                        </h2>
+                                    </div>
+
+                                    <div class="nds-grid nds-form-grid wwf-registration-fields"
+                                        style="--min-col: 1; --mid-col: 1; --max-col: 1;">
+                                        <div class="nds-form-container" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="country-pavilion-country"><span class="nds-label">Country</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="text" id="country-pavilion-country" name="country" class="nds-input"
+                                                    placeholder="Enter country name" autocomplete="country-name" required>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                            <p class="wwf-country-pavilion-hint">
+                                                <i class="hgi hgi-stroke hgi-help-circle" aria-hidden="true"></i>
+                                                <span>Please provide the country's name</span>
+                                            </p>
+                                        </div>
+
+                                        <div class="nds-form-container" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="country-pavilion-entity"><span class="nds-label">Representing Entity</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="text" id="country-pavilion-entity" name="representingEntity" class="nds-input"
+                                                    placeholder="Enter representing entity" autocomplete="organization" required>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                            <p class="wwf-country-pavilion-hint">
+                                                <i class="hgi hgi-stroke hgi-help-circle" aria-hidden="true"></i>
+                                                <span>Ministry, agency or authority submitting this expression of interest on behalf of the country</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section class="nds-card nds-stroke wwf-registration-card"
+                                    aria-labelledby="country-contact-title">
+                                    <div class="wwf-registration-card__heading">
+                                        <h2 id="country-contact-title" class="wwf-registration-card__title">
+                                            <i class="hgi hgi-stroke hgi-user" aria-hidden="true"></i>
+                                            <span>Contact Details</span>
+                                        </h2>
+                                    </div>
+
+                                    <div class="nds-grid nds-form-grid wwf-registration-fields"
+                                        style="--min-col: 1; --mid-col: 2; --max-col: 2;">
+                                        <div class="nds-form-container" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="country-pavilion-contact-name"><span class="nds-label">Primary Contact Name</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="text" id="country-pavilion-contact-name" name="primaryContactName"
+                                                    class="nds-input" placeholder="Enter primary contact name" autocomplete="name" required>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                            <p class="wwf-country-pavilion-hint">
+                                                <i class="hgi hgi-stroke hgi-help-circle" aria-hidden="true"></i>
+                                                <span>Full name of the primary contact</span>
+                                            </p>
+                                        </div>
+
+                                        <div class="nds-form-container" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="country-pavilion-contact-title"><span class="nds-label">Primary Contact Title</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="text" id="country-pavilion-contact-title" name="primaryContactTitle"
+                                                    class="nds-input" placeholder="Your position" autocomplete="organization-title" required>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                            <p class="wwf-country-pavilion-hint">
+                                                <i class="hgi hgi-stroke hgi-help-circle" aria-hidden="true"></i>
+                                                <span>Position of the primary contact within the representing entity</span>
+                                            </p>
+                                        </div>
+
+                                        <div class="nds-form-container" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="country-pavilion-email"><span class="nds-label">Contact Email</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="email" id="country-pavilion-email" name="primaryContactEmail"
+                                                    class="nds-input" placeholder="primary.email@domain.com" autocomplete="email" required>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                            <p class="wwf-country-pavilion-hint">
+                                                <i class="hgi hgi-stroke hgi-help-circle" aria-hidden="true"></i>
+                                                <span>Please provide a valid email address</span>
+                                            </p>
+                                        </div>
+
+                                        <div class="nds-form-container" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="country-pavilion-phone"><span class="nds-label">Contact Phone Number</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="tel" id="country-pavilion-phone" name="primaryContactPhone"
+                                                    class="nds-input" placeholder="+1 234 567 890" autocomplete="tel" required>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                            <p class="wwf-country-pavilion-hint">
+                                                <i class="hgi hgi-stroke hgi-help-circle" aria-hidden="true"></i>
+                                                <span>Please provide a valid telephone number</span>
+                                            </p>
+                                        </div>
+
+                                        <div class="nds-form-container">
+                                            <div class="nds-form-header">
+                                                <label for="country-pavilion-alt-email"><span class="nds-label">Alternative Contact Email</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="email" id="country-pavilion-alt-email" name="alternativeContactEmail"
+                                                    class="nds-input" placeholder="alternative.email@domain.com" autocomplete="email">
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                            <p class="wwf-country-pavilion-hint">
+                                                <i class="hgi hgi-stroke hgi-help-circle" aria-hidden="true"></i>
+                                                <span>Please provide a valid email address</span>
+                                            </p>
+                                        </div>
+
+                                        <div class="nds-form-container">
+                                            <div class="nds-form-header">
+                                                <label for="country-pavilion-alt-phone"><span class="nds-label">Alternative Contact Phone Number</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="tel" id="country-pavilion-alt-phone" name="alternativeContactPhone"
+                                                    class="nds-input" placeholder="+1 234 567 890" autocomplete="tel">
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                            <p class="wwf-country-pavilion-hint">
+                                                <i class="hgi hgi-stroke hgi-help-circle" aria-hidden="true"></i>
+                                                <span>Please provide a valid telephone number</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section class="nds-card nds-stroke wwf-registration-card"
+                                    aria-labelledby="pavilion-interest-title">
+                                    <div class="wwf-registration-card__heading">
+                                        <h2 id="pavilion-interest-title" class="wwf-registration-card__title">
+                                            <i class="hgi hgi-stroke hgi-checkmark-circle-02" aria-hidden="true"></i>
+                                            <span>Pavilion Interest Details</span>
+                                        </h2>
+                                    </div>
+
+                                    <fieldset class="nds-form-group nds-check-group wwf-registration-choice-group"
+                                        data-required>
+                                        <legend>Pavilion Type <span aria-hidden="true">*</span></legend>
+                                        <p class="wwf-country-pavilion-legend-hint">
+                                            Select the pavilion type that best matches your country's interest
+                                        </p>
+                                        <div class="wwf-registration-checks wwf-country-pavilion-options">
+                                            <div class="nds-form-container nds-check-container nds-md">
+                                                <div class="nds-form-header">
+                                                    <label for="pavilion-type-raw">
+                                                        <span class="nds-label">Raw Space</span>
+                                                        <span class="wwf-country-pavilion-option-description">Country designs and builds its own pavilion</span>
+                                                    </label>
+                                                </div>
+                                                <div class="nds-form-control">
+                                                    <input type="checkbox" id="pavilion-type-raw" name="pavilionType" value="raw-space">
+                                                </div>
+                                            </div>
+                                            <div class="nds-form-container nds-check-container nds-md">
+                                                <div class="nds-form-header">
+                                                    <label for="pavilion-type-shell">
+                                                        <span class="nds-label">Shell Scheme</span>
+                                                        <span class="wwf-country-pavilion-option-description">Ready-built structure; country adds branding and displays</span>
+                                                    </label>
+                                                </div>
+                                                <div class="nds-form-control">
+                                                    <input type="checkbox" id="pavilion-type-shell" name="pavilionType" value="shell-scheme">
+                                                </div>
+                                            </div>
+                                            <div class="nds-form-container nds-check-container nds-md">
+                                                <div class="nds-form-header">
+                                                    <label for="pavilion-type-built">
+                                                        <span class="nds-label">Fully Built Pavilion</span>
+                                                        <span class="wwf-country-pavilion-option-description">Fully designed, built, and equipped</span>
+                                                    </label>
+                                                </div>
+                                                <div class="nds-form-control">
+                                                    <input type="checkbox" id="pavilion-type-built" name="pavilionType" value="fully-built-pavilion">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="nds-form-footer" data-feedback-target hidden></div>
+                                    </fieldset>
+
+                                    <div class="nds-form-container nds-textarea wwf-country-pavilion-requirements">
+                                        <div class="nds-form-header">
+                                            <label for="country-pavilion-requirements">
+                                                <span class="nds-label">Additional Special Requirements</span>
+                                            </label>
+                                        </div>
+                                        <div class="nds-form-control">
+                                            <textarea id="country-pavilion-requirements" name="additionalRequirements" rows="4"
+                                                placeholder="Share any other information relevant to your country's pavilion interest..."></textarea>
+                                        </div>
+                                        <div class="nds-form-footer" data-feedback-target hidden></div>
+                                    </div>
+                                </section>
+
+                                <div class="nds-flex nds-row nds-form-actions wwf-registration-actions">
+                                    <button type="submit" class="nds-btn nds-primary nds-lg wwf-registration-submit">
+                                        <span class="nds-label">Submit</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <aside class="nds-card nds-sticky wwf-registration-stepper-panel"
+                            aria-label="Country Pavilion expression of interest progress">
+                            <div class="nds-stepper nds-radial nds-vertical-lg" id="country-pavilion-stepper"
+                                data-current="1" data-total="2">
+                                <div class="nds-progress-circle">
+                                    <svg width="64" height="64" viewBox="0 0 24 24" aria-hidden="true">
+                                        <circle class="nds-progress-bg" cx="12" cy="12" r="10" fill="none" stroke-width="3"></circle>
+                                        <circle class="nds-progress-track" cx="12" cy="12" r="10" fill="none" stroke-width="3"
+                                            stroke-dasharray="62.83" stroke-dashoffset="62.83" stroke-linecap="round"></circle>
+                                    </svg>
+                                    <div class="nds-progress-info"><span class="nds-progress-steps"></span></div>
+                                </div>
+                                <div class="nds-stepper-step">
+                                    <div class="nds-stepper-base">
+                                        <div class="nds-stepper-circle" data-step-text="1"></div>
+                                    </div>
+                                    <div class="nds-stepper-content">
+                                        <div class="nds-stepper-text">
+                                            <span class="nds-stepper-title">Expression of Interest</span>
+                                            <span class="nds-stepper-description">Submit Expression of Interest</span>
+                                            <span class="nds-stepper-next">Next: Review Process</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nds-stepper-step">
+                                    <div class="nds-stepper-base">
+                                        <div class="nds-stepper-circle" data-step-text="2"></div>
+                                    </div>
+                                    <div class="nds-stepper-content">
+                                        <div class="nds-stepper-text">
+                                            <span class="nds-stepper-title">Review Process</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <div id="shell-footer"></div>
+    <div id="shell-cookie"></div>
+    <div id="shell-a11y"></div>
+
+    <script src="assets/js/nds-main.min.js" defer></script>
+    <script src="assets/js/nds-accessibility.min.js" defer></script>
+    <script src="js/site.js" defer></script>
+</body>
+
+</html>

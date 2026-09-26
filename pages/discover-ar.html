@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="اكتشف ثقافة الرياض ومعالمها الحديثة وضيافتها والتحول الذي تقوده رؤية ٢٠٣٠.">
+    <title>اكتشف الرياض | المنتدى العالمي الحادي عشر للمياه</title>
+    <base href="../">
+
+    <link rel="stylesheet" href="theme/theme-layered.css">
+
+    <link rel="icon" type="image/png" href="theme/media/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="theme/media/favicon/favicon.svg">
+    <link rel="shortcut icon" href="theme/media/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="theme/media/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="11th World Water Forum">
+    <link rel="manifest" href="theme/media/favicon/site.webmanifest">
+
+    <style>
+        html:not([data-auth]) .nds-auth { display: none; }
+        html[data-auth] .nds-guest { display: none; }
+    </style>
+
+    <script>
+        (function () {
+            var t = localStorage.getItem('nds-theme');
+            if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+    <script>
+        (() => { try {
+            const s = JSON.parse(localStorage.getItem('nds-a11y') || '{}');
+            const R = {
+                'epilepsy-safe':        ['reduce-motion','low-saturation'],
+                'visually-impaired':    ['high-contrast'],
+                'cognitive-disability': ['highlight-titles','reduce-motion'],
+                'motor-impaired':       [],
+                'colorblind':           ['cvd-deutan'],
+                'dyslexia-friendly':    ['dyslexia','highlight-links'],
+                'adhd-friendly':        ['reduce-motion','highlight-titles','reading-mask'],
+            };
+            const t = new Set([
+                ...(s.modes || []),
+                ...(s.bundles || []).flatMap(b => b in R ? (R[b].length ? R[b] : [b]) : []),
+            ]);
+            (s.excluded || []).forEach(e => t.delete(e));
+            const c = s.settings || {};
+            const step = parseInt(c['font-step'], 10) || 0;
+            if (step > 0 && step < 4) t.add('font-step-' + step);
+            if (c['text-align'] && c['text-align'] !== 'default') t.add('text-align-' + c['text-align']);
+            if (t.size) document.documentElement.setAttribute('data-a11y', [...t].join(' '));
+        } catch {} })();
+    </script>
+    <script>
+        (function () {
+            if (document.cookie.indexOf('nds_auth=true') !== -1) {
+                document.documentElement.setAttribute('data-auth', 'true');
+            }
+        })();
+    </script>
+</head>
+
+<body class="wwf-riyadh-page">
+    <a class="skip-link" href="#main-content">تخطَّ إلى المحتوى الرئيسي</a>
+
+    <header>
+        <div id="shell-topbar"></div>
+        <div id="shell-mainnav"></div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <section class="nds-hero-section nds-sub wwf-sub-hero--illustrated wwf-riyadh-hero"
+            aria-label="ترويسة اكتشف الرياض">
+            <nav class="nds-breadcrumb-nav" aria-label="مسار التنقل" hidden>
+                <ol class="nds-breadcrumb">
+                    <li><a href="index-ar.html">الرئيسية</a></li>
+                    <li class="nds-truncate" aria-current="page">اكتشف</li>
+                </ol>
+            </nav>
+
+            <div class="nds-section-wrapper">
+                <div class="nds-section-head">
+                    <h1 class="nds-section-title">اكتشف الرياض</h1>
+                    <p class="nds-section-description">
+                        عِش مزيجًا مثاليًا من الأصالة والابتكار في قلب المملكة العربية السعودية
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="nds-content-section wwf-riyadh-overview" aria-label="أبرز معالم الرياض">
+            <div class="nds-section-wrapper">
+                <div class="nds-section-body">
+                    <div class="wwf-riyadh-overview__grid">
+                        <article class="nds-card nds-stroke wwf-riyadh-card wwf-riyadh-card--culture">
+                            <div class="nds-card-image wwf-riyadh-card__media">
+                                <img src="theme/media/about1.webp" alt="عمارة نجدية تقليدية في الرياض"
+                                    loading="lazy">
+                            </div>
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h2 class="nds-card-title">الثقافة والتراث</h2>
+                                    <p class="nds-card-description">
+                                        استكشف المعالم التاريخية والأحياء الثقافية والمتاحف والأسواق التقليدية التي تعكس تاريخ المدينة العريق وهويتها.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="nds-card nds-stroke wwf-riyadh-card wwf-riyadh-card--modern">
+                            <div class="nds-card-image wwf-riyadh-card__media">
+                                <img src="theme/media/about2.webp" alt="أبراج حديثة في الحي المالي بالرياض"
+                                    loading="lazy">
+                            </div>
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h2 class="nds-card-title">الرياض الحديثة</h2>
+                                    <p class="nds-card-description">
+                                        اكتشف مدينة مزدهرة تضم بنية تحتية عالمية المستوى وأحياء أعمال ووجهات ترفيهية ومعالم معمارية بارزة.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="nds-card nds-stroke wwf-riyadh-card wwf-riyadh-card--hospitality">
+                            <div class="nds-card-image wwf-riyadh-card__media">
+                                <img src="theme/media/about3.webp"
+                                    alt="وجهة معاصرة للضيافة والتسوق في الرياض" loading="lazy">
+                            </div>
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h2 class="nds-card-title">الضيافة والتجارب</h2>
+                                    <p class="nds-card-description">
+                                        استمتع بتشكيلة واسعة من تجارب الطعام والثقافة والترفيه والتسوق التي تبرز الضيافة السعودية والحياة الحضرية المعاصرة.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="nds-card nds-stroke wwf-riyadh-card wwf-riyadh-card--vision">
+                            <div class="wwf-riyadh-collage" aria-label="مشاريع رؤية ٢٠٣٠ في الرياض">
+                                <img class="wwf-riyadh-collage__lead" src="theme/media/about4-1.webp"
+                                    alt="منظر جوي لمشروع أخضر كبير في الرياض" loading="lazy">
+                                <div class="wwf-riyadh-collage__tiles">
+                                    <img src="theme/media/about4-2.webp" alt="مشروع المكعب" loading="lazy">
+                                    <img src="theme/media/about4-3.webp" alt="مشروع المربع الجديد"
+                                        loading="lazy">
+                                    <img src="theme/media/about4-4.webp"
+                                        alt="مشروع مدينة خضراء كما يبدو من طائرة" loading="lazy">
+                                    <img src="theme/media/about4-5.webp"
+                                        alt="عمارة مستدامة معاصرة في الرياض" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h2 class="nds-card-title">رؤية ٢٠٣٠</h2>
+                                    <p class="nds-card-description">
+                                        تقف الرياض في طليعة رحلة التحول في المملكة، مدفوعة برؤية ٢٠٣٠ والتزامها بالاستدامة والابتكار وجودة الحياة.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="nds-content-section wwf-riyadh-vision" aria-labelledby="riyadh-vision-title">
+            <img class="wwf-riyadh-vision__mark" src="theme/media/vision30.webp" alt="" aria-hidden="true">
+
+            <div class="nds-section-wrapper wwf-riyadh-vision__wrapper">
+                <div class="nds-section-head wwf-riyadh-vision__head">
+                    <span class="nds-tag nds-rounded nds-sm wwf-riyadh-vision__tag">
+                        <span class="nds-label">رؤية ٢٠٣٠</span>
+                    </span>
+                    <h2 id="riyadh-vision-title" class="nds-section-title">رحلة تحول الرياض</h2>
+                    <p class="nds-section-description">
+                        تقف الرياض في طليعة رحلة التحول في المملكة، مدفوعة برؤية ٢٠٣٠ والتزامها بالاستدامة والابتكار وجودة الحياة.
+                    </p>
+                </div>
+
+                <div class="nds-section-body">
+                    <div class="nds-grid wwf-riyadh-values" style="--max-col: 3; --mid-col: 3; --min-col: 1;">
+                        <article class="nds-card nds-stroke wwf-riyadh-value-card">
+                            <div class="nds-card-header">
+                                <div class="nds-card-featured-icon">
+                                    <span class="nds-featured-icon nds-lg nds-circle">
+                                        <i class="hgi hgi-stroke hgi-bulb" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h3 class="nds-card-title">الابتكار</h3>
+                                    <p class="nds-card-description">
+                                        ريادة التقدم التقني وتطوير المدن الذكية
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="nds-card nds-stroke wwf-riyadh-value-card">
+                            <div class="nds-card-header">
+                                <div class="nds-card-featured-icon">
+                                    <span class="nds-featured-icon nds-lg nds-circle">
+                                        <i class="hgi hgi-stroke hgi-medal-01" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h3 class="nds-card-title">الاستدامة</h3>
+                                    <p class="nds-card-description">
+                                        الالتزام بحماية البيئة والتنمية المستدامة
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="nds-card nds-stroke wwf-riyadh-value-card">
+                            <div class="nds-card-header">
+                                <div class="nds-card-featured-icon">
+                                    <span class="nds-featured-icon nds-lg nds-circle">
+                                        <i class="hgi hgi-stroke hgi-champion" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h3 class="nds-card-title">جودة الحياة</h3>
+                                    <p class="nds-card-description">
+                                        بناء مجتمعات نابضة بالحياة بمعايير معيشية محسنة
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="shell-footer"></div>
+    <div id="shell-cookie"></div>
+    <div id="shell-a11y"></div>
+
+    <script src="assets/js/nds-main.min.js" defer></script>
+    <script src="assets/js/nds-accessibility.min.js" defer></script>
+    <script src="js/site.js" defer></script>
+</body>
+
+</html>

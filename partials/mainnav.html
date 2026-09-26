@@ -1,0 +1,160 @@
+<!--
+    Main navigation. Class names are the NDS component API: change labels and
+    hrefs freely, keep the wrapper classes. Injected by js/site.js.
+-->
+<nav class="nds-main-nav nds-content-wrapper" id="shellMainNav" aria-label="Primary navigation">
+    <div class="nds-nav-container">
+
+        <!-- BRAND -->
+        <a href="index.html" class="nds-brand nds-link">
+            <img class="nds-brand-logo" src="theme/media/logo.webp" width="64" height="48" loading="lazy"
+                alt="11th World Water Forum">
+        </a>
+
+        <!-- MOBILE TOGGLER -->
+        <ul class="nds-nav-minimal">
+            <li class="nds-mainNav-toggler nds-nav-item">
+                <button class="nds-nav-link nds-btn nds-subtle nds-indicator" aria-label="Toggle navigation menu"
+                    aria-expanded="false" aria-controls="shellNavCollapse">
+                    <i class="nds-icon nds-hgi-menu-01" aria-hidden="true"></i>
+                </button>
+            </li>
+        </ul>
+
+        <div class="nds-collapse" id="shellNavCollapse">
+            <div class="nds-collapse-content">
+
+                <!-- PRIMARY LINKS -->
+                <ul class="nds-nav-primary">
+                    <li class="nds-nav-item">
+                        <a href="index.html" class="nds-nav-link nds-btn nds-subtle nds-indicator">
+                            <span class="nds-label">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nds-nav-item">
+                        <a href="pages/about-forum.html" class="nds-nav-link nds-btn nds-subtle nds-indicator">
+                            <span class="nds-label">About the Forum</span>
+                        </a>
+                    </li>
+
+                    <li class="nds-nav-item nds-dropdown">
+                        <a href="#" class="nds-nav-link nds-btn nds-subtle nds-menu-btn nds-indicator">
+                            <span class="nds-label">Processes &amp; Programs</span>
+                        </a>
+                        <div class="nds-dropdown-menu">
+                            <div class="nds-dropdown-content nds-content-wrapper">
+                                <div class="nds-dropdown-columns nds-colView">
+                                    <div class="nds-column">
+                                        <div class="nds-dropdown-title">Processes</div>
+                                        <div class="nds-list">
+                                            <a class="nds-btn nds-subtle nds-dropdown-item"
+                                                href="pages/forum-processes.html">
+                                                <span class="nds-label">Forum Processes</span>
+                                            </a>
+                                            <a class="nds-btn nds-subtle nds-dropdown-item"
+                                                href="pages/political-process.html">
+                                                <span class="nds-label">Political Process</span>
+                                            </a>
+                                            <a class="nds-btn nds-subtle nds-dropdown-item"
+                                                href="pages/thematic-process.html">
+                                                <span class="nds-label">Thematic Process</span>
+                                            </a>
+                                            <a class="nds-btn nds-subtle nds-dropdown-item"
+                                                href="pages/regional-process.html">
+                                                <span class="nds-label">Regional Process</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="nds-column">
+                                        <div class="nds-dropdown-title">Programs</div>
+                                        <div class="nds-list">
+                                            <a class="nds-btn nds-subtle nds-dropdown-item"
+                                                href="pages/youth-program.html">
+                                                <span class="nds-label">Youth Program</span>
+                                            </a>
+                                            <a class="nds-btn nds-subtle nds-dropdown-item"
+                                                href="pages/intersectoral-program.html">
+                                                <span class="nds-label">Intersectoral Program</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+
+                    <!-- Temporarily hidden until the next stakeholder meeting is published.
+                    <li class="nds-nav-item">
+                        <a href="pages/registration.html" class="nds-nav-link nds-btn nds-subtle nds-indicator">
+                            <span class="nds-label">2nd Stakeholder Meeting</span>
+                        </a>
+                    </li> -->
+
+                    <li class="nds-nav-item">
+                        <a href="pages/discover.html" class="nds-nav-link nds-btn nds-subtle nds-indicator">
+                            <span class="nds-label">About Riyadh</span>
+                        </a>
+                    </li>
+
+                    <li class="nds-nav-item">
+                        <a href="pages/organizers.html" class="nds-nav-link nds-btn nds-subtle nds-indicator">
+                            <span class="nds-label">Organizers</span>
+                        </a>
+                    </li>
+
+                    <li class="nds-nav-item">
+                        <a href="pages/media-center.html" class="nds-nav-link nds-btn nds-subtle nds-indicator">
+                            <span class="nds-label">Media Center</span>
+                        </a>
+                    </li>
+
+                    <li class="nds-nav-item">
+                        <a href="pages/knowledge-hub.html" class="nds-nav-link nds-btn nds-subtle nds-indicator">
+                            <span class="nds-label">Knowledge Hub</span>
+                        </a>
+                    </li>
+
+                    <li class="nds-nav-item">
+                        <a href="pages/participation-opportunities.html" class="nds-nav-link nds-btn nds-subtle nds-indicator">
+                            <span class="nds-label">Registration</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Overflow control. NDS moves items under this when the bar
+                     runs out of room. Keep it. -->
+                <div class="nds-nav-item nds-show-more">
+                    <a href="#" class="nds-nav-link nds-btn nds-subtle nds-indicator nds-full" title="Show more">
+                        <i class="nds-icon nds-hgi-arrow-down-01" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <!-- ACTIONS -->
+                <ul class="nds-nav-actions">
+
+                    <!-- Search -->
+                    <li class="nds-nav-item nds-icon-only nds-search nds-PAB">
+                        <a href="pages/search.html" class="nds-nav-link nds-btn nds-subtle nds-indicator" title="Search"
+                            aria-label="Search">
+                            <i class="nds-icon nds-hgi-search-01" aria-hidden="true"></i>
+                            <span class="nds-label d-block">Search</span>
+                        </a>
+                    </li>
+
+
+
+                    <!-- Language switch. site.js retargets it to the same page in the other language. -->
+                    <li class="nds-nav-item nds-icon-only lang">
+                        <a href="index-ar.html" class="nds-nav-link nds-btn nds-subtle nds-indicator" lang="ar"
+                            dir="rtl" title="التبديل إلى العربية">
+                            <span class="nds-label nds-lang-current">عربي</span>
+                            <i class="nds-icon nds-hgi-translation" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>

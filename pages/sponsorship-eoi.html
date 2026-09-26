@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Submit a sponsorship or exhibition expression of interest for the 11th World Water Forum Riyadh 2027.">
+    <title>Sponsorship Expression of Interest | 11th World Water Forum</title>
+    <base href="../">
+
+    <link rel="stylesheet" href="theme/theme-layered.css">
+
+    <link rel="icon" type="image/png" href="theme/media/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="theme/media/favicon/favicon.svg">
+    <link rel="shortcut icon" href="theme/media/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="theme/media/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="11th World Water Forum">
+    <link rel="manifest" href="theme/media/favicon/site.webmanifest">
+
+    <style>
+        html:not([data-auth]) .nds-auth { display: none; }
+        html[data-auth] .nds-guest { display: none; }
+    </style>
+
+    <script>
+        (function () {
+            var t = localStorage.getItem('nds-theme');
+            if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+    <script>
+        (() => { try {
+            const s = JSON.parse(localStorage.getItem('nds-a11y') || '{}');
+            const R = {
+                'epilepsy-safe':        ['reduce-motion','low-saturation'],
+                'visually-impaired':    ['high-contrast'],
+                'cognitive-disability': ['highlight-titles','reduce-motion'],
+                'motor-impaired':       [],
+                'colorblind':           ['cvd-deutan'],
+                'dyslexia-friendly':    ['dyslexia','highlight-links'],
+                'adhd-friendly':        ['reduce-motion','highlight-titles','reading-mask'],
+            };
+            const t = new Set([
+                ...(s.modes || []),
+                ...(s.bundles || []).flatMap(b => b in R ? (R[b].length ? R[b] : [b]) : []),
+            ]);
+            (s.excluded || []).forEach(e => t.delete(e));
+            const c = s.settings || {};
+            const step = parseInt(c['font-step'], 10) || 0;
+            if (step > 0 && step < 4) t.add('font-step-' + step);
+            if (c['text-align'] && c['text-align'] !== 'default') t.add('text-align-' + c['text-align']);
+            if (t.size) document.documentElement.setAttribute('data-a11y', [...t].join(' '));
+        } catch {} })();
+    </script>
+    <script>
+        (function () {
+            if (document.cookie.indexOf('nds_auth=true') !== -1) {
+                document.documentElement.setAttribute('data-auth', 'true');
+            }
+        })();
+    </script>
+</head>
+
+<body class="wwf-registration-page wwf-sponsorship-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header>
+        <div id="shell-topbar"></div>
+        <div id="shell-mainnav"></div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <div class="nds-content-layout nds-wSideInfo wwf-registration-layout">
+            <div class="nds-main-content">
+                <section class="nds-content-section nds-sideinfo-section wwf-registration-section"
+                    aria-labelledby="sponsorship-title">
+                    <div class="nds-section-body">
+                        <div class="nds-info-content">
+                            <nav class="nds-breadcrumb-nav" aria-label="Breadcrumb" hidden>
+                                <ol class="nds-breadcrumb">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="pages/participation-opportunities.html">Participation Opportunities</a></li>
+                                    <li class="nds-truncate" aria-current="page">Expression of Interest</li>
+                                </ol>
+                            </nav>
+
+                            <div class="wwf-registration-intro">
+                                <h1 id="sponsorship-title" class="nds-section-title">
+                                    <span>11th World Water Forum</span>
+                                    <span>Sponsorship Expression of Interest (EOI)</span>
+                                </h1>
+                                <p class="nds-section-description wwf-sponsorship-intro__lead">
+                                    Thank you for your interest in the 11th World Water Forum &ndash; Riyadh 2027.
+                                </p>
+                                <p class="nds-section-description wwf-sponsorship-intro__description">
+                                    This form is intended for organizations interested in exploring sponsorship and exhibition
+                                    opportunities at the Forum. Please provide your contact details and indicate your area of interest.
+                                    The Forum team will review your submission and contact you with further information on available
+                                    opportunities.
+                                </p>
+                                <p class="nds-section-description wwf-sponsorship-intro__note">
+                                    Please note: Submission of this form represents an expression of interest only and does not
+                                    constitute a formal commitment or confirmation of participation.
+                                </p>
+                            </div>
+
+                            <p class="nds-required-notice wwf-registration-required">
+                                <span class="nds-label">* Required information</span>
+                            </p>
+
+                            <!-- placeholder, replaced in the CMS -->
+                            <form id="sponsorship-eoi-form" class="nds-form wwf-registration-form" novalidate data-ajax
+                                data-success-url="pages/inquiry-successful.html">
+                                <section class="nds-card nds-stroke wwf-registration-card"
+                                    aria-labelledby="organization-information-title">
+                                    <div class="wwf-registration-card__heading">
+                                        <h2 id="organization-information-title" class="wwf-registration-card__title">
+                                            <i class="hgi hgi-stroke hgi-building-03" aria-hidden="true"></i>
+                                            <span>Organization Information</span>
+                                        </h2>
+                                    </div>
+
+                                    <div class="nds-grid nds-form-grid wwf-registration-fields"
+                                        style="--min-col: 1; --mid-col: 2; --max-col: 2;">
+                                        <div class="nds-form-container wwf-registration-field--full" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="sponsorship-organization"><span class="nds-label">What is the name of your organization/company?</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="text" id="sponsorship-organization" name="organization" class="nds-input"
+                                                    placeholder="Enter organization or company name" autocomplete="organization" required>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </div>
+
+                                        <fieldset class="nds-form-group nds-check-group wwf-registration-choice-group wwf-registration-field--full"
+                                            data-required>
+                                            <legend>What type of organization do you represent? <span aria-hidden="true">*</span></legend>
+                                            <div class="wwf-registration-checks wwf-sponsorship-options">
+                                                <div class="nds-form-container nds-check-container nds-md">
+                                                    <div class="nds-form-header">
+                                                        <label for="organization-government"><span class="nds-label">Government Entity</span></label>
+                                                    </div>
+                                                    <div class="nds-form-control">
+                                                        <input type="checkbox" id="organization-government" name="organizationType" value="government-entity">
+                                                    </div>
+                                                </div>
+                                                <div class="nds-form-container nds-check-container nds-md">
+                                                    <div class="nds-form-header">
+                                                        <label for="organization-private"><span class="nds-label">Private Sector</span></label>
+                                                    </div>
+                                                    <div class="nds-form-control">
+                                                        <input type="checkbox" id="organization-private" name="organizationType" value="private-sector">
+                                                    </div>
+                                                </div>
+                                                <div class="nds-form-container nds-check-container nds-md">
+                                                    <div class="nds-form-header">
+                                                        <label for="organization-international"><span class="nds-label">International Organization</span></label>
+                                                    </div>
+                                                    <div class="nds-form-control">
+                                                        <input type="checkbox" id="organization-international" name="organizationType" value="international-organization">
+                                                    </div>
+                                                </div>
+                                                <div class="nds-form-container nds-check-container nds-md">
+                                                    <div class="nds-form-header">
+                                                        <label for="organization-ngo"><span class="nds-label">NGO</span></label>
+                                                    </div>
+                                                    <div class="nds-form-control">
+                                                        <input type="checkbox" id="organization-ngo" name="organizationType" value="ngo">
+                                                    </div>
+                                                </div>
+                                                <div class="nds-form-container nds-check-container nds-md">
+                                                    <div class="nds-form-header">
+                                                        <label for="organization-academic"><span class="nds-label">Academic Institution</span></label>
+                                                    </div>
+                                                    <div class="nds-form-control">
+                                                        <input type="checkbox" id="organization-academic" name="organizationType" value="academic-institution">
+                                                    </div>
+                                                </div>
+                                                <div class="nds-form-container nds-check-container nds-md">
+                                                    <div class="nds-form-header">
+                                                        <label for="organization-other"><span class="nds-label">Other</span></label>
+                                                    </div>
+                                                    <div class="nds-form-control">
+                                                        <input type="checkbox" id="organization-other" name="organizationType" value="other">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </fieldset>
+
+                                        <div class="nds-form-container" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="sponsorship-country"><span class="nds-label">In which country is your organization based?</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="text" id="sponsorship-country" name="country" class="nds-input"
+                                                    placeholder="Enter country name" autocomplete="country-name" required>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </div>
+
+                                        <div class="nds-form-container">
+                                            <div class="nds-form-header">
+                                                <label for="sponsorship-website"><span class="nds-label">What is your organization's website?</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="url" id="sponsorship-website" name="website" class="nds-input"
+                                                    placeholder="https://example.com" autocomplete="url">
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section class="nds-card nds-stroke wwf-registration-card"
+                                    aria-labelledby="sponsorship-contact-title">
+                                    <div class="wwf-registration-card__heading">
+                                        <h2 id="sponsorship-contact-title" class="wwf-registration-card__title">
+                                            <i class="hgi hgi-stroke hgi-contact" aria-hidden="true"></i>
+                                            <span>Contact Person</span>
+                                        </h2>
+                                    </div>
+
+                                    <div class="nds-grid nds-form-grid wwf-registration-fields"
+                                        style="--min-col: 1; --mid-col: 2; --max-col: 2;">
+                                        <div class="nds-form-container" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="sponsorship-contact-name"><span class="nds-label">What is the name of the primary contact person?</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="text" id="sponsorship-contact-name" name="contactName" class="nds-input"
+                                                    placeholder="Enter contact person's full name" autocomplete="name" required>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </div>
+
+                                        <div class="nds-form-container" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="sponsorship-position"><span class="nds-label">What is your job title/position?</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="text" id="sponsorship-position" name="position" class="nds-input"
+                                                    placeholder="Your job title or position" autocomplete="organization-title" required>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </div>
+
+                                        <div class="nds-form-container" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="sponsorship-email"><span class="nds-label">What is your business email address?</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="email" id="sponsorship-email" name="email" class="nds-input"
+                                                    placeholder="your.name@company.com" autocomplete="email" required>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </div>
+
+                                        <div class="nds-form-container" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="sponsorship-phone"><span class="nds-label">What is your phone/WhatsApp number?</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="tel" id="sponsorship-phone" name="phone" class="nds-input"
+                                                    placeholder="+966 50 123 4567" autocomplete="tel" required>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                            <p class="wwf-registration-hint">
+                                                <i class="hgi hgi-stroke hgi-help-circle" aria-hidden="true"></i>
+                                                <span>including country code</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section class="nds-card nds-stroke wwf-registration-card"
+                                    aria-labelledby="sponsorship-interest-title">
+                                    <div class="wwf-registration-card__heading">
+                                        <h2 id="sponsorship-interest-title" class="wwf-registration-card__title">
+                                            <i class="hgi hgi-stroke hgi-checkmark-badge-02" aria-hidden="true"></i>
+                                            <span>Interest Details</span>
+                                        </h2>
+                                    </div>
+
+                                    <fieldset class="nds-form-group nds-check-group wwf-registration-choice-group"
+                                        data-required>
+                                        <legend>Which opportunity are you interested in? <span aria-hidden="true">*</span></legend>
+                                        <div class="wwf-registration-checks wwf-sponsorship-options">
+                                            <div class="nds-form-container nds-check-container nds-md">
+                                                <div class="nds-form-header">
+                                                    <label for="sponsorship-interest"><span class="nds-label">Sponsorship</span></label>
+                                                </div>
+                                                <div class="nds-form-control">
+                                                    <input type="checkbox" id="sponsorship-interest" name="interests" value="sponsorship">
+                                                </div>
+                                            </div>
+                                            <div class="nds-form-container nds-check-container nds-md">
+                                                <div class="nds-form-header">
+                                                    <label for="exhibition-interest"><span class="nds-label">Exhibition Booth</span></label>
+                                                </div>
+                                                <div class="nds-form-control">
+                                                    <input type="checkbox" id="exhibition-interest" name="interests" value="exhibition-booth">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="nds-form-footer" data-feedback-target hidden></div>
+                                    </fieldset>
+
+                                    <div class="nds-form-container nds-textarea wwf-sponsorship-comments">
+                                        <div class="nds-form-header">
+                                            <label for="sponsorship-comments"><span class="nds-label">Do you have any additional comments or requirements?</span></label>
+                                        </div>
+                                        <div class="nds-form-control">
+                                            <textarea id="sponsorship-comments" name="comments" rows="4"
+                                                placeholder="Tell us more about your interest, requirements, or questions..."></textarea>
+                                        </div>
+                                        <div class="nds-form-footer" data-feedback-target hidden></div>
+                                    </div>
+                                </section>
+
+                                <div class="nds-flex nds-row nds-form-actions wwf-registration-actions">
+                                    <button type="submit" class="nds-btn nds-primary nds-lg wwf-registration-submit">
+                                        <span class="nds-label">Submit Inquiry</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <aside class="nds-card nds-sticky wwf-registration-stepper-panel"
+                            aria-label="Sponsorship expression of interest progress">
+                            <div class="nds-stepper nds-radial nds-vertical-lg" id="sponsorship-eoi-stepper"
+                                data-current="1" data-total="2">
+                                <div class="nds-progress-circle">
+                                    <svg width="64" height="64" viewBox="0 0 24 24" aria-hidden="true">
+                                        <circle class="nds-progress-bg" cx="12" cy="12" r="10" fill="none" stroke-width="3"></circle>
+                                        <circle class="nds-progress-track" cx="12" cy="12" r="10" fill="none" stroke-width="3"
+                                            stroke-dasharray="62.83" stroke-dashoffset="62.83" stroke-linecap="round"></circle>
+                                    </svg>
+                                    <div class="nds-progress-info"><span class="nds-progress-steps"></span></div>
+                                </div>
+                                <div class="nds-stepper-step">
+                                    <div class="nds-stepper-base">
+                                        <div class="nds-stepper-circle" data-step-text="1"></div>
+                                    </div>
+                                    <div class="nds-stepper-content">
+                                        <div class="nds-stepper-text">
+                                            <span class="nds-stepper-title">Expression of Interest</span>
+                                            <span class="nds-stepper-description">Sponsorship EOI Inquiry</span>
+                                            <span class="nds-stepper-next">Next: Confirmation</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nds-stepper-step">
+                                    <div class="nds-stepper-base">
+                                        <div class="nds-stepper-circle" data-step-text="2"></div>
+                                    </div>
+                                    <div class="nds-stepper-content">
+                                        <div class="nds-stepper-text">
+                                            <span class="nds-stepper-title">Confirmation</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <div id="shell-footer"></div>
+    <div id="shell-cookie"></div>
+    <div id="shell-a11y"></div>
+
+    <script src="assets/js/nds-main.min.js" defer></script>
+    <script src="assets/js/nds-accessibility.min.js" defer></script>
+    <script src="js/site.js" defer></script>
+</body>
+
+</html>

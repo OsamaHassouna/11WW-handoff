@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Discover Riyadh's culture, modern landmarks, hospitality, and Vision 2030 transformation.">
+    <title>Discover Riyadh | 11th World Water Forum</title>
+    <base href="../">
+
+    <link rel="stylesheet" href="theme/theme-layered.css">
+
+    <link rel="icon" type="image/png" href="theme/media/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="theme/media/favicon/favicon.svg">
+    <link rel="shortcut icon" href="theme/media/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="theme/media/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="11th World Water Forum">
+    <link rel="manifest" href="theme/media/favicon/site.webmanifest">
+
+    <style>
+        html:not([data-auth]) .nds-auth { display: none; }
+        html[data-auth] .nds-guest { display: none; }
+    </style>
+
+    <script>
+        (function () {
+            var t = localStorage.getItem('nds-theme');
+            if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+    <script>
+        (() => { try {
+            const s = JSON.parse(localStorage.getItem('nds-a11y') || '{}');
+            const R = {
+                'epilepsy-safe':        ['reduce-motion','low-saturation'],
+                'visually-impaired':    ['high-contrast'],
+                'cognitive-disability': ['highlight-titles','reduce-motion'],
+                'motor-impaired':       [],
+                'colorblind':           ['cvd-deutan'],
+                'dyslexia-friendly':    ['dyslexia','highlight-links'],
+                'adhd-friendly':        ['reduce-motion','highlight-titles','reading-mask'],
+            };
+            const t = new Set([
+                ...(s.modes || []),
+                ...(s.bundles || []).flatMap(b => b in R ? (R[b].length ? R[b] : [b]) : []),
+            ]);
+            (s.excluded || []).forEach(e => t.delete(e));
+            const c = s.settings || {};
+            const step = parseInt(c['font-step'], 10) || 0;
+            if (step > 0 && step < 4) t.add('font-step-' + step);
+            if (c['text-align'] && c['text-align'] !== 'default') t.add('text-align-' + c['text-align']);
+            if (t.size) document.documentElement.setAttribute('data-a11y', [...t].join(' '));
+        } catch {} })();
+    </script>
+    <script>
+        (function () {
+            if (document.cookie.indexOf('nds_auth=true') !== -1) {
+                document.documentElement.setAttribute('data-auth', 'true');
+            }
+        })();
+    </script>
+</head>
+
+<body class="wwf-riyadh-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header>
+        <div id="shell-topbar"></div>
+        <div id="shell-mainnav"></div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <section class="nds-hero-section nds-sub wwf-sub-hero--illustrated wwf-riyadh-hero"
+            aria-label="Discover Riyadh header">
+            <nav class="nds-breadcrumb-nav" aria-label="Breadcrumb" hidden>
+                <ol class="nds-breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="nds-truncate" aria-current="page">Discover</li>
+                </ol>
+            </nav>
+
+            <div class="nds-section-wrapper">
+                <div class="nds-section-head">
+                    <h1 class="nds-section-title">Discover Riyadh</h1>
+                    <p class="nds-section-description">
+                        Experience the perfect blend of tradition and innovation in the heart of Saudi Arabia
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="nds-content-section wwf-riyadh-overview" aria-label="Discover Riyadh highlights">
+            <div class="nds-section-wrapper">
+                <div class="nds-section-body">
+                    <div class="wwf-riyadh-overview__grid">
+                        <article class="nds-card nds-stroke wwf-riyadh-card wwf-riyadh-card--culture">
+                            <div class="nds-card-image wwf-riyadh-card__media">
+                                <img src="theme/media/about1.webp" alt="Traditional Najdi architecture in Riyadh"
+                                    loading="lazy">
+                            </div>
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h2 class="nds-card-title">Culture &amp; Heritage</h2>
+                                    <p class="nds-card-description">
+                                        Explore historical landmarks, cultural districts, museums, and traditional
+                                        markets that reflect the city's rich history and identity.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="nds-card nds-stroke wwf-riyadh-card wwf-riyadh-card--modern">
+                            <div class="nds-card-image wwf-riyadh-card__media">
+                                <img src="theme/media/about2.webp" alt="Modern towers in Riyadh's financial district"
+                                    loading="lazy">
+                            </div>
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h2 class="nds-card-title">Modern Riyadh</h2>
+                                    <p class="nds-card-description">
+                                        Discover a thriving metropolis featuring world-class infrastructure, business
+                                        districts, entertainment destinations, and iconic architectural landmarks.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="nds-card nds-stroke wwf-riyadh-card wwf-riyadh-card--hospitality">
+                            <div class="nds-card-image wwf-riyadh-card__media">
+                                <img src="theme/media/about3.webp"
+                                    alt="Contemporary hospitality and shopping destination in Riyadh" loading="lazy">
+                            </div>
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h2 class="nds-card-title">Hospitality &amp; Experiences</h2>
+                                    <p class="nds-card-description">
+                                        Enjoy a wide range of dining, cultural, recreational, and shopping experiences
+                                        that showcase Saudi hospitality and contemporary urban life.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="nds-card nds-stroke wwf-riyadh-card wwf-riyadh-card--vision">
+                            <div class="wwf-riyadh-collage" aria-label="Vision 2030 projects in Riyadh">
+                                <img class="wwf-riyadh-collage__lead" src="theme/media/about4-1.webp"
+                                    alt="Aerial view of a major green development in Riyadh" loading="lazy">
+                                <div class="wwf-riyadh-collage__tiles">
+                                    <img src="theme/media/about4-2.webp" alt="The Mukaab project" loading="lazy">
+                                    <img src="theme/media/about4-3.webp" alt="New Murabba development"
+                                        loading="lazy">
+                                    <img src="theme/media/about4-4.webp"
+                                        alt="Green city development viewed from an aircraft" loading="lazy">
+                                    <img src="theme/media/about4-5.webp"
+                                        alt="Contemporary sustainable architecture in Riyadh" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h2 class="nds-card-title">Vision 2030</h2>
+                                    <p class="nds-card-description">
+                                        Riyadh stands at the forefront of the Kingdom's transformation journey, driven
+                                        by Vision 2030 and its commitment to sustainability, innovation, and quality of
+                                        life.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="nds-content-section wwf-riyadh-vision" aria-labelledby="riyadh-vision-title">
+            <img class="wwf-riyadh-vision__mark" src="theme/media/vision30.webp" alt="" aria-hidden="true">
+
+            <div class="nds-section-wrapper wwf-riyadh-vision__wrapper">
+                <div class="nds-section-head wwf-riyadh-vision__head">
+                    <span class="nds-tag nds-rounded nds-sm wwf-riyadh-vision__tag">
+                        <span class="nds-label">Vision 2030</span>
+                    </span>
+                    <h2 id="riyadh-vision-title" class="nds-section-title">Riyadh's Transformation Journey</h2>
+                    <p class="nds-section-description">
+                        Riyadh stands at the forefront of the Kingdom's transformation journey, driven by Vision 2030
+                        and its commitment to sustainability, innovation, and quality of life.
+                    </p>
+                </div>
+
+                <div class="nds-section-body">
+                    <div class="nds-grid wwf-riyadh-values" style="--max-col: 3; --mid-col: 3; --min-col: 1;">
+                        <article class="nds-card nds-stroke wwf-riyadh-value-card">
+                            <div class="nds-card-header">
+                                <div class="nds-card-featured-icon">
+                                    <span class="nds-featured-icon nds-lg nds-circle">
+                                        <i class="hgi hgi-stroke hgi-bulb" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h3 class="nds-card-title">Innovation</h3>
+                                    <p class="nds-card-description">
+                                        Leading the way in technological advancement and smart city development
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="nds-card nds-stroke wwf-riyadh-value-card">
+                            <div class="nds-card-header">
+                                <div class="nds-card-featured-icon">
+                                    <span class="nds-featured-icon nds-lg nds-circle">
+                                        <i class="hgi hgi-stroke hgi-medal-01" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h3 class="nds-card-title">Sustainability</h3>
+                                    <p class="nds-card-description">
+                                        Committed to environmental protection and sustainable development
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="nds-card nds-stroke wwf-riyadh-value-card">
+                            <div class="nds-card-header">
+                                <div class="nds-card-featured-icon">
+                                    <span class="nds-featured-icon nds-lg nds-circle">
+                                        <i class="hgi hgi-stroke hgi-champion" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h3 class="nds-card-title">Quality of Life</h3>
+                                    <p class="nds-card-description">
+                                        Creating vibrant communities with enhanced living standards
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="shell-footer"></div>
+    <div id="shell-cookie"></div>
+    <div id="shell-a11y"></div>
+
+    <script src="assets/js/nds-main.min.js" defer></script>
+    <script src="assets/js/nds-accessibility.min.js" defer></script>
+    <script src="js/site.js" defer></script>
+</body>
+
+</html>

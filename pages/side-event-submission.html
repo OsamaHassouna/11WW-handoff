@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Submit a proposal to host an official side event at the 11th World Water Forum in Riyadh 2027.">
+    <title>Official Side Event Submission | 11th World Water Forum</title>
+    <base href="../">
+
+    <link rel="stylesheet" href="theme/theme-layered.css">
+
+    <link rel="icon" type="image/png" href="theme/media/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="theme/media/favicon/favicon.svg">
+    <link rel="shortcut icon" href="theme/media/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="theme/media/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="11th World Water Forum">
+    <link rel="manifest" href="theme/media/favicon/site.webmanifest">
+
+    <style>
+        html:not([data-auth]) .nds-auth { display: none; }
+        html[data-auth] .nds-guest { display: none; }
+    </style>
+
+    <script>
+        (function () {
+            var t = localStorage.getItem('nds-theme');
+            if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+    <script>
+        (() => { try {
+            const s = JSON.parse(localStorage.getItem('nds-a11y') || '{}');
+            const R = {
+                'epilepsy-safe':        ['reduce-motion','low-saturation'],
+                'visually-impaired':    ['high-contrast'],
+                'cognitive-disability': ['highlight-titles','reduce-motion'],
+                'motor-impaired':       [],
+                'colorblind':           ['cvd-deutan'],
+                'dyslexia-friendly':    ['dyslexia','highlight-links'],
+                'adhd-friendly':        ['reduce-motion','highlight-titles','reading-mask'],
+            };
+            const t = new Set([
+                ...(s.modes || []),
+                ...(s.bundles || []).flatMap(b => b in R ? (R[b].length ? R[b] : [b]) : []),
+            ]);
+            (s.excluded || []).forEach(e => t.delete(e));
+            const c = s.settings || {};
+            const step = parseInt(c['font-step'], 10) || 0;
+            if (step > 0 && step < 4) t.add('font-step-' + step);
+            if (c['text-align'] && c['text-align'] !== 'default') t.add('text-align-' + c['text-align']);
+            if (t.size) document.documentElement.setAttribute('data-a11y', [...t].join(' '));
+        } catch {} })();
+    </script>
+    <script>
+        (function () {
+            if (document.cookie.indexOf('nds_auth=true') !== -1) {
+                document.documentElement.setAttribute('data-auth', 'true');
+            }
+        })();
+    </script>
+</head>
+
+<body class="wwf-registration-page wwf-side-event-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header>
+        <div id="shell-topbar"></div>
+        <div id="shell-mainnav"></div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <div class="nds-content-layout nds-wSideInfo wwf-registration-layout">
+            <div class="nds-main-content">
+                <section class="nds-content-section nds-sideinfo-section wwf-registration-section"
+                    aria-labelledby="side-event-title">
+                    <div class="nds-section-body">
+                        <div class="nds-info-content">
+                            <nav class="nds-breadcrumb-nav" aria-label="Breadcrumb" hidden>
+                                <ol class="nds-breadcrumb">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="pages/participation-opportunities.html">Participation Opportunities</a></li>
+                                    <li class="nds-truncate" aria-current="page">Side Event Submission</li>
+                                </ol>
+                            </nav>
+
+                            <div class="wwf-registration-intro">
+                                <h1 id="side-event-title" class="nds-section-title">
+                                    11th World Water Forum Official-Side Event Submission Form
+                                </h1>
+                                <p class="nds-section-description">
+                                    Submit your proposal to host a side event at the 11th World Water Forum Riyadh 2027.
+                                    We look forward to your innovative ideas!
+                                </p>
+                            </div>
+
+                            <p class="nds-required-notice wwf-registration-required">
+                                <span class="nds-label">* Required information</span>
+                            </p>
+
+                            <form id="side-event-form" class="nds-form wwf-registration-form" novalidate data-ajax
+                                data-success-url="pages/registration-successful.html">
+                                <section class="nds-card nds-stroke wwf-registration-card"
+                                    aria-labelledby="event-information-title">
+                                    <div class="wwf-registration-card__heading">
+                                        <h2 id="event-information-title" class="wwf-registration-card__title">
+                                            <i class="hgi hgi-stroke hgi-calendar-03" aria-hidden="true"></i>
+                                            <span>Event Information</span>
+                                        </h2>
+                                    </div>
+
+                                    <div class="nds-grid nds-form-grid wwf-registration-fields"
+                                        style="--min-col: 1; --mid-col: 1; --max-col: 1;">
+                                        <div class="nds-form-container" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="side-event-name"><span class="nds-label">Event Title</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="text" id="side-event-name" name="eventTitle" class="nds-input"
+                                                    placeholder="Enter event title" required>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </div>
+
+                                        <div class="nds-form-container nds-textarea" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="side-event-description"><span class="nds-label">Event Description</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <textarea id="side-event-description" name="eventDescription" rows="5"
+                                                    class="wwf-side-event-textarea--large"
+                                                    placeholder="Please provide a detailed description of your proposed side event..."
+                                                    required></textarea>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section class="nds-card nds-stroke wwf-registration-card"
+                                    aria-labelledby="entity-contact-title">
+                                    <div class="wwf-registration-card__heading">
+                                        <h2 id="entity-contact-title" class="wwf-registration-card__title">
+                                            <i class="hgi hgi-stroke hgi-building-03" aria-hidden="true"></i>
+                                            <span>Entity &amp; Contact Information</span>
+                                        </h2>
+                                    </div>
+
+                                    <div class="nds-grid nds-form-grid wwf-registration-fields"
+                                        style="--min-col: 1; --mid-col: 2; --max-col: 2;">
+                                        <div class="nds-form-container" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="side-event-entity"><span class="nds-label">Entity Name</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="text" id="side-event-entity" name="entityName" class="nds-input"
+                                                    placeholder="Organization / Entity Name" autocomplete="organization" required>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </div>
+
+                                        <div class="nds-form-container" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="side-event-contact-name"><span class="nds-label">Primary Contact Name</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="text" id="side-event-contact-name" name="primaryContactName"
+                                                    class="nds-input" placeholder="Enter contact person's name" autocomplete="name" required>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </div>
+
+                                        <div class="nds-form-container" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="side-event-contact-email"><span class="nds-label">Contact Email</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="email" id="side-event-contact-email" name="primaryContactEmail"
+                                                    class="nds-input" placeholder="primary.email@domain.com" autocomplete="email" required>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </div>
+
+                                        <div class="nds-form-container" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="side-event-contact-phone"><span class="nds-label">Contact Phone Number</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="tel" id="side-event-contact-phone" name="primaryContactPhone"
+                                                    class="nds-input" placeholder="+966 50 000 0000" autocomplete="tel" required>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </div>
+
+                                        <div class="nds-form-container nds-textarea">
+                                            <div class="nds-form-header">
+                                                <label for="side-event-alternative-email"><span class="nds-label">Alternative Contact Email</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="email" id="side-event-alternative-email" name="alternativeContactEmail"
+                                                    class="nds-input" placeholder="alternate.email@domain.com">
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </div>
+
+                                        <div class="nds-form-container">
+                                            <div class="nds-form-header">
+                                                <label for="side-event-alternative-phone"><span class="nds-label">Alternative Contact Phone Number</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="tel" id="side-event-alternative-phone" name="alternativeContactPhone"
+                                                    class="nds-input" placeholder="+966 50 123 4567">
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section class="nds-card nds-stroke wwf-registration-card"
+                                    aria-labelledby="event-details-title">
+                                    <div class="wwf-registration-card__heading">
+                                        <h2 id="event-details-title" class="wwf-registration-card__title">
+                                            <i class="hgi hgi-stroke hgi-left-to-right-list-bullet" aria-hidden="true"></i>
+                                            <span>Event Details</span>
+                                        </h2>
+                                    </div>
+
+                                    <fieldset class="nds-form-group nds-check-group wwf-registration-choice-group"
+                                        data-required>
+                                        <legend>Event Format <span aria-hidden="true">*</span></legend>
+                                        <div class="wwf-registration-checks wwf-side-event-checks--grid">
+                                            <div class="nds-form-container nds-check-container nds-md">
+                                                <div class="nds-form-header">
+                                                    <label for="event-format-panel"><span class="nds-label">Panel Discussion</span></label>
+                                                </div>
+                                                <div class="nds-form-control">
+                                                    <input type="checkbox" id="event-format-panel" name="eventFormat" value="panel-discussion">
+                                                </div>
+                                            </div>
+                                            <div class="nds-form-container nds-check-container nds-md">
+                                                <div class="nds-form-header">
+                                                    <label for="event-format-workshop"><span class="nds-label">Workshop</span></label>
+                                                </div>
+                                                <div class="nds-form-control">
+                                                    <input type="checkbox" id="event-format-workshop" name="eventFormat" value="workshop">
+                                                </div>
+                                            </div>
+                                            <div class="nds-form-container nds-check-container nds-md">
+                                                <div class="nds-form-header">
+                                                    <label for="event-format-roundtable"><span class="nds-label">Roundtable</span></label>
+                                                </div>
+                                                <div class="nds-form-control">
+                                                    <input type="checkbox" id="event-format-roundtable" name="eventFormat" value="roundtable">
+                                                </div>
+                                            </div>
+                                            <div class="nds-form-container nds-check-container nds-md">
+                                                <div class="nds-form-header">
+                                                    <label for="event-format-networking"><span class="nds-label">Networking Session</span></label>
+                                                </div>
+                                                <div class="nds-form-control">
+                                                    <input type="checkbox" id="event-format-networking" name="eventFormat" value="networking-session">
+                                                </div>
+                                            </div>
+                                            <div class="nds-form-container nds-check-container nds-md">
+                                                <div class="nds-form-header">
+                                                    <label for="event-format-other"><span class="nds-label">Other</span></label>
+                                                </div>
+                                                <div class="nds-form-control">
+                                                    <input type="checkbox" id="event-format-other" name="eventFormat" value="other">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="nds-form-footer" data-feedback-target hidden></div>
+                                    </fieldset>
+                                </section>
+
+                                <section class="nds-card nds-stroke wwf-registration-card"
+                                    aria-labelledby="preferred-date-title">
+                                    <div class="wwf-registration-card__heading">
+                                        <h2 id="preferred-date-title" class="wwf-registration-card__title">
+                                            <i class="hgi hgi-stroke hgi-clock-01" aria-hidden="true"></i>
+                                            <span>Preferred Date &amp; Duration</span>
+                                        </h2>
+                                    </div>
+
+                                    <div class="wwf-side-event-section-block wwf-side-event-section-block--first">
+                                        <fieldset class="nds-form-group nds-check-group wwf-registration-choice-group"
+                                            data-required>
+                                            <legend>Preferred Date <span aria-hidden="true">*</span></legend>
+                                            <div class="wwf-registration-checks">
+                                                <div class="nds-form-container nds-check-container nds-md">
+                                                    <div class="nds-form-header">
+                                                        <label for="event-date-21"><span class="nds-label">Sunday 21st / March / 2027</span></label>
+                                                    </div>
+                                                    <div class="nds-form-control">
+                                                        <input type="checkbox" id="event-date-21" name="preferredDate" value="2027-03-21">
+                                                    </div>
+                                                </div>
+                                                <div class="nds-form-container nds-check-container nds-md">
+                                                    <div class="nds-form-header">
+                                                        <label for="event-date-22"><span class="nds-label">Monday 22nd / March / 2027</span></label>
+                                                    </div>
+                                                    <div class="nds-form-control">
+                                                        <input type="checkbox" id="event-date-22" name="preferredDate" value="2027-03-22">
+                                                    </div>
+                                                </div>
+                                                <div class="nds-form-container nds-check-container nds-md">
+                                                    <div class="nds-form-header">
+                                                        <label for="event-date-23"><span class="nds-label">Tuesday 23rd / March / 2027</span></label>
+                                                    </div>
+                                                    <div class="nds-form-control">
+                                                        <input type="checkbox" id="event-date-23" name="preferredDate" value="2027-03-23">
+                                                    </div>
+                                                </div>
+                                                <div class="nds-form-container nds-check-container nds-md">
+                                                    <div class="nds-form-header">
+                                                        <label for="event-date-24"><span class="nds-label">Wednesday 24th / March / 2027</span></label>
+                                                    </div>
+                                                    <div class="nds-form-control">
+                                                        <input type="checkbox" id="event-date-24" name="preferredDate" value="2027-03-24">
+                                                    </div>
+                                                </div>
+                                                <div class="nds-form-container nds-check-container nds-md">
+                                                    <div class="nds-form-header">
+                                                        <label for="event-date-25"><span class="nds-label">Thursday 25th / March / 2027</span></label>
+                                                    </div>
+                                                    <div class="nds-form-control">
+                                                        <input type="checkbox" id="event-date-25" name="preferredDate" value="2027-03-25">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </fieldset>
+                                    </div>
+
+                                    <div class="wwf-side-event-section-block">
+                                        <div class="nds-form-container" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="side-event-duration"><span class="nds-label">Duration</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="text" id="side-event-duration" name="duration" class="nds-input"
+                                                    placeholder="e.g., 90 minutes" required>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="wwf-side-event-section-block">
+                                        <fieldset class="nds-form-group nds-check-group wwf-registration-choice-group"
+                                            data-required>
+                                            <legend>Technical Requirements <span aria-hidden="true">*</span></legend>
+                                            <div class="wwf-registration-checks">
+                                                <div class="nds-form-container nds-check-container nds-md">
+                                                    <div class="nds-form-header">
+                                                        <label for="requirement-projector"><span class="nds-label">Projector</span></label>
+                                                    </div>
+                                                    <div class="nds-form-control">
+                                                        <input type="checkbox" id="requirement-projector" name="technicalRequirements" value="projector">
+                                                    </div>
+                                                </div>
+                                                <div class="nds-form-container nds-check-container nds-md">
+                                                    <div class="nds-form-header">
+                                                        <label for="requirement-screens"><span class="nds-label">Screens</span></label>
+                                                    </div>
+                                                    <div class="nds-form-control">
+                                                        <input type="checkbox" id="requirement-screens" name="technicalRequirements" value="screens">
+                                                    </div>
+                                                </div>
+                                                <div class="nds-form-container nds-check-container nds-md">
+                                                    <div class="nds-form-header">
+                                                        <label for="requirement-microphones"><span class="nds-label">Microphones</span></label>
+                                                    </div>
+                                                    <div class="nds-form-control">
+                                                        <input type="checkbox" id="requirement-microphones" name="technicalRequirements" value="microphones">
+                                                    </div>
+                                                </div>
+                                                <div class="nds-form-container nds-check-container nds-md">
+                                                    <div class="nds-form-header">
+                                                        <label for="requirement-interpretation"><span class="nds-label">Interpretation</span></label>
+                                                    </div>
+                                                    <div class="nds-form-control">
+                                                        <input type="checkbox" id="requirement-interpretation" name="technicalRequirements" value="interpretation">
+                                                    </div>
+                                                </div>
+                                                <div class="nds-form-container nds-check-container nds-md">
+                                                    <div class="nds-form-header">
+                                                        <label for="requirement-catering"><span class="nds-label">Catering</span></label>
+                                                    </div>
+                                                    <div class="nds-form-control">
+                                                        <input type="checkbox" id="requirement-catering" name="technicalRequirements" value="catering">
+                                                    </div>
+                                                </div>
+                                                <div class="nds-form-container nds-check-container nds-md">
+                                                    <div class="nds-form-header">
+                                                        <label for="requirement-hybrid"><span class="nds-label">Hybrid Meeting</span></label>
+                                                    </div>
+                                                    <div class="nds-form-control">
+                                                        <input type="checkbox" id="requirement-hybrid" name="technicalRequirements" value="hybrid-meeting">
+                                                    </div>
+                                                </div>
+                                                <div class="nds-form-container nds-check-container nds-md">
+                                                    <div class="nds-form-header">
+                                                        <label for="requirement-other"><span class="nds-label">Other</span></label>
+                                                    </div>
+                                                    <div class="nds-form-control">
+                                                        <input type="checkbox" id="requirement-other" name="technicalRequirements" value="other">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </fieldset>
+                                    </div>
+
+                                    <div class="wwf-side-event-section-block">
+                                        <div class="nds-form-container" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="side-event-participants">
+                                                    <span class="nds-label">How many participants do you expect to mobilize to attend and participate in the event?</span>
+                                                </label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="text" id="side-event-participants" name="expectedParticipants"
+                                                    class="nds-input" placeholder="e.g., 50 - 100" required>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="wwf-side-event-section-block wwf-side-event-section-block--last">
+                                        <div class="nds-form-container nds-textarea">
+                                            <div class="nds-form-header">
+                                                <label for="side-event-comments"><span class="nds-label">Additional Comments or Special Requests</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <textarea id="side-event-comments" name="additionalComments" rows="4"
+                                                    class="wwf-side-event-textarea--medium"
+                                                    placeholder="Tell us more about your interest, requirements, or questions..."></textarea>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <div class="nds-flex nds-row nds-form-actions wwf-registration-actions">
+                                    <button type="submit" class="nds-btn nds-primary nds-lg wwf-registration-submit">
+                                        <span class="nds-label">Submit</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <aside class="nds-card nds-sticky wwf-registration-stepper-panel"
+                            aria-label="Side event submission progress">
+                            <div class="nds-stepper nds-radial nds-vertical-lg" id="side-event-stepper"
+                                data-current="1" data-total="2">
+                                <div class="nds-progress-circle">
+                                    <svg width="64" height="64" viewBox="0 0 24 24" aria-hidden="true">
+                                        <circle class="nds-progress-bg" cx="12" cy="12" r="10" fill="none" stroke-width="3"></circle>
+                                        <circle class="nds-progress-track" cx="12" cy="12" r="10" fill="none" stroke-width="3"
+                                            stroke-dasharray="62.83" stroke-dashoffset="62.83" stroke-linecap="round"></circle>
+                                    </svg>
+                                    <div class="nds-progress-info"><span class="nds-progress-steps"></span></div>
+                                </div>
+                                <div class="nds-stepper-step">
+                                    <div class="nds-stepper-base">
+                                        <div class="nds-stepper-circle" data-step-text="1"></div>
+                                    </div>
+                                    <div class="nds-stepper-content">
+                                        <div class="nds-stepper-text">
+                                            <span class="nds-stepper-title">Registration</span>
+                                            <span class="nds-stepper-description">Register for Side Event</span>
+                                            <span class="nds-stepper-next">Next: Confirmation</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nds-stepper-step">
+                                    <div class="nds-stepper-base">
+                                        <div class="nds-stepper-circle" data-step-text="2"></div>
+                                    </div>
+                                    <div class="nds-stepper-content">
+                                        <div class="nds-stepper-text">
+                                            <span class="nds-stepper-title">Confirmation</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <div id="shell-footer"></div>
+    <div id="shell-cookie"></div>
+    <div id="shell-a11y"></div>
+
+    <script src="assets/js/nds-main.min.js" defer></script>
+    <script src="assets/js/nds-accessibility.min.js" defer></script>
+    <script src="js/site.js" defer></script>
+</body>
+
+</html>

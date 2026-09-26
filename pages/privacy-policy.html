@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Privacy Policy for the 11th World Water Forum website and its handling of personal information.">
+    <title>Privacy Policy | 11th World Water Forum</title>
+    <base href="../">
+
+    <link rel="stylesheet" href="theme/theme-layered.css">
+
+    <link rel="icon" type="image/png" href="theme/media/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="theme/media/favicon/favicon.svg">
+    <link rel="shortcut icon" href="theme/media/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="theme/media/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="11th World Water Forum">
+    <link rel="manifest" href="theme/media/favicon/site.webmanifest">
+
+    <style>
+        html:not([data-auth]) .nds-auth { display: none; }
+        html[data-auth] .nds-guest { display: none; }
+    </style>
+
+    <script>
+        (function () {
+            var t = localStorage.getItem('nds-theme');
+            if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+    <script>
+        (() => { try {
+            const s = JSON.parse(localStorage.getItem('nds-a11y') || '{}');
+            const R = {
+                'epilepsy-safe':        ['reduce-motion','low-saturation'],
+                'visually-impaired':    ['high-contrast'],
+                'cognitive-disability': ['highlight-titles','reduce-motion'],
+                'motor-impaired':       [],
+                'colorblind':           ['cvd-deutan'],
+                'dyslexia-friendly':    ['dyslexia','highlight-links'],
+                'adhd-friendly':        ['reduce-motion','highlight-titles','reading-mask'],
+            };
+            const t = new Set([
+                ...(s.modes || []),
+                ...(s.bundles || []).flatMap(b => b in R ? (R[b].length ? R[b] : [b]) : []),
+            ]);
+            (s.excluded || []).forEach(e => t.delete(e));
+            const c = s.settings || {};
+            const step = parseInt(c['font-step'], 10) || 0;
+            if (step > 0 && step < 4) t.add('font-step-' + step);
+            if (c['text-align'] && c['text-align'] !== 'default') t.add('text-align-' + c['text-align']);
+            if (t.size) document.documentElement.setAttribute('data-a11y', [...t].join(' '));
+        } catch {} })();
+    </script>
+    <script>
+        (function () {
+            if (document.cookie.indexOf('nds_auth=true') !== -1) {
+                document.documentElement.setAttribute('data-auth', 'true');
+            }
+        })();
+    </script>
+</head>
+
+<body class="wwf-legal-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header>
+        <div id="shell-topbar"></div>
+        <div id="shell-mainnav"></div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <section class="nds-hero-section nds-sub nds-flat wwf-legal-hero" aria-label="Privacy Policy header">
+            <nav class="nds-breadcrumb-nav" aria-label="Breadcrumb" hidden>
+                <ol class="nds-breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="nds-truncate" aria-current="page">Privacy Policy</li>
+                </ol>
+            </nav>
+
+            <div class="nds-section-wrapper">
+                <div class="nds-section-head">
+                    <h1 class="nds-section-title">Privacy Policy</h1>
+                    <p class="wwf-legal-hero__lead">
+                        You're welcome to contact us using the contact details listed below,
+                    </p>
+                    <p class="nds-section-description">
+                        Several components are used in standard content pages include: heading 3, heading 4, ordered
+                        and unordered lists, body text content, hyperlinks, and rich multimedia including images and
+                        videos
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="nds-content-layout nds-wSideInfo">
+            <div class="nds-main-content">
+                <section id="privacy-policy" class="nds-content-section nds-sideinfo-section wwf-legal-content">
+                    <div class="nds-section-body">
+                        <aside class="nds-sideinfo nds-md nds-sticky nds-top" aria-label="On this page">
+                            <nav class="nds-toc" aria-label="Table of contents"
+                                data-toc-source="#privacy-policy article" data-toc-levels="h2, h3">
+                                <div class="nds-toc-head">
+                                    <span class="nds-label">On this page</span>
+                                    <h2 class="nds-toc-title nds-truncate">Privacy Policy</h2>
+                                </div>
+                                <div class="nds-drawer nds-lined">
+                                    <ul class="nds-drawer-list"></ul>
+                                </div>
+                            </nav>
+                        </aside>
+
+                        <div class="nds-info-content">
+                            <article>
+                                <h2 id="introduction" class="nds-section-title">1. Introduction</h2>
+                                <p>
+                                    The World Water Forum ("the Forum", "we", "us", or "our") is committed to
+                                    protecting the privacy and personal data of users who access and use the website
+                                    www.11worldwaterforum.com (the "Website"). This Privacy Policy explains how personal
+                                    information is collected, used, stored, and protected when you visit or interact
+                                    with the Website.
+                                </p>
+
+                                <h2 id="scope" class="nds-section-title">2. Scope of This Policy</h2>
+                                <p>
+                                    This Policy applies to all visitors and users of the Website, including
+                                    participants, registrants, sponsors, media representatives, subscribers, and any
+                                    individual who submits information through the Website.
+                                </p>
+
+                                <h2 id="information-collected" class="nds-section-title">3. Information We Collect</h2>
+                                <h3 id="information-provided">3.1 Information You Provide</h3>
+                                <p>
+                                    We may collect personal or organizational information that you voluntarily submit
+                                    through the Website, such as contact details, affiliation, registration, or
+                                    participation information.
+                                </p>
+
+                                <h3 id="information-automatic">3.2 Information Collected Automatically</h3>
+                                <p>
+                                    When you use the Website, limited technical data may be collected automatically,
+                                    including IP address, browser and device information, pages visited, and general
+                                    usage statistics. This data is used for security, analytics, and service improvement
+                                    purposes.
+                                </p>
+
+                                <h2 id="information-use" class="nds-section-title">4. How We Use Information</h2>
+                                <p>
+                                    The information collected is used to operate and manage the Website, process
+                                    registrations and communications, improve content and user experience, conduct
+                                    internal analysis, and comply with applicable legal or regulatory requirements.
+                                    Personal data is used only for legitimate and defined purposes.
+                                </p>
+
+                                <h2 id="data-sharing" class="nds-section-title">5. Data Sharing and Disclosure</h2>
+                                <p>We do not sell, rent, or trade personal information.</p>
+                                <ul>
+                                    <li>With trusted service providers acting on behalf of the Forum, solely for operational purposes.</li>
+                                    <li>When required by applicable laws, regulations, or legal processes.</li>
+                                    <li>To protect the rights, safety, or security of the Forum, users, or the Website.</li>
+                                </ul>
+                                <p>Any data sharing is limited to what is necessary and handled confidentially.</p>
+
+                                <h2 id="data-security" class="nds-section-title">6. Data Protection and Security</h2>
+                                <p>
+                                    We implement reasonable technical and organizational measures to protect personal
+                                    information from unauthorized access, loss, misuse, or disclosure. However, no
+                                    online system can be guaranteed to be completely secure, and users acknowledge this
+                                    risk when using the Website.
+                                </p>
+
+                                <h2 id="data-retention" class="nds-section-title">7. Data Retention</h2>
+                                <p>
+                                    Personal information is retained only for as long as necessary to fulfill the
+                                    purposes outlined in this Policy or as required by applicable laws. Data is securely
+                                    deleted or anonymized once it is no longer needed.
+                                </p>
+
+                                <h2 id="cookies" class="nds-section-title">8. Cookies and Acceptance</h2>
+                                <p>
+                                    The Website uses cookies and similar technologies to ensure proper functionality,
+                                    analyze usage, and improve user experience. By continuing to use the Website, you
+                                    consent to the use of cookies in accordance with this Privacy Policy. Users may
+                                    manage or disable cookies through their browser settings; however, disabling cookies
+                                    may affect certain Website features.
+                                </p>
+
+                                <h2 id="user-rights" class="nds-section-title">9. User Rights and Data Deletion Requests</h2>
+                                <p>Subject to applicable laws, users have the right to:</p>
+                                <ul>
+                                    <li>Request access to their personal data.</li>
+                                    <li>Request correction or updating of inaccurate information.</li>
+                                    <li>Request deletion of their personal data, where legally permissible.</li>
+                                    <li>Withdraw consent for data processing, where applicable.</li>
+                                </ul>
+                                <p>
+                                    Requests related to personal data access, correction, or deletion may be submitted
+                                    by contacting: support@11worldwaterforum.com. We will review and respond to requests
+                                    within a reasonable timeframe and in accordance with applicable regulations.
+                                </p>
+
+                                <h2 id="policy-changes" class="nds-section-title">10. Changes to This Privacy Policy</h2>
+                                <p>
+                                    We reserve the right to update or amend this Privacy Policy at any time. Any changes
+                                    will become effective upon publication on the Website. Continued use of the Website
+                                    constitutes acceptance of the updated Policy.
+                                </p>
+
+                                <h2 id="contact" class="nds-section-title">11. Contact Us</h2>
+                                <p>For general inquiries regarding this Privacy Policy, please contact:</p>
+
+                                <div class="nds-card nds-stroke wwf-legal-contact-card">
+                                    <div class="wwf-legal-contact-card__item">
+                                        <span class="wwf-legal-contact-card__label">
+                                            <i class="nds-icon nds-hgi-mail-01" aria-hidden="true"></i>
+                                            General Inquiries
+                                        </span>
+                                        <a href="mailto:support@11worldwaterforum.com">
+                                            support@11worldwaterforum.com
+                                        </a>
+                                    </div>
+                                    <div class="wwf-legal-contact-card__item">
+                                        <span class="wwf-legal-contact-card__label">
+                                            <i class="nds-icon nds-hgi-mail-01" aria-hidden="true"></i>
+                                            Privacy-related Requests (including data deletion)
+                                        </span>
+                                        <a href="mailto:support@11worldwaterforum.com">
+                                            support@11worldwaterforum.com
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <div id="shell-footer"></div>
+    <div id="shell-cookie"></div>
+    <div id="shell-a11y"></div>
+
+    <script src="assets/js/nds-main.min.js" defer></script>
+    <script src="assets/js/nds-accessibility.min.js" defer></script>
+    <script src="js/site.js" defer></script>
+</body>
+
+</html>

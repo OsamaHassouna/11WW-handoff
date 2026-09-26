@@ -1,0 +1,161 @@
+/* ==========================================================================
+   PROJECT TOKENS - 11th World Water Forum
+   ==========================================================================
+
+   Imported by theme/theme-layered.css into @layer theme, above the NDS vendor
+   styles. NDS components read public custom properties (--btn-*, --section-*,
+   --background-* ...) and fall back to their defaults, so theming means setting
+   a public property here, never overriding an NDS selector. Never set a
+   --_prefixed property: those are private component internals.
+
+   The NDS section-title and section-description overrides come first. Every
+   --wwf-* token after them is project-specific, grouped by the page or
+   component that consumes it in theme/theme-layered.css.
+   ========================================================================== */
+
+:root {
+
+   /* === HOME === */
+
+   /* Section */
+   --section-title-FS: var(--typo-display-clamp-sm-FS);
+   --section-title-LH: var(--typo-display-clamp-sm-LH);
+   --section-title-color: var(--text-default);
+   --section-description-FS: var(--typo-text-clamp-md-FS);
+   --section-description-LH: var(--typo-text-clamp-md-LH);
+   --section-description-color: var(--text-primary-paragraph);
+
+   /* Shared action */
+   --wwf-action-bg: #f37021;
+   --wwf-action-bg-hover: #e8640f;
+   --wwf-action-bg-active: #c6530b;
+   
+   /* HERO */
+   --wwf-hero-overlay: #000000b2;
+   --wwf-hero-title: #62b6d4;
+   --wwf-hero-tagline-start: #3565c0;
+   --wwf-hero-tagline-end: #7ae0de;
+   --wwf-hero-panel-bg: #ffffff14;
+   --wwf-hero-panel-border: #ffffff33;
+   --wwf-hero-panel-shadow: 0 4px 16px #0000000a;
+
+   /* Milestones */
+   --wwf-milestone-card-height-mobile: 440px;
+   --wwf-milestone-active-grow: 1.62;
+   --wwf-milestone-complete-color: #BFE6DB;
+   --wwf-milestone-card-overlay: linear-gradient(
+      0deg,
+      rgba(3, 2, 19, 0.9) 0%,
+      rgba(3, 2, 19, 0.3) 50%,
+      rgba(0, 0, 0, 0) 100%
+   );
+
+   /* Global Water Dialogue */
+   --wwf-dialogue-bg: #0A1D37;
+   --wwf-dialogue-card-bg: #1A2E7FE6;
+   --wwf-dialogue-card-height: 555px;
+   --wwf-dialogue-texture-opacity: 0.12;
+
+   /* Home announcement modal */
+   --wwf-announcement-close-color: #323232;
+   --wwf-announcement-link: #155dfc;
+   --wwf-announcement-shadow: 0 32px 64px -12px #10182824;
+
+   /* Knowledge Hub case study modal */
+   --wwf-knowledge-case-modal-max-width: 595px;
+   --wwf-knowledge-case-modal-header-height: 210px;
+
+   /* Visa Information */
+   --wwf-visa-timeline-text: #101828;
+
+   /* 11th World Water Forum event */
+   --wwf-forum-counter-gradient: linear-gradient(90deg, #2C90B9 0%, #8AD2F3 44.18%);
+   --wwf-forum-venue-image-overlay: linear-gradient(90deg, rgba(13, 18, 28, 0) 0%, rgba(13, 18, 28, 0.6) 100%);
+   --wwf-forum-rating-shadow: 0px 4px 16px 0px #0000000A;
+
+   /* Youth Program */
+   --wwf-youth-program-stat-color: #eaf2ffe6;
+   --wwf-youth-program-title-color: #0D1F52;
+   --wwf-youth-program-coordinators-border: #E6EEF5;
+   --wwf-youth-program-coordinators-color: #334066;
+   --wwf-youth-program-coordinators-shadow: 0px 8px 24px 0px #0F172A0A;
+   --wwf-youth-program-stat-shadow: 0px 8px 24px 0px #0000000A;
+
+   /* Intersectoral Program */
+   --wwf-intersectoral-acwa-base-bg: #000000;
+   --wwf-intersectoral-brand-bg: #1B4199;
+   --wwf-intersectoral-brand-bg-deep: #0E2A68;
+   --wwf-intersectoral-brand-surface: #FFFFFF1A;
+   --wwf-intersectoral-brand-border: #FFFFFF2E;
+   --wwf-intersectoral-content-color: #D8E6F4;
+   --wwf-intersectoral-note-color: #A9C5DA;
+   --wwf-intersectoral-metric-bg: #05193DC2;
+   --wwf-intersectoral-metric-border: #FFFFFF2E;
+   --wwf-intersectoral-metric-label: #AADBE1;
+   --wwf-intersectoral-metric-shadow: 0px 14px 30px 0px #00000038;
+   --wwf-intersectoral-logo-border: #FFFFFFEB;
+   --wwf-intersectoral-logo-shadow: 0px 1px 0px 0px #FFFFFF inset, 0px 0px 0px 10px #FFFFFF1A, 0px 28px 70px 0px #00081E61;
+   --wwf-intersectoral-logo-ring: #77E0E547;
+   --wwf-intersectoral-logo-orbit: #FFFFFF38;
+   --wwf-intersectoral-reason-bg: linear-gradient(110deg, rgba(255, 255, 255, 0.13) 8.49%, rgba(255, 255, 255, 0.055) 91.51%);
+   --wwf-intersectoral-reason-border: #FFFFFF08;
+   --wwf-intersectoral-cluster-partners-bg: #F3F4F6;
+   --wwf-intersectoral-cluster-icon-radius: 12px;
+   --wwf-intersectoral-cluster-partners-radius: 10px;
+   --wwf-intersectoral-cluster-bullet-size: 9px;
+   --wwf-intersectoral-cluster-list-line-height: 22px;
+   --wwf-intersectoral-governance-label: #C5DBFF;
+   --wwf-intersectoral-governance-card-bg: linear-gradient(145deg, rgba(255, 255, 255, 0.18) 6.17%, rgba(255, 255, 255, 0.09) 93.83%);
+   --wwf-intersectoral-governance-card-border: #C7D0FF5C;
+   --wwf-intersectoral-governance-grid-offset: 34px;
+   --wwf-intersectoral-governance-card-blur: blur(20px);
+   --wwf-intersectoral-governance-shape-border: #FFFFFF33;
+   --wwf-intersectoral-governance-shape-shadow: 0px 0px 0px 140px #FFFFFF06, 0px 0px 0px 70px #FFFFFF09;
+   --wwf-intersectoral-governance-title-line-height: 23px;
+
+
+   /* Visitor Guide */
+   --wwf-visitor-note-color: #666666;
+
+   /* Official Agenda */
+   --wwf-agenda-day-active-bg: #081B53;
+   --wwf-agenda-day-size: 120px;
+   --wwf-agenda-table-icon-size: 28px;
+   --wwf-agenda-table-cell-padding-block: 7.5px;
+   --wwf-agenda-fact-padding-block: 18.5px;
+   --wwf-agenda-map-aspect-ratio: 1280 / 277;
+
+   /* About the Forum */
+   --wwf-about-warning-text: #93370D;
+   --wwf-about-warning-border: #FEDF89;
+   --wwf-about-warning-bg: #FFFAEB;
+   --wwf-about-inquiry-bg: #FFFFFF33;
+   --wwf-about-hero-image-opacity: .8;
+   --wwf-about-hero-overlay: linear-gradient(90deg, #223D8B 0.06%, rgba(34, 61, 139, 0.4) 100%);
+   --wwf-about-hero-overlay-rtl: linear-gradient(270deg, #223D8B 0.06%, rgba(34, 61, 139, 0.4) 100%);
+
+   /* Forum Processes: diagram colors and the supplied hover states. */
+   --wwf-forum-process-card-hover-border: #CBAB7B;
+   --wwf-forum-process-shape-hover-border: #00000033;
+   --wwf-forum-process-overview-political-fill: #FED69A;
+   --wwf-forum-process-overview-program-fill: #8D96B0;
+   --wwf-forum-process-overview-ring: #A1B9D4;
+   --wwf-forum-process-overview-label: #000000;
+   --wwf-forum-process-overview-badge-text: #081B53;
+   --wwf-forum-process-launching-soon: #9CA3AF;
+   --wwf-forum-process-political-fill: var(--wwf-forum-process-overview-political-fill);
+   --wwf-forum-process-thematic-fill: #3266A2;
+   --wwf-forum-process-regional-fill: #64C5D7;
+   --wwf-forum-process-framework-thematic-fill: #A1B9D4;
+   --wwf-forum-process-framework-regional-fill: #B8E4ED;
+   --wwf-forum-process-framework-political-halo: #FDA523;
+   --wwf-forum-process-framework-outcome-halo: var(--wwf-forum-process-overview-badge-text);
+   --wwf-forum-process-framework-outcome-link: #6674A9;
+   --wwf-forum-process-framework-gradient-blue: #3B82F6;
+   --wwf-forum-process-framework-gradient-green: #22C55E;
+   --wwf-forum-process-framework-gradient-orange: #F97316;
+   --wwf-forum-process-framework-label: #333333;
+   --wwf-forum-process-program-fill: var(--wwf-forum-process-overview-program-fill);
+   --wwf-forum-process-outcome-fill: #5A668C;
+   --wwf-forum-process-ring: #9BB5D2;
+}

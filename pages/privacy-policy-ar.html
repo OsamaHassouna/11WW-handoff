@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="سياسة الخصوصية لموقع المنتدى العالمي الحادي عشر للمياه وآلية تعامله مع المعلومات الشخصية.">
+    <title>سياسة الخصوصية | المنتدى العالمي الحادي عشر للمياه</title>
+    <base href="../">
+
+    <link rel="stylesheet" href="theme/theme-layered.css">
+
+    <link rel="icon" type="image/png" href="theme/media/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="theme/media/favicon/favicon.svg">
+    <link rel="shortcut icon" href="theme/media/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="theme/media/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="11th World Water Forum">
+    <link rel="manifest" href="theme/media/favicon/site.webmanifest">
+
+    <style>
+        html:not([data-auth]) .nds-auth { display: none; }
+        html[data-auth] .nds-guest { display: none; }
+    </style>
+
+    <script>
+        (function () {
+            var t = localStorage.getItem('nds-theme');
+            if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+    <script>
+        (() => { try {
+            const s = JSON.parse(localStorage.getItem('nds-a11y') || '{}');
+            const R = {
+                'epilepsy-safe':        ['reduce-motion','low-saturation'],
+                'visually-impaired':    ['high-contrast'],
+                'cognitive-disability': ['highlight-titles','reduce-motion'],
+                'motor-impaired':       [],
+                'colorblind':           ['cvd-deutan'],
+                'dyslexia-friendly':    ['dyslexia','highlight-links'],
+                'adhd-friendly':        ['reduce-motion','highlight-titles','reading-mask'],
+            };
+            const t = new Set([
+                ...(s.modes || []),
+                ...(s.bundles || []).flatMap(b => b in R ? (R[b].length ? R[b] : [b]) : []),
+            ]);
+            (s.excluded || []).forEach(e => t.delete(e));
+            const c = s.settings || {};
+            const step = parseInt(c['font-step'], 10) || 0;
+            if (step > 0 && step < 4) t.add('font-step-' + step);
+            if (c['text-align'] && c['text-align'] !== 'default') t.add('text-align-' + c['text-align']);
+            if (t.size) document.documentElement.setAttribute('data-a11y', [...t].join(' '));
+        } catch {} })();
+    </script>
+    <script>
+        (function () {
+            if (document.cookie.indexOf('nds_auth=true') !== -1) {
+                document.documentElement.setAttribute('data-auth', 'true');
+            }
+        })();
+    </script>
+</head>
+
+<body class="wwf-legal-page">
+    <a class="skip-link" href="#main-content">تخطَّ إلى المحتوى الرئيسي</a>
+
+    <header>
+        <div id="shell-topbar"></div>
+        <div id="shell-mainnav"></div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <section class="nds-hero-section nds-sub nds-flat wwf-legal-hero" aria-label="ترويسة سياسة الخصوصية">
+            <nav class="nds-breadcrumb-nav" aria-label="مسار التنقل" hidden>
+                <ol class="nds-breadcrumb">
+                    <li><a href="index-ar.html">الرئيسية</a></li>
+                    <li class="nds-truncate" aria-current="page">سياسة الخصوصية</li>
+                </ol>
+            </nav>
+
+            <div class="nds-section-wrapper">
+                <div class="nds-section-head">
+                    <h1 class="nds-section-title">سياسة الخصوصية</h1>
+                    <p class="wwf-legal-hero__lead">
+                        يسعدنا تواصلك معنا باستخدام بيانات الاتصال الموضحة أدناه،
+                    </p>
+                    <p class="nds-section-description">
+                        تستخدم صفحات المحتوى القياسية عدة مكونات، منها: العنوان ٣، والعنوان ٤، والقوائم المرتبة وغير المرتبة، والنصوص، والروابط، والوسائط الغنية بما فيها الصور والفيديوهات
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="nds-content-layout nds-wSideInfo">
+            <div class="nds-main-content">
+                <section id="privacy-policy" class="nds-content-section nds-sideinfo-section wwf-legal-content">
+                    <div class="nds-section-body">
+                        <aside class="nds-sideinfo nds-md nds-sticky nds-top" aria-label="في هذه الصفحة">
+                            <nav class="nds-toc" aria-label="جدول المحتويات"
+                                data-toc-source="#privacy-policy article" data-toc-levels="h2, h3">
+                                <div class="nds-toc-head">
+                                    <span class="nds-label">في هذه الصفحة</span>
+                                    <h2 class="nds-toc-title nds-truncate">سياسة الخصوصية</h2>
+                                </div>
+                                <div class="nds-drawer nds-lined">
+                                    <ul class="nds-drawer-list"></ul>
+                                </div>
+                            </nav>
+                        </aside>
+
+                        <div class="nds-info-content">
+                            <article>
+                                <h2 id="introduction" class="nds-section-title">١. المقدمة</h2>
+                                <p>
+                                    يلتزم المنتدى العالمي للمياه ("المنتدى" أو "نحن") بحماية خصوصية المستخدمين وبياناتهم الشخصية عند الوصول إلى الموقع www.11worldwaterforum.com واستخدامه ("الموقع"). توضح سياسة الخصوصية هذه كيفية جمع المعلومات الشخصية واستخدامها وتخزينها وحمايتها عند زيارة الموقع أو التفاعل معه.
+                                </p>
+
+                                <h2 id="scope" class="nds-section-title">٢. نطاق هذه السياسة</h2>
+                                <p>
+                                    تنطبق هذه السياسة على جميع زوار الموقع ومستخدميه، بمن فيهم المشاركون والمسجلون والرعاة وممثلو وسائل الإعلام والمشتركون وأي فرد يقدم معلومات عبر الموقع.
+                                </p>
+
+                                <h2 id="information-collected" class="nds-section-title">٣. المعلومات التي نجمعها</h2>
+                                <h3 id="information-provided">٣.١ المعلومات التي تقدمها</h3>
+                                <p>
+                                    قد نجمع معلومات شخصية أو مؤسسية تقدمها طوعًا عبر الموقع، مثل بيانات التواصل أو الانتساب أو التسجيل أو المشاركة.
+                                </p>
+
+                                <h3 id="information-automatic">٣.٢ المعلومات التي تُجمع تلقائيًا</h3>
+                                <p>
+                                    عند استخدام الموقع، قد تُجمع تلقائيًا بيانات فنية محدودة، منها عنوان IP ومعلومات المتصفح والجهاز والصفحات التي تمت زيارتها وإحصاءات الاستخدام العامة. تُستخدم هذه البيانات لأغراض الأمن والتحليلات وتحسين الخدمة.
+                                </p>
+
+                                <h2 id="information-use" class="nds-section-title">٤. كيفية استخدامنا للمعلومات</h2>
+                                <p>
+                                    تُستخدم المعلومات المجموعة لتشغيل الموقع وإدارته ومعالجة التسجيلات والاتصالات وتحسين المحتوى وتجربة المستخدم وإجراء التحليلات الداخلية والامتثال للمتطلبات القانونية أو التنظيمية المعمول بها. ولا تُستخدم البيانات الشخصية إلا لأغراض مشروعة ومحددة.
+                                </p>
+
+                                <h2 id="data-sharing" class="nds-section-title">٥. مشاركة البيانات والإفصاح عنها</h2>
+                                <p>لا نبيع المعلومات الشخصية أو نؤجرها أو نتاجر بها.</p>
+                                <ul>
+                                    <li>مع مزودي خدمات موثوقين يعملون نيابة عن المنتدى، ولأغراض تشغيلية فقط.</li>
+                                    <li>عندما تقتضي القوانين أو اللوائح أو الإجراءات القانونية المعمول بها ذلك.</li>
+                                    <li>لحماية حقوق المنتدى أو المستخدمين أو الموقع أو سلامتهم أو أمنهم.</li>
+                                </ul>
+                                <p>تقتصر أي مشاركة للبيانات على القدر الضروري وتُعالج بسرية.</p>
+
+                                <h2 id="data-security" class="nds-section-title">٦. حماية البيانات وأمنها</h2>
+                                <p>
+                                    نطبق تدابير فنية وتنظيمية معقولة لحماية المعلومات الشخصية من الوصول غير المصرح به أو الفقدان أو إساءة الاستخدام أو الإفصاح. ومع ذلك، لا يمكن ضمان الأمان الكامل لأي نظام عبر الإنترنت، ويقر المستخدمون بهذه المخاطر عند استخدام الموقع.
+                                </p>
+
+                                <h2 id="data-retention" class="nds-section-title">٧. الاحتفاظ بالبيانات</h2>
+                                <p>
+                                    يُحتفظ بالمعلومات الشخصية فقط للمدة اللازمة لتحقيق الأغراض الموضحة في هذه السياسة أو وفق ما تقتضيه القوانين المعمول بها. وتُحذف البيانات بأمان أو تُجعل مجهولة الهوية عند انتفاء الحاجة إليها.
+                                </p>
+
+                                <h2 id="cookies" class="nds-section-title">٨. ملفات تعريف الارتباط والموافقة</h2>
+                                <p>
+                                    يستخدم الموقع ملفات تعريف الارتباط وتقنيات مشابهة لضمان عمله بصورة صحيحة وتحليل الاستخدام وتحسين تجربة المستخدم. وبمواصلة استخدام الموقع، فإنك توافق على استخدام ملفات تعريف الارتباط وفق سياسة الخصوصية هذه. ويمكن للمستخدمين إدارتها أو تعطيلها عبر إعدادات المتصفح؛ إلا أن تعطيلها قد يؤثر في بعض ميزات الموقع.
+                                </p>
+
+                                <h2 id="user-rights" class="nds-section-title">٩. حقوق المستخدم وطلبات حذف البيانات</h2>
+                                <p>وفق القوانين المعمول بها، يحق للمستخدمين:</p>
+                                <ul>
+                                    <li>طلب الوصول إلى بياناتهم الشخصية.</li>
+                                    <li>طلب تصحيح المعلومات غير الدقيقة أو تحديثها.</li>
+                                    <li>طلب حذف بياناتهم الشخصية حيثما يسمح القانون.</li>
+                                    <li>سحب الموافقة على معالجة البيانات حيثما ينطبق ذلك.</li>
+                                </ul>
+                                <p>
+                                    يمكن تقديم طلبات الوصول إلى البيانات الشخصية أو تصحيحها أو حذفها عبر التواصل على: support@11worldwaterforum.com. وسنراجع الطلبات ونرد عليها خلال مدة معقولة ووفق اللوائح المعمول بها.
+                                </p>
+
+                                <h2 id="policy-changes" class="nds-section-title">١٠. التغييرات على سياسة الخصوصية</h2>
+                                <p>
+                                    نحتفظ بالحق في تحديث سياسة الخصوصية هذه أو تعديلها في أي وقت. وتسري أي تغييرات عند نشرها على الموقع. ويعد استمرار استخدام الموقع قبولًا للسياسة المحدثة.
+                                </p>
+
+                                <h2 id="contact" class="nds-section-title">١١. تواصل معنا</h2>
+                                <p>للاستفسارات العامة بشأن سياسة الخصوصية هذه، يرجى التواصل عبر:</p>
+
+                                <div class="nds-card nds-stroke wwf-legal-contact-card">
+                                    <div class="wwf-legal-contact-card__item">
+                                        <span class="wwf-legal-contact-card__label">
+                                            <i class="nds-icon nds-hgi-mail-01" aria-hidden="true"></i>
+                                            الاستفسارات العامة
+                                        </span>
+                                        <a href="mailto:support@11worldwaterforum.com">
+                                            support@11worldwaterforum.com
+                                        </a>
+                                    </div>
+                                    <div class="wwf-legal-contact-card__item">
+                                        <span class="wwf-legal-contact-card__label">
+                                            <i class="nds-icon nds-hgi-mail-01" aria-hidden="true"></i>
+                                            الطلبات المتعلقة بالخصوصية (بما فيها حذف البيانات)
+                                        </span>
+                                        <a href="mailto:support@11worldwaterforum.com">
+                                            support@11worldwaterforum.com
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <div id="shell-footer"></div>
+    <div id="shell-cookie"></div>
+    <div id="shell-a11y"></div>
+
+    <script src="assets/js/nds-main.min.js" defer></script>
+    <script src="assets/js/nds-accessibility.min.js" defer></script>
+    <script src="js/site.js" defer></script>
+</body>
+
+</html>

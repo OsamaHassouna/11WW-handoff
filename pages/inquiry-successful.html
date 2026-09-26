@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Your exhibitor or partner inquiry for the 11th World Water Forum has been submitted.">
+    <title>Inquiry Submitted | 11th World Water Forum</title>
+    <base href="../">
+
+    <link rel="stylesheet" href="theme/theme-layered.css">
+
+    <link rel="icon" type="image/png" href="theme/media/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="theme/media/favicon/favicon.svg">
+    <link rel="shortcut icon" href="theme/media/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="theme/media/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="11th World Water Forum">
+    <link rel="manifest" href="theme/media/favicon/site.webmanifest">
+
+    <style>
+        html:not([data-auth]) .nds-auth { display: none; }
+        html[data-auth] .nds-guest { display: none; }
+    </style>
+
+    <script>
+        (function () {
+            var t = localStorage.getItem('nds-theme');
+            if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+    <script>
+        (() => { try {
+            const s = JSON.parse(localStorage.getItem('nds-a11y') || '{}');
+            const R = {
+                'epilepsy-safe':        ['reduce-motion','low-saturation'],
+                'visually-impaired':    ['high-contrast'],
+                'cognitive-disability': ['highlight-titles','reduce-motion'],
+                'motor-impaired':       [],
+                'colorblind':           ['cvd-deutan'],
+                'dyslexia-friendly':    ['dyslexia','highlight-links'],
+                'adhd-friendly':        ['reduce-motion','highlight-titles','reading-mask'],
+            };
+            const t = new Set([
+                ...(s.modes || []),
+                ...(s.bundles || []).flatMap(b => b in R ? (R[b].length ? R[b] : [b]) : []),
+            ]);
+            (s.excluded || []).forEach(e => t.delete(e));
+            const c = s.settings || {};
+            const step = parseInt(c['font-step'], 10) || 0;
+            if (step > 0 && step < 4) t.add('font-step-' + step);
+            if (c['text-align'] && c['text-align'] !== 'default') t.add('text-align-' + c['text-align']);
+            if (t.size) document.documentElement.setAttribute('data-a11y', [...t].join(' '));
+        } catch {} })();
+    </script>
+    <script>
+        (function () {
+            if (document.cookie.indexOf('nds_auth=true') !== -1) {
+                document.documentElement.setAttribute('data-auth', 'true');
+            }
+        })();
+    </script>
+</head>
+
+<body class="wwf-registration-page wwf-inquiry-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header>
+        <div id="shell-topbar"></div>
+        <div id="shell-mainnav"></div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <div class="nds-content-layout nds-wSideInfo wwf-registration-layout">
+            <div class="nds-main-content">
+                <section class="nds-content-section nds-sideinfo-section wwf-registration-section"
+                    aria-labelledby="inquiry-success-title">
+                    <div class="nds-section-body">
+                        <div class="nds-info-content">
+                            <nav class="nds-breadcrumb-nav" aria-label="Breadcrumb" hidden>
+                                <ol class="nds-breadcrumb">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="pages/2nd-stakeholders-consultation-meeting.html">2nd Stakeholder Consultation Meeting</a></li>
+                                    <li><a href="pages/inquiry.html">Registration</a></li>
+                                    <li class="nds-truncate" aria-current="page">Inquiry Submitted!</li>
+                                </ol>
+                            </nav>
+
+                            <section class="wwf-registration-success-summary wwf-inquiry-success-summary"
+                                aria-labelledby="inquiry-success-title">
+                                <span class="wwf-registration-success-icon" aria-hidden="true">
+                                    <i class="hgi hgi-stroke hgi-tick-02"></i>
+                                </span>
+                                <h1 id="inquiry-success-title" class="nds-section-title">Inquiry Submitted!</h1>
+                                <p class="wwf-registration-success-lead">
+                                    Thank you for your interest in the 11th World Water Forum
+                                </p>
+
+                                <div class="wwf-inquiry-success-details">
+                                    <article class="wwf-inquiry-success-card">
+                                        <span class="wwf-inquiry-success-card__icon" aria-hidden="true">
+                                            <i class="hgi hgi-stroke hgi-mail-at-sign-01"></i>
+                                        </span>
+                                        <h2>Check Your Email</h2>
+                                        <p>Our team will review your inquiry and contact you within 2-3 business days with next steps.</p>
+                                    </article>
+
+                                    <article class="wwf-inquiry-success-card">
+                                        <span class="wwf-inquiry-success-card__icon" aria-hidden="true">
+                                            <i class="hgi hgi-stroke hgi-calendar-03"></i>
+                                        </span>
+                                        <h2>Next Steps</h2>
+                                        <p>We'll provide detailed information about partnership opportunities and exhibition details.</p>
+                                    </article>
+                                </div>
+
+                                <div class="wwf-registration-success-buttons wwf-inquiry-success-buttons">
+                                    <a class="nds-btn nds-primary nds-lg wwf-registration-submit" href="index.html">
+                                        <span class="nds-label">Back to home</span>
+                                    </a>
+                                    <a class="nds-btn nds-secondary nds-lg wwf-registration-learn" href="pages/about-forum.html">
+                                        <span class="nds-label">Learn more about the forum</span>
+                                        <i class="nds-icon nds-hgi-arrow-left-01" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </section>
+                        </div>
+
+                        <aside class="nds-card nds-sticky wwf-registration-stepper-panel"
+                            aria-label="Inquiry progress">
+                            <div class="nds-stepper nds-radial nds-vertical-lg" id="inquiry-stepper"
+                                data-current="2" data-total="2">
+                                <div class="nds-progress-circle">
+                                    <svg width="64" height="64" viewBox="0 0 24 24" aria-hidden="true">
+                                        <circle class="nds-progress-bg" cx="12" cy="12" r="10" fill="none" stroke-width="3"></circle>
+                                        <circle class="nds-progress-track" cx="12" cy="12" r="10" fill="none" stroke-width="3"
+                                            stroke-dasharray="62.83" stroke-dashoffset="62.83" stroke-linecap="round"></circle>
+                                    </svg>
+                                    <div class="nds-progress-info"><span class="nds-progress-steps"></span></div>
+                                </div>
+                                <div class="nds-stepper-step">
+                                    <div class="nds-stepper-base">
+                                        <div class="nds-stepper-circle" data-step-text="1"></div>
+                                    </div>
+                                    <div class="nds-stepper-content">
+                                        <div class="nds-stepper-text">
+                                            <span class="nds-stepper-title">Registration</span>
+                                            <span class="nds-stepper-description">Register for Forum</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nds-stepper-step">
+                                    <div class="nds-stepper-base">
+                                        <div class="nds-stepper-circle" data-step-text="2"></div>
+                                    </div>
+                                    <div class="nds-stepper-content">
+                                        <div class="nds-stepper-text">
+                                            <span class="nds-stepper-title">Confirmation</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <div id="shell-footer"></div>
+    <div id="shell-cookie"></div>
+    <div id="shell-a11y"></div>
+
+    <script src="assets/js/nds-main.min.js" defer></script>
+    <script src="assets/js/nds-accessibility.min.js" defer></script>
+    <script src="js/site.js" defer></script>
+</body>
+
+</html>

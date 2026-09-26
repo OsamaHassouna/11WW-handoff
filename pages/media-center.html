@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Official logos, brand guidelines, photos, and media resources for the 11th World Water Forum.">
+    <title>Media Center | 11th World Water Forum</title>
+    <base href="../">
+
+    <link rel="stylesheet" href="theme/theme-layered.css">
+
+    <link rel="icon" type="image/png" href="theme/media/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="theme/media/favicon/favicon.svg">
+    <link rel="shortcut icon" href="theme/media/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="theme/media/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="11th World Water Forum">
+    <link rel="manifest" href="theme/media/favicon/site.webmanifest">
+
+    <style>
+        html:not([data-auth]) .nds-auth { display: none; }
+        html[data-auth] .nds-guest { display: none; }
+    </style>
+
+    <script>
+        (function () {
+            var t = localStorage.getItem('nds-theme');
+            if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+    <script>
+        (() => { try {
+            const s = JSON.parse(localStorage.getItem('nds-a11y') || '{}');
+            const R = {
+                'epilepsy-safe':        ['reduce-motion','low-saturation'],
+                'visually-impaired':    ['high-contrast'],
+                'cognitive-disability': ['highlight-titles','reduce-motion'],
+                'motor-impaired':       [],
+                'colorblind':           ['cvd-deutan'],
+                'dyslexia-friendly':    ['dyslexia','highlight-links'],
+                'adhd-friendly':        ['reduce-motion','highlight-titles','reading-mask'],
+            };
+            const t = new Set([
+                ...(s.modes || []),
+                ...(s.bundles || []).flatMap(b => b in R ? (R[b].length ? R[b] : [b]) : []),
+            ]);
+            (s.excluded || []).forEach(e => t.delete(e));
+            const c = s.settings || {};
+            const step = parseInt(c['font-step'], 10) || 0;
+            if (step > 0 && step < 4) t.add('font-step-' + step);
+            if (c['text-align'] && c['text-align'] !== 'default') t.add('text-align-' + c['text-align']);
+            if (t.size) document.documentElement.setAttribute('data-a11y', [...t].join(' '));
+        } catch {} })();
+    </script>
+    <script>
+        (function () {
+            if (document.cookie.indexOf('nds_auth=true') !== -1) {
+                document.documentElement.setAttribute('data-auth', 'true');
+            }
+        })();
+    </script>
+</head>
+
+<body class="wwf-media-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header>
+        <div id="shell-topbar"></div>
+        <div id="shell-mainnav"></div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <section class="nds-hero-section nds-sub wwf-sub-hero--illustrated wwf-media-hero"
+            aria-label="Media Center header">
+            <nav class="nds-breadcrumb-nav" aria-label="Breadcrumb" hidden>
+                <ol class="nds-breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="nds-truncate" aria-current="page">Media Center</li>
+                </ol>
+            </nav>
+
+            <div class="nds-section-wrapper">
+                <div class="nds-section-head">
+                    <h1 class="nds-section-title">Media Center</h1>
+                    <p class="nds-section-description">
+                        Access official logos, brand guidelines, photos, and media resources for the 11th World Water
+                        Forum.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="nds-content-section wwf-media-assets" aria-labelledby="media-assets-title">
+            <div class="nds-section-wrapper">
+                <div class="nds-section-head">
+                    <h2 id="media-assets-title" class="nds-section-title">Official Logo Packs &amp; Brand Basics</h2>
+                    <p class="nds-section-description">
+                        Download official logos, brand guidelines, and communication resources for your communications
+                        and materials.
+                    </p>
+                </div>
+
+                <div class="nds-section-body">
+                    <div class="nds-grid wwf-resources-grid wwf-media-assets__grid"
+                        style="--max-col: 2; --mid-col: 2; --min-col: 1;">
+                        <article class="nds-card nds-stroke wwf-resource-card wwf-media-resource-card">
+                            <div class="nds-card-header">
+                                <div class="nds-card-featured-icon">
+                                    <span class="nds-featured-icon nds-lg nds-circle wwf-resource-card__icon">
+                                        <i class="hgi hgi-stroke hgi-book-02" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h3 class="nds-card-title">Official Logo Pack</h3>
+                                    <p class="nds-card-description">
+                                        Official Forum logo in multiple formats for your communications and materials.
+                                    </p>
+                                </div>
+                                <div class="nds-card-tags">
+                                    <span class="nds-tag nds-sm wwf-media-tag--success">
+                                        <span class="nds-label">Logos</span>
+                                    </span>
+                                    <span class="nds-tag nds-sm wwf-media-tag--neutral">
+                                        <span class="nds-label">207 KB</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nds-card-actions">
+                                <button class="nds-btn nds-secondary-outline wwf-resource-card__download" type="button">
+                                    <i class="hgi hgi-stroke hgi-download-01" aria-hidden="true"></i>
+                                    <span class="nds-label">Download</span>
+                                </button>
+                            </div>
+                        </article>
+
+                        <article class="nds-card nds-stroke wwf-resource-card wwf-media-resource-card">
+                            <div class="nds-card-header">
+                                <div class="nds-card-featured-icon">
+                                    <span class="nds-featured-icon nds-lg nds-circle wwf-resource-card__icon">
+                                        <i class="hgi hgi-stroke hgi-files-01" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h3 class="nds-card-title">Brand Guidelines</h3>
+                                    <p class="nds-card-description">
+                                        Comprehensive guide to logo usage, colors, typography, and visual identity.
+                                    </p>
+                                </div>
+                                <div class="nds-card-tags">
+                                    <span class="nds-tag nds-sm wwf-media-tag--success">
+                                        <span class="nds-label">Guidelines</span>
+                                    </span>
+                                    <span class="nds-tag nds-sm wwf-media-tag--neutral">
+                                        <span class="nds-label">5 MB</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nds-card-actions">
+                                <button class="nds-btn nds-secondary-outline wwf-resource-card__download" type="button">
+                                    <i class="hgi hgi-stroke hgi-download-01" aria-hidden="true"></i>
+                                    <span class="nds-label">Download</span>
+                                </button>
+                            </div>
+                        </article>
+
+                        <article class="nds-card nds-stroke wwf-resource-card wwf-media-resource-card">
+                            <div class="nds-card-header">
+                                <div class="nds-card-featured-icon">
+                                    <span class="nds-featured-icon nds-lg nds-circle wwf-resource-card__icon">
+                                        <i class="hgi hgi-stroke hgi-hierarchy" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h3 class="nds-card-title">Typography Guide</h3>
+                                    <p class="nds-card-description">
+                                        Typeface specifications and usage rules for all official materials.
+                                    </p>
+                                </div>
+                                <div class="nds-card-tags">
+                                    <span class="nds-tag nds-sm wwf-media-tag--success">
+                                        <span class="nds-label">Guidelines</span>
+                                    </span>
+                                    <span class="nds-tag nds-sm wwf-media-tag--neutral">
+                                        <span class="nds-label">1.8 MB</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nds-card-actions">
+                                <button class="nds-btn nds-secondary-outline wwf-resource-card__download" type="button">
+                                    <i class="hgi hgi-stroke hgi-download-01" aria-hidden="true"></i>
+                                    <span class="nds-label">Download</span>
+                                </button>
+                            </div>
+                        </article>
+
+                        <article class="nds-card nds-stroke wwf-resource-card wwf-media-resource-card">
+                            <div class="nds-card-header">
+                                <div class="nds-card-featured-icon">
+                                    <span class="nds-featured-icon nds-lg nds-circle wwf-resource-card__icon">
+                                        <i class="hgi hgi-stroke hgi-waving-hand-01" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h3 class="nds-card-title">Communication Toolkit</h3>
+                                    <p class="nds-card-description">
+                                        Templates, talking points, and communication resources for partners.
+                                    </p>
+                                </div>
+                                <div class="nds-card-tags">
+                                    <span class="nds-tag nds-sm wwf-media-tag--success">
+                                        <span class="nds-label">Toolkit</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nds-card-actions">
+                                <a class="nds-btn nds-secondary-outline wwf-resource-card__download"
+                                    href="pages/communication-toolkit.html">
+                                    <i class="hgi hgi-stroke hgi-view" aria-hidden="true"></i>
+                                    <span class="nds-label">View Files</span>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="nds-content-section wwf-media-gallery" aria-labelledby="media-gallery-title">
+            <div class="nds-section-wrapper">
+                <div class="nds-section-head">
+                    <h2 id="media-gallery-title" class="nds-section-title">Photo Gallery</h2>
+                    <p class="nds-section-description">
+                        Official photos from Forum events and meetings, available for media and partner use.
+                    </p>
+                </div>
+
+                <div class="nds-section-body">
+                    <div class="nds-grid wwf-media-gallery__grid"
+                        style="--max-col: 3; --mid-col: 2; --min-col: 1;">
+                        <article class="nds-card nds-stroke wwf-media-gallery-card">
+                            <div class="nds-card-image wwf-media-gallery-card__media">
+                                <img src="theme/media/media1.webp"
+                                    alt="Audience attending a stakeholder consultation meeting" loading="lazy">
+                            </div>
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h3 class="nds-card-title">1st Stakeholder Consultation Meeting</h3>
+                                    <p class="nds-card-description">April 2025, Hilton Riyadh Hotel &amp; Residences</p>
+                                </div>
+                                <div class="nds-card-tags">
+                                    <span class="nds-tag nds-sm wwf-media-tag--neutral">
+                                        <span class="nds-label">21 photos</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nds-card-actions">
+                                <a class="nds-btn nds-secondary-outline wwf-media-gallery-card__action"
+                                    href="pages/first-stakeholder-consultation-meeting.html">
+                                    <span class="nds-label">View Gallery</span>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="nds-card nds-stroke wwf-media-gallery-card">
+                            <div class="nds-card-image wwf-media-gallery-card__media">
+                                <img src="theme/media/media2.webp"
+                                    alt="Conference room prepared for a stakeholder consultation meeting"
+                                    loading="lazy">
+                            </div>
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h3 class="nds-card-title">1st Stakeholder Consultation Meeting</h3>
+                                    <p class="nds-card-description">Diriyah, Saudi Arabia</p>
+                                </div>
+                                <div class="nds-card-tags">
+                                    <span class="nds-tag nds-sm wwf-media-tag--neutral">
+                                        <span class="nds-label">32 photos</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nds-card-actions">
+                                <button class="nds-btn nds-secondary-outline wwf-media-gallery-card__action"
+                                    type="button">
+                                    <span class="nds-label">View Gallery</span>
+                                </button>
+                            </div>
+                        </article>
+
+                        <article class="nds-card nds-stroke wwf-media-gallery-card">
+                            <div class="nds-card-image wwf-media-gallery-card__media">
+                                <img src="theme/media/media3.webp" alt="Boardroom overlooking Riyadh" loading="lazy">
+                            </div>
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h3 class="nds-card-title">89th Board of Governors Meeting</h3>
+                                    <p class="nds-card-description">Strategic planning and coordination session</p>
+                                </div>
+                                <div class="nds-card-tags">
+                                    <span class="nds-tag nds-sm wwf-media-tag--neutral">
+                                        <span class="nds-label">23 photos</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nds-card-actions">
+                                <button class="nds-btn nds-secondary-outline wwf-media-gallery-card__action"
+                                    type="button">
+                                    <span class="nds-label">View Gallery</span>
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="nds-content-section wwf-media-guidelines" aria-labelledby="media-guidelines-title">
+            <div class="nds-section-wrapper">
+                <div class="nds-section-head">
+                    <h2 id="media-guidelines-title" class="nds-section-title">Usage Guidelines</h2>
+                </div>
+
+                <div class="nds-section-body">
+                    <div class="nds-card nds-stroke wwf-media-guidelines__card">
+                        <h3 class="wwf-media-guidelines__title">Terms of Use</h3>
+                        <ul class="wwf-media-guidelines__list">
+                            <li>Official logos and brand materials are provided for use by Forum partners, media, and
+                                participants only.</li>
+                            <li>Do not modify, distort, or alter logos in any way. Use only approved versions.</li>
+                            <li>Maintain appropriate spacing and sizing as specified in brand guidelines.</li>
+                            <li>Photos are available for editorial use related to the 11th World Water Forum. Credit
+                                must be given as specified.</li>
+                            <li>For commercial use or questions about usage rights, please contact the Media Center
+                                team.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="shell-footer"></div>
+    <div id="shell-cookie"></div>
+    <div id="shell-a11y"></div>
+
+    <script src="assets/js/nds-main.min.js" defer></script>
+    <script src="assets/js/nds-accessibility.min.js" defer></script>
+    <script src="js/site.js" defer></script>
+</body>
+
+</html>

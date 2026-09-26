@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<!--
+    11th World Water Forum - Home page (Arabic / RTL)
+    ============================================================================
+    Built on the Saudi NDS design system. Everything under assets/ is vendor NDS,
+    unmodified; replace it wholesale on a version bump rather than editing it.
+
+    The shared chrome (topbar, nav, hero, footer, cookie bar, accessibility
+    panel) is not in this file. js/site.js fetches it from partials/ at runtime
+    and mounts it into the empty <div id="shell-*"> elements below. This page
+    declares lang="ar", so the loader takes its chrome from partials-ar/.
+
+    The <head> load order and the three inline guard scripts are load-bearing:
+    they prevent a flash of unstyled or unthemed content and NDS depends on them
+    running before first paint. Do not reorder them.
+-->
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="الموقع الرسمي للمنتدى العالمي الحادي عشر للمياه في الرياض، الذي يجمع مجتمع المياه العالمي للعمل والحوار والتعاون.">
+    <title>المنتدى العالمي الحادي عشر للمياه | الرياض 2027</title>
+    <base href="./">
+
+    <!-- DGA vendor styles, project tokens, and project components. -->
+    <link rel="stylesheet" href="theme/theme-layered.css">
+
+    <!-- FAV Icon -->
+    <link rel="icon" type="image/png" href="theme/media/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="theme/media/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="theme/media/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="theme/media/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="11th World Water Forum" />
+    <link rel="manifest" href="theme/media/favicon/site.webmanifest" />
+
+    <!-- Auth visibility. Elements marked .nds-auth show only when signed in,
+         .nds-guest only when signed out. -->
+    <style>
+        html:not([data-auth]) .nds-auth {
+            display: none;
+        }
+
+        html[data-auth] .nds-guest {
+            display: none;
+        }
+    </style>
+
+    <!-- GUARD 1: theme. Applies the saved light/dark choice before paint. -->
+    <script>
+        (function () {
+            var t = localStorage.getItem('nds-theme');
+            if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+
+    <!-- GUARD 2: accessibility. Replays the visitor's saved panel settings
+         before paint, so a high-contrast or dyslexia user never sees a flash
+         of the default theme. Keep verbatim. -->
+    <script>
+        (() => {
+            try {
+                const s = JSON.parse(localStorage.getItem('nds-a11y') || '{}');
+                const R = {
+                    'epilepsy-safe': ['reduce-motion', 'low-saturation'],
+                    'visually-impaired': ['high-contrast'],
+                    'cognitive-disability': ['highlight-titles', 'reduce-motion'],
+                    'motor-impaired': [],
+                    'colorblind': ['cvd-deutan'],
+                    'dyslexia-friendly': ['dyslexia', 'highlight-links'],
+                    'adhd-friendly': ['reduce-motion', 'highlight-titles', 'reading-mask'],
+                };
+                const t = new Set([
+                    ...(s.modes || []),
+                    ...(s.bundles || []).flatMap(b => b in R ? (R[b].length ? R[b] : [b]) : []),
+                ]);
+                (s.excluded || []).forEach(e => t.delete(e));
+                const c = s.settings || {};
+                const step = parseInt(c['font-step'], 10) || 0;
+                if (step > 0 && step < 4) t.add('font-step-' + step);
+                if (c['text-align'] && c['text-align'] !== 'default') t.add('text-align-' + c['text-align']);
+                if (t.size) document.documentElement.setAttribute('data-a11y', [...t].join(' '));
+            } catch { }
+        })();
+    </script>
+
+    <!-- GUARD 3: auth. Sets data-auth from the auth cookie; rename the cookie to match the CMS. -->
+    <script>
+        (function () {
+            if (document.cookie.indexOf('nds_auth=true') !== -1) {
+                document.documentElement.setAttribute('data-auth', 'true');
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- Skip link. First focusable element on the page. WCAG 2.4.1.
+         NDS ships no skip link, so this one is ours; it is styled in
+         theme/theme-layered.css under @layer base. -->
+    <a class="skip-link" href="#main-content">تخطَّ إلى المحتوى الرئيسي</a>
+
+    <header>
+        <div id="shell-topbar"></div>
+        <div id="shell-mainnav"></div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+
+        <!-- Hero. Markup lives in partials/hero-main.html. -->
+        <div id="shell-hero-main"></div>
+
+        <div class="nds-content-layout">
+            <div class="nds-main-content">
+
+                <!-- Each distinct area of the page is its own .nds-content-section.
+                     Never nest one inside another; use .nds-block to subdivide. -->
+                <section id="milestones" class="nds-content-section wwf-milestones">
+                    <div class="nds-section-wrapper">
+                        <div class="nds-section-head">
+                            <span class="nds-tag nds-rounded wwf-section-tag wwf-milestones__tag">
+                                <span class="nds-label">الطريق إلى الرياض</span>
+                            </span>
+                            <h2 class="nds-section-title">مسيرة المنتدى العالمي الحادي عشر للمياه نحو 2027</h2>
+                            <p class="nds-section-description">
+                                محطات رئيسية تجمع مجتمع المياه العالمي
+                            </p>
+                        </div>
+                        <div class="nds-section-body">
+                            <div class="wwf-milestones__grid">
+                                <article class="nds-card nds-shadow nds-oncolor wwf-milestone-card">
+                                    <div
+                                        class="nds-card-image wwf-milestone-card__media wwf-milestone-card__media--consultation">
+                                        <img src="theme/media/milestones1.webp"
+                                            alt="مندوبون يحضرون الاجتماع التشاوري الأول لأصحاب المصلحة"
+                                            loading="lazy">
+                                    </div>
+                                    <div class="nds-card-content wwf-milestone-card__content">
+                                        <div class="nds-card-text wwf-milestone-card__text">
+                                            <time class="nds-tag nds-rounded wwf-oncolor-tag wwf-milestone-card__date"
+                                                datetime="2025-04-14">
+                                                <span class="nds-label">14-15 أبريل 2025</span>
+                                            </time>
+                                            <h3 class="nds-card-title wwf-milestone-card__title">
+                                                الاجتماع التشاوري الأول لأصحاب المصلحة
+                                            </h3>
+                                        </div>
+                                        <div
+                                            class="nds-card-meta wwf-milestone-card__status wwf-milestone-card__inactive-only">
+                                            <i class="nds-icon nds-hgi-checkmark-circle-02" aria-hidden="true"></i>
+                                            <span>اكتمل بنجاح</span>
+                                        </div>
+                                        <div class="nds-card-actions wwf-milestone-card__actions">
+                                            <a href="pages/first-stakeholder-consultation-meeting-ar.html"
+                                                class="nds-btn nds-primary nds-oncolor wwf-milestone-card__view-action wwf-milestone-card__inactive-only">
+                                                <span class="nds-label">عرض الفعالية</span>
+                                                <i class="nds-icon nds-hgi-arrow-left-01" aria-hidden="true"></i>
+                                            </a>
+                                            <a href="pages/participation-opportunities-ar.html"
+                                                class="nds-btn nds-primary nds-oncolor wwf-milestone-card__register-action wwf-milestone-card__active-only">
+                                                <span class="nds-label">سجّل الآن</span>
+                                                <i class="nds-icon nds-hgi-arrow-left-01" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="nds-card nds-shadow nds-oncolor wwf-milestone-card">
+                                    <div class="nds-card-image wwf-milestone-card__media">
+                                        <img src="theme/media/milestones3.webp"
+                                            alt="المنصة الرئيسية وقد جُهّزت للاجتماع التشاوري الثاني لأصحاب المصلحة"
+                                            loading="lazy">
+                                    </div>
+                                    <div class="nds-card-content wwf-milestone-card__content">
+                                        <div class="nds-card-text wwf-milestone-card__text">
+                                            <time class="nds-tag nds-rounded wwf-oncolor-tag wwf-milestone-card__date"
+                                                datetime="2026-06-28">
+                                                <span class="nds-label">28-29 يونيو 2026</span>
+                                            </time>
+                                            <h3 class="nds-card-title wwf-milestone-card__title">
+                                                الاجتماع التشاوري الثاني لأصحاب المصلحة
+                                            </h3>
+                                        </div>
+                                        <div
+                                            class="nds-card-meta wwf-milestone-card__status wwf-milestone-card__inactive-only">
+                                            <i class="nds-icon nds-hgi-checkmark-circle-02" aria-hidden="true"></i>
+                                            <span>اكتمل بنجاح</span>
+                                        </div>
+                                        <div class="nds-card-actions wwf-milestone-card__actions">
+                                            <a href="pages/2nd-stakeholders-consultation-meeting-ar.html"
+                                                class="nds-btn nds-primary nds-oncolor wwf-milestone-card__view-action wwf-milestone-card__inactive-only">
+                                                <span class="nds-label">عرض الفعالية</span>
+                                                <i class="nds-icon nds-hgi-arrow-left-01" aria-hidden="true"></i>
+                                            </a>
+                                            <a href="pages/participation-opportunities-ar.html"
+                                                class="nds-btn nds-primary nds-oncolor wwf-milestone-card__register-action wwf-milestone-card__active-only">
+                                                <span class="nds-label">سجّل الآن</span>
+                                                <i class="nds-icon nds-hgi-arrow-left-01" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article
+                                    class="nds-card nds-shadow nds-oncolor wwf-milestone-card wwf-milestone-card--active">
+                                    <div
+                                        class="nds-card-image wwf-milestone-card__media wwf-milestone-card__media--forum">
+                                        <img src="theme/media/milestones2.webp"
+                                            alt="متحدث يلقي كلمته في المنتدى العالمي الحادي عشر للمياه" loading="lazy">
+                                    </div>
+                                    <div class="nds-card-content wwf-milestone-card__content">
+                                        <div class="nds-card-text wwf-milestone-card__text">
+                                            <time class="nds-tag nds-rounded wwf-oncolor-tag wwf-milestone-card__date"
+                                                datetime="2026-06-28">
+                                                <span class="nds-label">28-29 يونيو 2026</span>
+                                            </time>
+                                            <h3 class="nds-card-title wwf-milestone-card__title">
+                                                المنتدى العالمي الحادي عشر للمياه
+                                            </h3>
+                                        </div>
+                                        <div
+                                            class="nds-card-meta wwf-milestone-card__status wwf-milestone-card__status--upcoming wwf-milestone-card__inactive-only">
+                                            <i class="nds-icon nds-hgi-calendar-03" aria-hidden="true"></i>
+                                            <span>فعالية قادمة</span>
+                                        </div>
+                                        <div class="nds-card-actions wwf-milestone-card__actions">
+                                            <a href="pages/2nd-stakeholders-consultation-meeting-ar.html"
+                                                class="nds-btn nds-primary nds-oncolor wwf-milestone-card__view-action wwf-milestone-card__inactive-only">
+                                                <span class="nds-label">عرض الفعالية</span>
+                                                <i class="nds-icon nds-hgi-arrow-left-01" aria-hidden="true"></i>
+                                            </a>
+                                            <a href="pages/participation-opportunities-ar.html"
+                                                class="nds-btn nds-primary nds-oncolor wwf-milestone-card__register-action wwf-milestone-card__active-only">
+                                                <span class="nds-label">سجّل الآن</span>
+                                                <i class="nds-icon nds-hgi-arrow-left-01" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="processes" class="nds-content-section nds-center wwf-processes">
+                    <div class="nds-section-wrapper">
+                        <div class="nds-section-head">
+                            <span class="nds-tag nds-rounded wwf-section-tag wwf-processes__tag">
+                                <span class="nds-label">الطريق إلى الرياض</span>
+                            </span>
+                            <h2 class="nds-section-title">المسارات الرئيسية</h2>
+                            <p class="nds-section-description">
+                                تعرّف على المسارات الرئيسية للمنتدى العالمي الحادي عشر للمياه
+                            </p>
+                        </div>
+                        <div class="nds-section-body">
+                            <div class="nds-grid wwf-processes__grid" style="--max-col: 3; --mid-col: 2; --min-col: 1;">
+
+                                <article class="nds-card nds-stroke wwf-process-card">
+                                    <div class="nds-card-header">
+                                        <div class="nds-card-featured-icon">
+                                            <span class="nds-featured-icon nds-circle">
+                                                <i class="hgi hgi-stroke hgi-legal-01" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="nds-card-content">
+                                        <div class="nds-card-text">
+                                            <h3 class="nds-card-title">المسار السياسي</h3>
+                                            <p class="nds-card-description">
+                                                يضع أجندات السياسات والإعلانات والالتزامات بإشراك الوزراء والبرلمانيين والسلطات المحلية وسلطات الأحواض. ويربط مخرجات المنتدى بالأدوات السياسية والتمويلية، ويعزّز الدبلوماسية الشاملة والتنفيذ.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="nds-card-actions">
+                                        <a class="nds-btn nds-transparent wwf-process-card__action">
+                                            <span class="nds-label">اعرف المزيد</span>
+                                            <i class="nds-icon nds-hgi-arrow-left-01" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </article>
+
+                                <article class="nds-card nds-stroke wwf-process-card">
+                                    <div class="nds-card-header">
+                                        <div class="nds-card-featured-icon">
+                                            <span class="nds-featured-icon nds-circle">
+                                                <i class="nds-icon nds-hgi-slow-winds" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="nds-card-content">
+                                        <div class="nds-card-text">
+                                            <h3 class="nds-card-title">المسار الموضوعي</h3>
+                                            <p class="nds-card-description">
+                                                يحشد أصحاب المصلحة حول العالم لتصميم حلول عملية. ويقوم على ستة محاور &ndash; الأمن المائي؛ حوكمة المياه والدبلوماسية؛ المياه للإنسان والطبيعة؛ تمويل المياه؛ الابتكار في المياه؛ قيمة المياه. ويُنتج جلسات تجميعية وأوراق سياسات وخرائط طريق قابلة للتنفيذ.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="nds-card-actions">
+                                        <a class="nds-btn nds-transparent wwf-process-card__action">
+                                            <span class="nds-label">اعرف المزيد</span>
+                                            <i class="nds-icon nds-hgi-arrow-left-01" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </article>
+
+                                <article class="nds-card nds-stroke wwf-process-card">
+                                    <div class="nds-card-header">
+                                        <div class="nds-card-featured-icon">
+                                            <span class="nds-featured-icon nds-circle">
+                                                <i class="hgi hgi-stroke hgi-globe-02" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="nds-card-content">
+                                        <div class="nds-card-text">
+                                            <h3 class="nds-card-title">المسار الإقليمي</h3>
+                                            <p class="nds-card-description">
+                                                يرسّخ رسالة المنتدى في السياقات الإقليمية ودون الإقليمية، ويطوّر خرائط طريق ملائمة محلياً وتعاوناً قائماً على الحالات بين المناطق. ويصل بين المجتمعات والسياسات العالمية لتحقيق أثر عملي.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="nds-card-actions">
+                                        <a class="nds-btn nds-transparent wwf-process-card__action">
+                                            <span class="nds-label">اعرف المزيد</span>
+                                            <i class="nds-icon nds-hgi-arrow-left-01" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </article>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="dialogue" class="nds-content-section wwf-dialogue">
+                    <div class="nds-section-wrapper">
+                        <div class="nds-section-body">
+                            <article class="nds-card nds-oncolor wwf-dialogue-card">
+                                <img class="wwf-dialogue-card__landmarks"
+                                    src="theme/media/global-dialogue-landmarks.webp" alt="" aria-hidden="true">
+
+                                <div class="wwf-dialogue-card__content">
+                                    <p class="wwf-dialogue-card__eyebrow">
+                                        <i class="hgi hgi-stroke hgi-book-open-01" aria-hidden="true"></i>
+                                        <span>الحوار العالمي للمياه</span>
+                                    </p>
+                                    <h2 class="nds-section-title wwf-dialogue-card__title">
+                                        انضم إلى الحوار العالمي للمياه
+                                    </h2>
+                                    <p class="nds-section-description wwf-dialogue-card__description">
+                                        يجمع المنتدى العالمي الحادي عشر للمياه الوزراء والمندوبين والخبراء الفنيين وأصحاب المصلحة لرسم مستقبل حوكمة المياه والعمل المائي عالمياً.
+                                    </p>
+                                    <div class="nds-card-actions wwf-dialogue-card__actions">
+                                        <a class="nds-btn nds-primary nds-oncolor wwf-dialogue-card__primary">
+                                            <span class="nds-label">سجّل اهتمامك</span>
+                                            <i class="nds-icon nds-hgi-arrow-left-01" aria-hidden="true"></i>
+                                        </a>
+                                        <a class="nds-btn nds-transparent nds-oncolor wwf-dialogue-card__secondary">
+                                            <span class="nds-label">الاستفسار عن المعرض</span>
+                                            <i class="nds-icon nds-hgi-arrow-left-01" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="news" class="nds-content-section wwf-news">
+                    <div class="nds-section-wrapper">
+                        <div class="nds-section-head wwf-news__head">
+                            <div class="wwf-news__heading">
+                                <span class="nds-tag nds-rounded wwf-section-tag">
+                                    <span class="nds-label">آخر المستجدات</span>
+                                </span>
+                                <h2 class="nds-section-title">الأخبار</h2>
+                                <p class="nds-section-description">
+                                    تابع أحدث الإعلانات والمستجدات والرؤى من المنتدى العالمي الحادي عشر للمياه
+                                </p>
+                            </div>
+                            <a class="nds-btn nds-secondary-outline nds-md wwf-news__view-all">
+                                <span class="nds-label">عرض كل الأخبار</span>
+                            </a>
+                        </div>
+
+                        <div class="nds-section-body">
+                            <div class="nds-grid wwf-news__grid"
+                                style="--max-col: 3; --mid-col: 2; --min-col: 1;">
+                                <article class="nds-card nds-stroke wwf-news-card">
+                                    <div class="nds-card-image wwf-news-card__media">
+                                        <img src="theme/media/news1.webp"
+                                            alt="واجهة جدة البحرية وأفق المدينة عند الغروب" loading="lazy">
+                                    </div>
+                                    <div class="nds-card-content">
+                                        <div class="wwf-news-card__meta">
+                                            <span class="nds-tag nds-green nds-rounded nds-sm">
+                                                <span class="nds-label">إعلان</span>
+                                            </span>
+                                            <time datetime="2025-11-01" class="wwf-news-card__date">
+                                                <i class="nds-icon nds-hgi-calendar-03" aria-hidden="true"></i>
+                                                1 نوفمبر 2025
+                                            </time>
+                                        </div>
+                                        <div class="nds-card-text">
+                                            <h3 class="nds-card-title">
+                                                فتح التسجيل للاجتماع التشاوري الثاني في جدة
+                                            </h3>
+                                            <p class="nds-card-description">
+                                                يسرّنا الإعلان عن فتح التسجيل في 15 ديسمبر 2025 للاجتماع التشاوري الثاني، الذي يُعقد يومي 8-9 أبريل 2026 في جدة، المملكة العربية السعودية.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="nds-card-actions">
+                                        <a class="nds-btn nds-transparent wwf-news-card__action">
+                                            <span class="nds-label">اقرأ الإعلان كاملاً</span>
+                                            <i class="nds-icon nds-hgi-arrow-left-01" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </article>
+
+                                <article class="nds-card nds-stroke wwf-news-card">
+                                    <div class="nds-card-image wwf-news-card__media">
+                                        <img src="theme/media/news2.webp"
+                                            alt="مندوبون يحضرون إحدى جلسات المنتدى العالمي للمياه" loading="lazy">
+                                    </div>
+                                    <div class="nds-card-content">
+                                        <div class="wwf-news-card__meta">
+                                            <span class="nds-tag nds-rounded nds-sm wwf-news-card__tag--program">
+                                                <span class="nds-label">برنامج</span>
+                                            </span>
+                                            <time datetime="2025-03-10" class="wwf-news-card__date">
+                                                <i class="nds-icon nds-hgi-calendar-03" aria-hidden="true"></i>
+                                                10 مارس 2025
+                                            </time>
+                                        </div>
+                                        <div class="nds-card-text">
+                                            <h3 class="nds-card-title">الإعلان عن إطار المسار الموضوعي</h3>
+                                            <p class="nds-card-description">
+                                                يكشف المنتدى العالمي الحادي عشر للمياه عن إطاره الموضوعي الشامل الذي يغطي 6 محاور و30 موضوعاً تعالج تحديات المياه عالمياً.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="nds-card-actions">
+                                        <a class="nds-btn nds-transparent wwf-news-card__action">
+                                            <span class="nds-label">اعرف المزيد</span>
+                                            <i class="nds-icon nds-hgi-arrow-left-01" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </article>
+
+                                <article class="nds-card nds-stroke wwf-news-card">
+                                    <div class="nds-card-image wwf-news-card__media">
+                                        <img src="theme/media/news3.webp"
+                                            alt="متحدث في المنتدى العالمي للمياه يلقي كلمته على المنصة" loading="lazy">
+                                    </div>
+                                    <div class="nds-card-content">
+                                        <div class="wwf-news-card__meta">
+                                            <span class="nds-tag nds-yellow nds-rounded nds-sm">
+                                                <span class="nds-label">شراكة</span>
+                                            </span>
+                                            <time datetime="2025-03-05" class="wwf-news-card__date">
+                                                <i class="nds-icon nds-hgi-calendar-03" aria-hidden="true"></i>
+                                                5 مارس 2025
+                                            </time>
+                                        </div>
+                                        <div class="nds-card-text">
+                                            <h3 class="nds-card-title">
+                                                شراكات استراتيجية مع كبرى المنظمات المائية
+                                            </h3>
+                                            <p class="nds-card-description">
+                                                يعلن المنتدى عن شراكات استراتيجية مع كبرى المنظمات المائية الدولية لتعزيز التعاون وتبادل المعرفة.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="nds-card-actions">
+                                        <a class="nds-btn nds-transparent wwf-news-card__action">
+                                            <span class="nds-label">اعرف المزيد</span>
+                                            <i class="nds-icon nds-hgi-arrow-left-01" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="organizers" class="nds-content-section nds-center wwf-organizers">
+                    <div class="nds-section-wrapper">
+                        <div class="nds-section-head">
+                            <h2 class="nds-section-title">الجهات المنظمة</h2>
+                            <p class="nds-section-description">
+                                يُنظّم المنتدى العالمي الحادي عشر للمياه بالشراكة بين مؤسسات رائدة في حوكمة المياه
+                            </p>
+                        </div>
+                        <div class="nds-section-body">
+                            <div class="nds-grid wwf-organizers__grid"
+                                style="--max-col: 2; --mid-col: 2; --min-col: 1;">
+                                <article class="nds-card nds-stroke wwf-organizer-card">
+                                    <div class="nds-card-header">
+                                        <img class="wwf-organizer-card__logo wwf-organizer-card__logo--mewa"
+                                            src="theme/media/organize1.webp"
+                                            alt="وزارة البيئة والمياه والزراعة" loading="lazy">
+                                    </div>
+                                    <div class="nds-card-content">
+                                        <div class="nds-card-text">
+                                            <h3 class="nds-card-title">وزارة البيئة والمياه والزراعة
+                                            </h3>
+                                            <p class="nds-card-description">
+                                                تستضيف وزارة البيئة والمياه والزراعة في المملكة العربية السعودية المنتدى العالمي الحادي عشر للمياه وتقوده، بخبرة تمتد عقوداً في إدارة المياه وريادة إقليمية تدعم الأمن المائي العالمي.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="nds-card nds-stroke wwf-organizer-card">
+                                    <div class="nds-card-header">
+                                        <img class="wwf-organizer-card__logo wwf-organizer-card__logo--wwc"
+                                            src="theme/media/organize2.webp" alt="المجلس العالمي للمياه" loading="lazy">
+                                    </div>
+                                    <div class="nds-card-content">
+                                        <div class="nds-card-text">
+                                            <h3 class="nds-card-title">المجلس العالمي للمياه</h3>
+                                            <p class="nds-card-description">
+                                                المجلس العالمي للمياه منظمة دولية تضم أصحاب مصلحة متعددين، ورسالتها حشد العمل في قضايا المياه الحرجة على جميع المستويات، بما فيها أعلى مستويات صنع القرار، عبر إشراك الناس في النقاش ومساءلة الأفكار السائدة.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="stay-connected" class="nds-content-section nds-oncolor wwf-stay-connected">
+                    <img class="wwf-stay-connected__linework"
+                        src="theme/media/global-dialogue-linework.svg" alt="" aria-hidden="true">
+
+                    <div class="nds-section-wrapper wwf-stay-connected__wrapper">
+                        <div class="wwf-stay-connected__content">
+                            <h2 class="nds-section-title">ابقَ على تواصل</h2>
+                            <p class="nds-section-description">
+                                اشترك لتصلك آخر الأخبار والمستجدات والفرص من المنتدى العالمي الحادي عشر للمياه. نحترم خصوصيتك، ويمكنك إلغاء الاشتراك في أي وقت.
+                            </p>
+                        </div>
+
+                        <form class="nds-form wwf-stay-connected__form" action="#" method="post">
+                            <div class="nds-form-container">
+                                <label class="nds-sr-only" for="newsletter-email">البريد الإلكتروني</label>
+                                <div class="nds-form-control">
+                                    <input class="nds-input" type="email" id="newsletter-email" name="email"
+                                        placeholder="أدخل بريدك الإلكتروني" autocomplete="email" required>
+                                </div>
+                            </div>
+                            <button class="nds-btn nds-primary nds-oncolor wwf-stay-connected__submit"
+                                type="submit">
+                                <span class="nds-label">اشترك</span>
+                            </button>
+                        </form>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <div id="home-announcement-modal"
+        class="nds-modal nds-card nds-stroke wwf-home-announcement-modal"
+        role="dialog" aria-modal="true" aria-labelledby="home-announcement-title"
+        aria-describedby="home-announcement-description" aria-hidden="true" tabindex="-1" hidden>
+        <div class="nds-card-header wwf-home-announcement-modal__header">
+            <span class="nds-featured-icon nds-circle wwf-home-announcement-modal__icon" data-status="neutral"
+                aria-hidden="true">
+                <i class="nds-icon nds-hgi-notification-02"></i>
+            </span>
+            <button type="button"
+                class="nds-close nds-modal-close nds-btn nds-subtle nds-icon-only wwf-home-announcement-modal__close"
+                aria-label="إغلاق الإعلان">
+                <i class="nds-icon nds-hgi-cancel-01" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <div class="wwf-home-announcement-modal__heading">
+            <h2 class="nds-card-title" id="home-announcement-title">
+                إطلاق وثيقة الإعلان الثاني
+            </h2>
+            <span class="nds-tag nds-sm wwf-home-announcement-modal__tag">
+                <span class="nds-label">إعلان</span>
+            </span>
+        </div>
+
+        <div class="nds-card-content wwf-home-announcement-modal__content">
+            <div class="nds-card-text wwf-home-announcement-modal__copy" id="home-announcement-description">
+                <p>
+                    أصبحت وثيقة الإعلان الثاني للمنتدى العالمي الحادي عشر للمياه - الرياض 2027 متاحة الآن، لتمثّل محطة مهمة جديدة على الطريق إلى الرياض.
+                </p>
+                <a class="nds-link wwf-home-announcement-modal__link">
+                    اطّلع على وثيقة الإعلان الثاني
+                </a>
+                <p>
+                    بناءً على مخرجات الاجتماع التشاوري الثاني لأصحاب المصلحة، تقدّم الوثيقة أحدث المعلومات عن تطوّر المنتدى، بما يشمل مساراته السياسي والموضوعي والإقليمي، وبرامج الشباب والتعاون بين القطاعات، ومختلف فرص مشاركة المنظمات وأصحاب المصلحة.
+                </p>
+                <p>
+                    كما تقدّم معلومات عملية تدعم الاستعداد للمنتدى، تشمل مقر الانعقاد وإرشادات السفر والتنقل والإقامة وتجربة الرياض.
+                </p>
+                <p class="wwf-home-announcement-modal__closing-copy">
+                    اطّلع على وثيقة الإعلان الثاني واكتشف كيف تكون جزءاً من المنتدى العالمي الحادي عشر للمياه، الذي يُقام في الرياض من 21 إلى 25 مارس 2027.
+                </p>
+            </div>
+        </div>
+
+        <div class="nds-card-actions wwf-home-announcement-modal__actions">
+            <button type="button" class="nds-btn nds-secondary nds-lg wwf-home-announcement-modal__cancel"
+                data-modal-close>
+                <span class="nds-label">إغلاق</span>
+            </button>
+        </div>
+    </div>
+
+    <div id="shell-footer"></div>
+    <div id="shell-cookie"></div>
+    <div id="shell-a11y"></div>
+
+    <!-- NDS bundle. Sweeps the DOM once on DOMContentLoaded and initialises
+         only the components actually present on the page. -->
+    <script src="assets/js/nds-main.min.js" defer></script>
+    <script src="assets/js/nds-accessibility.min.js" defer></script>
+
+    <!-- Shell loader. Injects the partials, then re-runs the NDS sweep so the
+         chrome that arrived late gets initialised. -->
+    <script src="js/site.js" defer></script>
+</body>
+
+</html>

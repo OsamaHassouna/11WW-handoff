@@ -1,0 +1,145 @@
+<!--
+    القائمة الرئيسية - النسخة العربية. يحقنها js/site.js داخل index-ar.html.
+    أسماء الفئات (classes) مطابقة تماماً للنسخة الإنجليزية في partials/mainnav.html
+    ولا يجوز تغييرها، فهي جزء من مكوّن NDS. النصوص والروابط فقط هي الخاصة بنا.
+    الاتجاه من اليمين لليسار يُضبط من dir="rtl" على وسم <html>، والتخطيط ينعكس تلقائياً.
+-->
+<nav class="nds-main-nav nds-content-wrapper" id="shellMainNav" aria-label="التنقل الرئيسي">
+    <div class="nds-nav-container">
+
+        <a href="index-ar.html" class="nds-brand nds-link">
+            <img class="nds-brand-logo" src="theme/media/logo.webp" width="64" height="48" loading="lazy"
+                alt="المنتدى العالمي الحادي عشر للمياه">
+        </a>
+
+        <!-- زر القائمة على الشاشات الصغيرة -->
+        <ul class="nds-nav-minimal">
+            <li class="nds-mainNav-toggler nds-nav-item">
+                <button class="nds-nav-link nds-btn nds-subtle nds-indicator" aria-label="إظهار أو إخفاء القائمة"
+                    aria-expanded="false" aria-controls="shellNavCollapse">
+                    <i class="nds-icon nds-hgi-menu-01" aria-hidden="true"></i>
+                </button>
+            </li>
+        </ul>
+
+        <div class="nds-collapse" id="shellNavCollapse">
+            <div class="nds-collapse-content">
+
+                <!-- الروابط الرئيسية -->
+                <ul class="nds-nav-primary">
+                    <li class="nds-nav-item">
+                        <a href="index-ar.html" class="nds-nav-link nds-btn nds-subtle nds-indicator">
+                            <span class="nds-label">الرئيسية</span>
+                        </a>
+                    </li>
+
+                    <li class="nds-nav-item">
+                        <a href="pages/about-forum-ar.html" class="nds-nav-link nds-btn nds-subtle nds-indicator">
+                            <span class="nds-label">عن المنتدى</span>
+                        </a>
+                    </li>
+
+                    <li class="nds-nav-item nds-dropdown">
+                        <a href="#" class="nds-nav-link nds-btn nds-subtle nds-menu-btn nds-indicator">
+                            <span class="nds-label">المسارات والبرامج</span>
+                        </a>
+                        <div class="nds-dropdown-menu">
+                            <div class="nds-dropdown-content nds-content-wrapper">
+                                <div class="nds-dropdown-columns nds-colView">
+                                    <div class="nds-column">
+                                        <div class="nds-dropdown-title">المسارات</div>
+                                        <div class="nds-list">
+                                            <a class="nds-btn nds-subtle nds-dropdown-item" href="pages/forum-processes-ar.html">
+                                                <span class="nds-label">مسارات المنتدى</span>
+                                            </a>
+                                            <a class="nds-btn nds-subtle nds-dropdown-item" href="pages/political-process-ar.html">
+                                                <span class="nds-label">المسار السياسي</span>
+                                            </a>
+                                            <a class="nds-btn nds-subtle nds-dropdown-item" href="pages/thematic-process-ar.html">
+                                                <span class="nds-label">المسار الموضوعي</span>
+                                            </a>
+                                            <a class="nds-btn nds-subtle nds-dropdown-item" href="pages/regional-process-ar.html">
+                                                <span class="nds-label">المسار الإقليمي</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="nds-column">
+                                        <div class="nds-dropdown-title">البرامج</div>
+                                        <div class="nds-list">
+                                            <a class="nds-btn nds-subtle nds-dropdown-item" href="pages/youth-program-ar.html">
+                                                <span class="nds-label">برنامج الشباب</span>
+                                            </a>
+                                            <a class="nds-btn nds-subtle nds-dropdown-item" href="pages/intersectoral-program-ar.html">
+                                                <span class="nds-label">برنامج القطاعات المتداخلة</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- مخفي مؤقتاً حتى يتم نشر الاجتماع التشاوري القادم.
+                    <li class="nds-nav-item">
+                        <a href="pages/registration-ar.html" class="nds-nav-link nds-btn nds-subtle nds-indicator">
+                            <span class="nds-label">الاجتماع التشاوري الثاني</span>
+                        </a>
+                    </li> -->
+
+                    <li class="nds-nav-item">
+                        <a href="pages/organizers-ar.html" class="nds-nav-link nds-btn nds-subtle nds-indicator">
+                            <span class="nds-label">الجهات المنظمة</span>
+                        </a>
+                    </li>
+
+                    <li class="nds-nav-item">
+                        <a href="pages/media-center-ar.html" class="nds-nav-link nds-btn nds-subtle nds-indicator">
+                            <span class="nds-label">المركز الإعلامي</span>
+                        </a>
+                    </li>
+
+                    <li class="nds-nav-item">
+                        <a href="pages/knowledge-hub-ar.html" class="nds-nav-link nds-btn nds-subtle nds-indicator">
+                            <span class="nds-label">مركز المعرفة</span>
+                        </a>
+                    </li>
+
+                    <li class="nds-nav-item">
+                        <a href="pages/participation-opportunities-ar.html" class="nds-nav-link nds-btn nds-subtle nds-indicator">
+                            <span class="nds-label">التسجيل</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- عنصر التحكم بالفائض. ينقل NDS العناصر الزائدة أسفله عند ضيق الشريط. لا تحذفه. -->
+                <div class="nds-nav-item nds-show-more">
+                    <a href="#" class="nds-nav-link nds-btn nds-subtle nds-indicator nds-full" title="عرض المزيد">
+                        <i class="nds-icon nds-hgi-arrow-down-01" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <!-- الإجراءات -->
+                <ul class="nds-nav-actions">
+
+                    <!-- البحث -->
+                    <li class="nds-nav-item nds-icon-only nds-search nds-PAB">
+                        <a href="pages/search-ar.html" class="nds-nav-link nds-btn nds-subtle nds-indicator"
+                            title="البحث" aria-label="البحث">
+                            <i class="nds-icon nds-hgi-search-01" aria-hidden="true"></i>
+                            <span class="nds-label d-block">البحث</span>
+                        </a>
+                    </li>
+
+                    <!-- مبدّل اللغة. يقرأ site.js قيمة lang من وسم <html> ويحمّل partials/ للصفحة الإنجليزية. -->
+                    <li class="nds-nav-item nds-icon-only lang">
+                        <a href="index.html" class="nds-nav-link nds-btn nds-subtle nds-indicator" lang="en"
+                            dir="ltr" title="Switch to English">
+                            <span class="nds-label nds-lang-current">English</span>
+                            <i class="nds-icon nds-hgi-translation" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Announcements, reports, publications, and research from the 11th World Water Forum.">
+    <title>Knowledge Hub | 11th World Water Forum</title>
+    <base href="../">
+
+    <link rel="stylesheet" href="theme/theme-layered.css">
+    <link rel="icon" type="image/png" href="theme/media/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="theme/media/favicon/favicon.svg">
+    <link rel="shortcut icon" href="theme/media/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="theme/media/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="11th World Water Forum">
+    <link rel="manifest" href="theme/media/favicon/site.webmanifest">
+
+    <style>
+        html:not([data-auth]) .nds-auth { display: none; }
+        html[data-auth] .nds-guest { display: none; }
+    </style>
+    <script>
+        (function () {
+            var t = localStorage.getItem('nds-theme');
+            if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+    <script>
+        (() => { try {
+            const s = JSON.parse(localStorage.getItem('nds-a11y') || '{}');
+            const R = {
+                'epilepsy-safe': ['reduce-motion','low-saturation'],
+                'visually-impaired': ['high-contrast'],
+                'cognitive-disability': ['highlight-titles','reduce-motion'],
+                'motor-impaired': [], 'colorblind': ['cvd-deutan'],
+                'dyslexia-friendly': ['dyslexia','highlight-links'],
+                'adhd-friendly': ['reduce-motion','highlight-titles','reading-mask']
+            };
+            const t = new Set([...(s.modes || []), ...(s.bundles || []).flatMap(b => b in R ? (R[b].length ? R[b] : [b]) : [])]);
+            (s.excluded || []).forEach(e => t.delete(e));
+            const c = s.settings || {};
+            const step = parseInt(c['font-step'], 10) || 0;
+            if (step > 0 && step < 4) t.add('font-step-' + step);
+            if (c['text-align'] && c['text-align'] !== 'default') t.add('text-align-' + c['text-align']);
+            if (t.size) document.documentElement.setAttribute('data-a11y', [...t].join(' '));
+        } catch {} })();
+    </script>
+    <script>
+        (function () {
+            if (document.cookie.indexOf('nds_auth=true') !== -1) document.documentElement.setAttribute('data-auth', 'true');
+        })();
+    </script>
+</head>
+
+<body class="wwf-knowledge-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header>
+        <div id="shell-topbar"></div>
+        <div id="shell-mainnav"></div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <section class="nds-hero-section nds-sub wwf-sub-hero--illustrated wwf-knowledge-hero"
+            aria-labelledby="knowledge-title">
+            <nav class="nds-breadcrumb-nav" aria-label="Breadcrumb" hidden>
+                <ol class="nds-breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="nds-truncate" aria-current="page">Knowledge Hub</li>
+                </ol>
+            </nav>
+            <div class="nds-section-wrapper">
+                <div class="nds-section-head">
+                    <h1 id="knowledge-title" class="nds-section-title">Knowledge Hub</h1>
+                    <p class="nds-section-description">Access announcements, reports, research, and multimedia resources to stay informed on Forum developments and global water issues.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="nds-content-section wwf-knowledge-section wwf-knowledge-announcements" aria-labelledby="announcements-title">
+            <div class="nds-section-wrapper">
+                <div class="nds-section-head">
+                    <h2 id="announcements-title" class="nds-section-title wwf-knowledge-section__title">Latest Announcements</h2>
+                </div>
+                <div class="nds-section-body wwf-knowledge-list">
+                    <article class="nds-card nds-stroke wwf-knowledge-row">
+                        <span class="nds-featured-icon nds-xl nds-circle wwf-knowledge-row__icon" aria-hidden="true"><i class="hgi hgi-stroke hgi-megaphone-01"></i></span>
+                        <div class="wwf-knowledge-row__content">
+                            <div class="wwf-knowledge-row__heading">
+                                <h3>Thematic Framework Finalized for Riyadh 2027</h3>
+                                <span class="nds-tag nds-sm nds-rounded wwf-tag--solid-neutral"><span class="nds-label">Process Update</span></span>
+                            </div>
+                            <p>October 28, 2024</p>
+                        </div>
+                        <button class="nds-btn nds-secondary nds-icon-only wwf-knowledge-row__action" type="button" aria-label="Open Thematic Framework Finalized for Riyadh 2027"><i class="nds-icon nds-hgi-arrow-left-01" aria-hidden="true"></i></button>
+                    </article>
+                    <article class="nds-card nds-stroke wwf-knowledge-row">
+                        <span class="nds-featured-icon nds-xl nds-circle wwf-knowledge-row__icon" aria-hidden="true"><i class="hgi hgi-stroke hgi-megaphone-01"></i></span>
+                        <div class="wwf-knowledge-row__content">
+                            <div class="wwf-knowledge-row__heading">
+                                <h3>Registration Opens for 2nd Stakeholder Consultation Meeting</h3>
+                                <span class="nds-tag nds-sm nds-rounded wwf-tag--solid-success"><span class="nds-label">Event</span></span>
+                            </div>
+                            <p>October 10, 2024</p>
+                        </div>
+                        <button class="nds-btn nds-secondary nds-icon-only wwf-knowledge-row__action" type="button" aria-label="Open Registration Opens for 2nd Stakeholder Consultation Meeting"><i class="nds-icon nds-hgi-arrow-left-01" aria-hidden="true"></i></button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="nds-content-section wwf-knowledge-section wwf-knowledge-reports" aria-labelledby="reports-title">
+            <div class="nds-section-wrapper">
+                <div class="nds-section-head">
+                    <h2 id="reports-title" class="nds-section-title wwf-knowledge-section__title">Reports &amp; Publications</h2>
+                </div>
+                <div class="nds-section-body">
+                    <div class="wwf-knowledge-report-grid">
+                        <article class="nds-card nds-stroke wwf-knowledge-report-card">
+                            <span class="nds-featured-icon nds-lg nds-circle wwf-knowledge-report-card__icon" aria-hidden="true"><i class="hgi hgi-stroke hgi-pdf-01"></i></span>
+                            <div class="nds-card-content"><div class="nds-card-text"><h3 class="nds-card-title">Thematic Framework Document</h3><p class="nds-card-description">Comprehensive overview of the six themes and 30+ topics guiding the Forum.</p></div><div class="nds-card-tags"><span class="nds-tag nds-sm wwf-knowledge-tag wwf-knowledge-tag--info"><span class="nds-label">Framework</span></span><span class="nds-tag nds-sm wwf-knowledge-tag wwf-knowledge-tag--success"><span class="nds-label">3 pages</span></span><span class="nds-tag nds-sm wwf-knowledge-tag wwf-knowledge-tag--neutral"><span class="nds-label">September 2024</span></span></div></div>
+                            <div class="nds-card-actions"><button class="nds-btn nds-secondary-outline" type="button"><span class="nds-label">Download PDF</span></button></div>
+                        </article>
+                        <article class="nds-card nds-stroke wwf-knowledge-report-card">
+                            <span class="nds-featured-icon nds-lg nds-circle wwf-knowledge-report-card__icon" aria-hidden="true"><i class="hgi hgi-stroke hgi-pdf-01"></i></span>
+                            <div class="nds-card-content"><div class="nds-card-text"><h3 class="nds-card-title">Thematic Terms of Reference (ToR)</h3><p class="nds-card-description">Roles, responsibilities, and selection criteria for Forum coordinators.</p></div><div class="nds-card-tags"><span class="nds-tag nds-sm wwf-knowledge-tag wwf-knowledge-tag--info"><span class="nds-label">Guidelines</span></span><span class="nds-tag nds-sm wwf-knowledge-tag wwf-knowledge-tag--success"><span class="nds-label">8 pages</span></span><span class="nds-tag nds-sm wwf-knowledge-tag wwf-knowledge-tag--neutral"><span class="nds-label">October 2024</span></span></div></div>
+                            <div class="nds-card-actions"><button class="nds-btn nds-secondary-outline" type="button"><span class="nds-label">Download PDF</span></button></div>
+                        </article>
+                        <article class="nds-card nds-stroke wwf-knowledge-report-card">
+                            <span class="nds-featured-icon nds-lg nds-circle wwf-knowledge-report-card__icon" aria-hidden="true"><i class="hgi hgi-stroke hgi-pdf-01"></i></span>
+                            <div class="nds-card-content"><div class="nds-card-text"><h3 class="nds-card-title">Regional Terms of Reference (ToR)</h3><p class="nds-card-description">Strategy for regional consultations and locally relevant action plans.</p></div><div class="nds-card-tags"><span class="nds-tag nds-sm wwf-knowledge-tag wwf-knowledge-tag--info"><span class="nds-label">Process</span></span><span class="nds-tag nds-sm wwf-knowledge-tag wwf-knowledge-tag--success"><span class="nds-label">13 pages</span></span><span class="nds-tag nds-sm wwf-knowledge-tag wwf-knowledge-tag--neutral"><span class="nds-label">August 2024</span></span></div></div>
+                            <div class="nds-card-actions"><button class="nds-btn nds-secondary-outline" type="button"><span class="nds-label">Download PDF</span></button></div>
+                        </article>
+                        <article class="nds-card nds-stroke wwf-knowledge-report-card">
+                            <span class="nds-featured-icon nds-lg nds-circle wwf-knowledge-report-card__icon" aria-hidden="true"><i class="hgi hgi-stroke hgi-pdf-01"></i></span>
+                            <div class="nds-card-content"><div class="nds-card-text"><h3 class="nds-card-title">Draft CNs - Regional Process</h3><p class="nds-card-description">Working documents reflecting collective efforts for regional consultations and perspectives</p></div><div class="nds-card-tags"><span class="nds-tag nds-sm wwf-knowledge-tag wwf-knowledge-tag--info"><span class="nds-label">Draft Concept Notes</span></span><span class="nds-tag nds-sm wwf-knowledge-tag wwf-knowledge-tag--success"><span class="nds-label">3 PDFs</span></span><span class="nds-tag nds-sm wwf-knowledge-tag wwf-knowledge-tag--neutral"><span class="nds-label">May 2026</span></span></div></div>
+                            <div class="nds-card-actions"><a class="nds-btn nds-secondary-outline" href="pages/draft-concept-notes.html"><span class="nds-label">View Files</span></a></div>
+                        </article>
+                        <article class="nds-card nds-stroke wwf-knowledge-report-card">
+                            <span class="nds-featured-icon nds-lg nds-circle wwf-knowledge-report-card__icon" aria-hidden="true"><i class="hgi hgi-stroke hgi-pdf-01"></i></span>
+                            <div class="nds-card-content"><div class="nds-card-text"><h3 class="nds-card-title">Draft CNs - Thematic Process</h3><p class="nds-card-description">Working documents prepared by Working Groups covering all six themes and topics.</p></div><div class="nds-card-tags"><span class="nds-tag nds-sm wwf-knowledge-tag wwf-knowledge-tag--info"><span class="nds-label">Draft Concept Notes</span></span><span class="nds-tag nds-sm wwf-knowledge-tag wwf-knowledge-tag--success"><span class="nds-label">32 PDFs</span></span><span class="nds-tag nds-sm wwf-knowledge-tag wwf-knowledge-tag--neutral"><span class="nds-label">May 2026</span></span></div></div>
+                            <div class="nds-card-actions"><a class="nds-btn nds-secondary-outline" href="pages/draft-concept-notes-thematic.html"><span class="nds-label">View Files</span></a></div>
+                        </article>
+                        <article class="nds-card nds-stroke wwf-knowledge-report-card">
+                            <span class="nds-featured-icon nds-lg nds-circle wwf-knowledge-report-card__icon" aria-hidden="true"><i class="hgi hgi-stroke hgi-pdf-01"></i></span>
+                            <div class="nds-card-content"><div class="nds-card-text"><h3 class="nds-card-title">Political Process Concept Note Draft</h3><p class="nds-card-description">Draft concept note for the Political Process of the Forum.</p></div><div class="nds-card-tags"><span class="nds-tag nds-sm wwf-knowledge-tag wwf-knowledge-tag--info"><span class="nds-label">Draft Concept Note</span></span><span class="nds-tag nds-sm wwf-knowledge-tag wwf-knowledge-tag--success"><span class="nds-label">1 PDF</span></span><span class="nds-tag nds-sm wwf-knowledge-tag wwf-knowledge-tag--neutral"><span class="nds-label">May 2026</span></span></div></div>
+                            <div class="nds-card-actions"><button class="nds-btn nds-secondary-outline" type="button"><span class="nds-label">Download PDF</span></button></div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="nds-content-section wwf-knowledge-section wwf-knowledge-research" aria-labelledby="research-title">
+            <div class="nds-section-wrapper">
+                <div class="nds-section-head">
+                    <h2 id="research-title" class="nds-section-title wwf-knowledge-section__title">Background Research &amp; Reference Case Studies</h2>
+                    <p class="nds-section-description">* listed research and case studies are background or reference materials and do not represent official Forum outcomes</p>
+                </div>
+                <div class="nds-section-body wwf-knowledge-list">
+                    <article class="nds-card nds-stroke wwf-knowledge-row wwf-knowledge-research-row"
+                        data-knowledge-case>
+                        <span class="nds-featured-icon nds-xl nds-circle wwf-knowledge-row__icon"
+                            aria-hidden="true"><i class="hgi hgi-stroke hgi-calendar-03"></i></span>
+                        <div class="wwf-knowledge-row__content">
+                            <div class="wwf-knowledge-row__heading">
+                                <h3 data-knowledge-case-title>Water Security in Arid Regions: Saudi Arabia Case Study</h3>
+                            </div>
+                            <p>Analysis of innovative approaches to water security in resource-scarce environments.</p>
+                            <div class="nds-card-tags">
+                                <span class="nds-tag nds-sm nds-rounded wwf-tag--solid-success"><span
+                                        class="nds-label" data-knowledge-case-type>Case Study</span></span>
+                                <span class="nds-tag nds-sm nds-rounded wwf-tag--solid-neutral"><span
+                                        class="nds-label" data-knowledge-case-topic>Water Security</span></span>
+                            </div>
+                        </div>
+                        <template data-knowledge-case-description>
+                            <p class="wwf-knowledge-case-modal__description-text">
+                                This comprehensive case study examines Saudi Arabia's innovative approaches to water
+                                security in arid conditions. The research covers desalination technologies, water
+                                recycling systems, smart irrigation practices, and policy frameworks that have enabled
+                                the Kingdom to achieve water security despite limited freshwater resources. Key
+                                findings include the importance of integrated water resource management, public-private
+                                partnerships in infrastructure development, and community engagement in water
+                                conservation efforts.
+                            </p>
+                        </template>
+                        <button class="nds-btn nds-secondary wwf-knowledge-research-row__action" type="button"
+                            data-knowledge-case-open data-modal-target="knowledge-case-modal" aria-haspopup="dialog"
+                            aria-controls="knowledge-case-modal">
+                            <span class="nds-label">Read More</span>
+                            <i class="nds-icon nds-hgi-arrow-left-01" aria-hidden="true"></i>
+                        </button>
+                    </article>
+
+                    <article class="nds-card nds-stroke wwf-knowledge-row wwf-knowledge-research-row"
+                        data-knowledge-case>
+                        <span class="nds-featured-icon nds-xl nds-circle wwf-knowledge-row__icon"
+                            aria-hidden="true"><i class="hgi hgi-stroke hgi-calendar-03"></i></span>
+                        <div class="wwf-knowledge-row__content">
+                            <div class="wwf-knowledge-row__heading">
+                                <h3 data-knowledge-case-title>Financing Water Infrastructure: Blended Finance Models</h3>
+                            </div>
+                            <p>Research on public-private partnerships and innovative financing mechanisms.</p>
+                            <div class="nds-card-tags">
+                                <span class="nds-tag nds-sm nds-rounded wwf-tag--solid-success"><span
+                                        class="nds-label" data-knowledge-case-type>Research Paper</span></span>
+                                <span class="nds-tag nds-sm nds-rounded wwf-tag--solid-neutral"><span
+                                        class="nds-label" data-knowledge-case-topic>Water Finance</span></span>
+                            </div>
+                        </div>
+                        <template data-knowledge-case-description>
+                            <p class="wwf-knowledge-case-modal__description-text">
+                                This research paper explores blended finance models for developing water
+                                infrastructure, examining how public funding, development finance, and private
+                                investment can be combined to reduce project risk and mobilize capital. It reviews
+                                public-private partnership structures, risk-sharing mechanisms, performance-based
+                                financing, and governance arrangements that help deliver resilient water and
+                                sanitation services. Key findings highlight the importance of transparent project
+                                pipelines, clear regulatory frameworks, measurable outcomes, and long-term
+                                collaboration between governments, financial institutions, utilities, and investors.
+                            </p>
+                        </template>
+                        <button class="nds-btn nds-secondary wwf-knowledge-research-row__action" type="button"
+                            data-knowledge-case-open data-modal-target="knowledge-case-modal" aria-haspopup="dialog"
+                            aria-controls="knowledge-case-modal">
+                            <span class="nds-label">Read More</span>
+                            <i class="nds-icon nds-hgi-arrow-left-01" aria-hidden="true"></i>
+                        </button>
+                    </article>
+
+                    <article class="nds-card nds-stroke wwf-knowledge-row wwf-knowledge-research-row"
+                        data-knowledge-case>
+                        <span class="nds-featured-icon nds-xl nds-circle wwf-knowledge-row__icon"
+                            aria-hidden="true"><i class="hgi hgi-stroke hgi-calendar-03"></i></span>
+                        <div class="wwf-knowledge-row__content">
+                            <div class="wwf-knowledge-row__heading">
+                                <h3 data-knowledge-case-title>Transboundary Water Cooperation: Lessons from the Middle
+                                    East</h3>
+                            </div>
+                            <p>Best practices in diplomatic approaches to shared water resources.</p>
+                            <div class="nds-card-tags">
+                                <span class="nds-tag nds-sm nds-rounded wwf-tag--solid-success"><span
+                                        class="nds-label" data-knowledge-case-type>Case Study</span></span>
+                                <span class="nds-tag nds-sm nds-rounded wwf-tag--solid-neutral"><span
+                                        class="nds-label" data-knowledge-case-topic>Water Governance</span></span>
+                            </div>
+                        </div>
+                        <template data-knowledge-case-description>
+                            <p class="wwf-knowledge-case-modal__description-text">
+                                This case study examines approaches to cooperation over shared water resources in the
+                                Middle East. It reviews basin-level coordination, data sharing, joint monitoring,
+                                conflict-prevention mechanisms, and diplomatic frameworks that support equitable and
+                                sustainable water management across borders. Key findings emphasize the value of
+                                trust-building, transparent information exchange, inclusive institutions, adaptive
+                                agreements, and sustained technical dialogue between riparian communities and
+                                governments.
+                            </p>
+                        </template>
+                        <button class="nds-btn nds-secondary wwf-knowledge-research-row__action" type="button"
+                            data-knowledge-case-open data-modal-target="knowledge-case-modal" aria-haspopup="dialog"
+                            aria-controls="knowledge-case-modal">
+                            <span class="nds-label">Read More</span>
+                            <i class="nds-icon nds-hgi-arrow-left-01" aria-hidden="true"></i>
+                        </button>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="knowledge-case-modal"
+        class="nds-modal nds-card nds-stroke wwf-home-announcement-modal wwf-knowledge-case-modal" role="dialog"
+        aria-modal="true" aria-labelledby="knowledge-case-modal-title"
+        aria-describedby="knowledge-case-modal-description" aria-hidden="true" tabindex="-1" hidden>
+        <div class="wwf-home-announcement-modal__heading wwf-knowledge-case-modal__hero">
+            <button type="button"
+                class="nds-close nds-modal-close nds-btn nds-subtle nds-icon-only wwf-home-announcement-modal__close wwf-knowledge-case-modal__close"
+                aria-label="Close case study">
+                <i class="nds-icon nds-hgi-cancel-01" aria-hidden="true"></i>
+            </button>
+
+            <h2 class="nds-card-title wwf-knowledge-case-modal__title" id="knowledge-case-modal-title"
+                data-knowledge-case-modal-title>
+                Water Security in Arid Regions: Saudi Arabia Case Study
+            </h2>
+
+            <div class="wwf-knowledge-case-modal__tags" aria-label="Case study categories">
+                <span class="nds-tag nds-sm wwf-home-announcement-modal__tag wwf-knowledge-case-modal__tag">
+                    <span class="nds-label" data-knowledge-case-modal-type>Case Study</span>
+                </span>
+                <span class="nds-tag nds-sm wwf-home-announcement-modal__tag wwf-knowledge-case-modal__tag">
+                    <span class="nds-label" data-knowledge-case-modal-topic>Water Security</span>
+                </span>
+            </div>
+        </div>
+
+        <div class="nds-card-content wwf-home-announcement-modal__content">
+            <div class="nds-card-text wwf-home-announcement-modal__copy wwf-knowledge-case-modal__copy"
+                id="knowledge-case-modal-description" data-knowledge-case-modal-description>
+                <p class="wwf-knowledge-case-modal__description-text">
+                    This comprehensive case study examines Saudi Arabia's innovative approaches to water security in
+                    arid conditions. The research covers desalination technologies, water recycling systems, smart
+                    irrigation practices, and policy frameworks that have enabled the Kingdom to achieve water security
+                    despite limited freshwater resources. Key findings include the importance of integrated water
+                    resource management, public-private partnerships in infrastructure development, and community
+                    engagement in water conservation efforts.
+                </p>
+            </div>
+        </div>
+
+        <div class="nds-card-actions wwf-home-announcement-modal__actions">
+            <button type="button" class="nds-btn nds-secondary nds-lg wwf-home-announcement-modal__cancel"
+                data-modal-close>
+                <span class="nds-label">Close</span>
+            </button>
+        </div>
+    </div>
+
+    <div id="shell-footer"></div><div id="shell-cookie"></div><div id="shell-a11y"></div>
+    <script src="assets/js/nds-main.min.js" defer></script>
+    <script src="assets/js/nds-accessibility.min.js" defer></script>
+    <script src="js/site.js" defer></script>
+</body>
+</html>

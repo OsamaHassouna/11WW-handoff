@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Search pages, resources, events, and information from the 11th World Water Forum.">
+    <title>Search | 11th World Water Forum</title>
+    <base href="../">
+
+    <link rel="stylesheet" href="theme/theme-layered.css">
+
+    <link rel="icon" type="image/png" href="theme/media/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="theme/media/favicon/favicon.svg">
+    <link rel="shortcut icon" href="theme/media/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="theme/media/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="11th World Water Forum">
+    <link rel="manifest" href="theme/media/favicon/site.webmanifest">
+
+    <style>
+        html:not([data-auth]) .nds-auth { display: none; }
+        html[data-auth] .nds-guest { display: none; }
+    </style>
+
+    <script>
+        (function () {
+            var t = localStorage.getItem('nds-theme');
+            if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+    <script>
+        (() => { try {
+            const s = JSON.parse(localStorage.getItem('nds-a11y') || '{}');
+            const R = {
+                'epilepsy-safe':        ['reduce-motion','low-saturation'],
+                'visually-impaired':    ['high-contrast'],
+                'cognitive-disability': ['highlight-titles','reduce-motion'],
+                'motor-impaired':       [],
+                'colorblind':           ['cvd-deutan'],
+                'dyslexia-friendly':    ['dyslexia','highlight-links'],
+                'adhd-friendly':        ['reduce-motion','highlight-titles','reading-mask'],
+            };
+            const t = new Set([
+                ...(s.modes || []),
+                ...(s.bundles || []).flatMap(b => b in R ? (R[b].length ? R[b] : [b]) : []),
+            ]);
+            (s.excluded || []).forEach(e => t.delete(e));
+            const c = s.settings || {};
+            const step = parseInt(c['font-step'], 10) || 0;
+            if (step > 0 && step < 4) t.add('font-step-' + step);
+            if (c['text-align'] && c['text-align'] !== 'default') t.add('text-align-' + c['text-align']);
+            if (t.size) document.documentElement.setAttribute('data-a11y', [...t].join(' '));
+        } catch {} })();
+    </script>
+    <script>
+        (function () {
+            if (document.cookie.indexOf('nds_auth=true') !== -1) {
+                document.documentElement.setAttribute('data-auth', 'true');
+            }
+        })();
+    </script>
+</head>
+
+<body class="wwf-search-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header>
+        <div id="shell-topbar"></div>
+        <div id="shell-mainnav"></div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <section id="search-results" class="nds-content-section wwf-search-results"
+            aria-labelledby="search-results-title">
+            <div class="nds-section-wrapper">
+                <form class="nds-form-container nds-search-box wwf-search-form" role="search"
+                    action="pages/search.html" method="get" data-site-search>
+                    <div class="nds-search-content">
+                        <div class="nds-form-control">
+                            <i class="nds-icon nds-hgi-search-01" aria-hidden="true"></i>
+                            <input id="searchResultsInput" type="search" class="nds-search-input" name="q"
+                                placeholder="Search" aria-label="Search the 11th World Water Forum website"
+                                autocomplete="off">
+                            <div class="nds-form-action">
+                                <button type="button" class="nds-btn nds-subtle nds-clear" aria-label="Clear search"
+                                    data-search-clear hidden>
+                                    <i class="nds-icon nds-hgi-cancel-01" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="submit" class="nds-btn nds-primary nds-search-btn">
+                            <i class="nds-icon nds-hgi-search-01" aria-hidden="true"></i>
+                            <span class="nds-label">Search</span>
+                        </button>
+                    </div>
+                </form>
+
+                <div class="wwf-search-results__output" data-search-output hidden>
+                    <div class="nds-section-head wwf-search-results__heading">
+                        <h1 id="search-results-title" class="nds-section-title" tabindex="-1">
+                            Search results<span data-search-query></span>
+                        </h1>
+                        <p class="nds-section-description nds-results-count" aria-live="polite">
+                            <span data-search-count>0</span> result(s) found
+                        </p>
+                    </div>
+
+                    <div class="nds-section-body">
+                    <div id="search-results-content" class="nds-paged-content nds-grid wwf-search-list" hidden
+                        data-search-per-page="6"
+                        style="--per-page: 6; --max-col: 1; --mid-col: 1; --min-col: 1;">
+                        <article class="nds-page-item nds-card nds-stroke wwf-search-card"
+                            data-search-text="home world water forum riyadh 2027 action dialogue global community">
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h2 class="nds-card-title">11th World Water Forum</h2>
+                                    <p class="nds-card-description">Discover the Forum journey, core processes, latest news, organizers, and opportunities to participate.</p>
+                                </div>
+                                <div class="nds-card-tags">
+                                    <span class="nds-tag nds-sm wwf-search-card__tag"><span class="nds-label">Forum</span></span>
+                                    <span class="nds-tag nds-sm wwf-search-card__tag"><span class="nds-label">Riyadh 2027</span></span>
+                                </div>
+                                <div class="nds-card-actions">
+                                    <a href="index.html" class="nds-btn nds-primary wwf-search-card__action"><span class="nds-label">View page</span></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="nds-page-item nds-card nds-stroke wwf-search-card"
+                            data-search-text="discover riyadh culture heritage hospitality modern city vision 2030 saudi arabia">
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h2 class="nds-card-title">Discover Riyadh</h2>
+                                    <p class="nds-card-description">Explore Riyadh's culture, modern landmarks, hospitality, and Vision 2030 transformation.</p>
+                                </div>
+                                <div class="nds-card-tags">
+                                    <span class="nds-tag nds-sm wwf-search-card__tag"><span class="nds-label">Destination</span></span>
+                                    <span class="nds-tag nds-sm wwf-search-card__tag"><span class="nds-label">Vision 2030</span></span>
+                                </div>
+                                <div class="nds-card-actions">
+                                    <a href="pages/discover.html" class="nds-btn nds-primary wwf-search-card__action"><span class="nds-label">View page</span></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="nds-page-item nds-card nds-stroke wwf-search-card"
+                            data-search-text="organizers ministry environment water agriculture mewa world water council partners governance">
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h2 class="nds-card-title">Organizers</h2>
+                                    <p class="nds-card-description">Meet the institutions jointly organizing the 11th World Water Forum in Riyadh.</p>
+                                </div>
+                                <div class="nds-card-tags">
+                                    <span class="nds-tag nds-sm wwf-search-card__tag"><span class="nds-label">Partners</span></span>
+                                    <span class="nds-tag nds-sm wwf-search-card__tag"><span class="nds-label">Governance</span></span>
+                                </div>
+                                <div class="nds-card-actions">
+                                    <a href="pages/organizers.html" class="nds-btn nds-primary wwf-search-card__action"><span class="nds-label">View page</span></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="nds-page-item nds-card nds-stroke wwf-search-card"
+                            data-search-text="resources documents guidelines materials downloads thematic framework session proposal training">
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h2 class="nds-card-title">Resources</h2>
+                                    <p class="nds-card-description">Access documents, guidelines, and materials supporting participation in the Forum.</p>
+                                </div>
+                                <div class="nds-card-tags">
+                                    <span class="nds-tag nds-sm wwf-search-card__tag"><span class="nds-label">Documents</span></span>
+                                    <span class="nds-tag nds-sm wwf-search-card__tag"><span class="nds-label">Guidelines</span></span>
+                                </div>
+                                <div class="nds-card-actions">
+                                    <a href="pages/resources.html" class="nds-btn nds-primary wwf-search-card__action"><span class="nds-label">View page</span></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="nds-page-item nds-card nds-stroke wwf-search-card"
+                            data-search-text="communication toolkit identity brand campaign logos media pdf presentation downloads">
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h2 class="nds-card-title">Communication Toolkit</h2>
+                                    <p class="nds-card-description">Download official identity files and campaign resources for Forum communications.</p>
+                                </div>
+                                <div class="nds-card-tags">
+                                    <span class="nds-tag nds-sm wwf-search-card__tag"><span class="nds-label">Brand</span></span>
+                                    <span class="nds-tag nds-sm wwf-search-card__tag"><span class="nds-label">Toolkit</span></span>
+                                </div>
+                                <div class="nds-card-actions">
+                                    <a href="pages/communication-toolkit.html" class="nds-btn nds-primary wwf-search-card__action"><span class="nds-label">View page</span></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="nds-page-item nds-card nds-stroke wwf-search-card"
+                            data-search-text="media center official logos brand guidelines typography photos gallery communication resources">
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h2 class="nds-card-title">Media Center</h2>
+                                    <p class="nds-card-description">Find official logos, brand guidelines, photos, and media resources for the Forum.</p>
+                                </div>
+                                <div class="nds-card-tags">
+                                    <span class="nds-tag nds-sm wwf-search-card__tag"><span class="nds-label">Media</span></span>
+                                    <span class="nds-tag nds-sm wwf-search-card__tag"><span class="nds-label">Gallery</span></span>
+                                </div>
+                                <div class="nds-card-actions">
+                                    <a href="pages/media-center.html" class="nds-btn nds-primary wwf-search-card__action"><span class="nds-label">View page</span></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="nds-page-item nds-card nds-stroke wwf-search-card"
+                            data-search-text="registration second stakeholder consultation meeting jeddah participant application event">
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h2 class="nds-card-title">Registration</h2>
+                                    <p class="nds-card-description">Register for the 2nd Stakeholder Consultation Meeting of the 11th World Water Forum.</p>
+                                </div>
+                                <div class="nds-card-tags">
+                                    <span class="nds-tag nds-sm wwf-search-card__tag"><span class="nds-label">Registration</span></span>
+                                    <span class="nds-tag nds-sm wwf-search-card__tag"><span class="nds-label">Event</span></span>
+                                </div>
+                                <div class="nds-card-actions">
+                                    <a href="pages/registration.html" class="nds-btn nds-primary wwf-search-card__action"><span class="nds-label">View page</span></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="nds-page-item nds-card nds-stroke wwf-search-card"
+                            data-search-text="exhibitor partner inquiry exhibition booth sponsorship media speaking opportunity contact company">
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h2 class="nds-card-title">Exhibitor &amp; Partner Inquiry</h2>
+                                    <p class="nds-card-description">Submit an inquiry about exhibiting, sponsorship, partnerships, or media opportunities.</p>
+                                </div>
+                                <div class="nds-card-tags">
+                                    <span class="nds-tag nds-sm wwf-search-card__tag"><span class="nds-label">Exhibitors</span></span>
+                                    <span class="nds-tag nds-sm wwf-search-card__tag"><span class="nds-label">Partners</span></span>
+                                </div>
+                                <div class="nds-card-actions">
+                                    <a href="pages/inquiry.html" class="nds-btn nds-primary wwf-search-card__action"><span class="nds-label">View page</span></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="nds-page-item nds-card nds-stroke wwf-search-card"
+                            data-search-text="privacy policy personal information data security cookies retention rights deletion contact legal">
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h2 class="nds-card-title">Privacy Policy</h2>
+                                    <p class="nds-card-description">Learn how the Forum website collects, uses, stores, and protects personal information.</p>
+                                </div>
+                                <div class="nds-card-tags">
+                                    <span class="nds-tag nds-sm wwf-search-card__tag"><span class="nds-label">Legal</span></span>
+                                    <span class="nds-tag nds-sm wwf-search-card__tag"><span class="nds-label">Privacy</span></span>
+                                </div>
+                                <div class="nds-card-actions">
+                                    <a href="pages/privacy-policy.html" class="nds-btn nds-primary wwf-search-card__action"><span class="nds-label">View page</span></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="nds-page-item nds-card nds-stroke wwf-search-card"
+                            data-search-text="terms of use website registration disclaimer accuracy intellectual property external links legal">
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h2 class="nds-card-title">Terms of Use</h2>
+                                    <p class="nds-card-description">Review the terms governing access to and use of the 11th World Water Forum website.</p>
+                                </div>
+                                <div class="nds-card-tags">
+                                    <span class="nds-tag nds-sm wwf-search-card__tag"><span class="nds-label">Legal</span></span>
+                                    <span class="nds-tag nds-sm wwf-search-card__tag"><span class="nds-label">Website</span></span>
+                                </div>
+                                <div class="nds-card-actions">
+                                    <a href="pages/terms-of-use.html" class="nds-btn nds-primary wwf-search-card__action"><span class="nds-label">View page</span></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="wwf-search-empty" data-search-empty hidden>
+                        <i class="nds-icon nds-hgi-search-01" aria-hidden="true"></i>
+                        <p>No results found. Try a different search term.</p>
+                    </div>
+
+                        <nav class="nds-pagination" data-auto-pagination aria-label="Search result pages"></nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="shell-footer"></div>
+    <div id="shell-cookie"></div>
+    <div id="shell-a11y"></div>
+
+    <script src="assets/js/nds-main.min.js" defer></script>
+    <script src="assets/js/nds-accessibility.min.js" defer></script>
+    <script src="js/site.js" defer></script>
+</body>
+
+</html>

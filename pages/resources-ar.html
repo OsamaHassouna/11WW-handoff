@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="وثائق وإرشادات ومواد للمشاركة في المنتدى العالمي الحادي عشر للمياه.">
+    <title>الموارد | المنتدى العالمي الحادي عشر للمياه</title>
+    <base href="../">
+
+    <link rel="stylesheet" href="theme/theme-layered.css">
+
+    <link rel="icon" type="image/png" href="theme/media/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="theme/media/favicon/favicon.svg">
+    <link rel="shortcut icon" href="theme/media/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="theme/media/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="11th World Water Forum">
+    <link rel="manifest" href="theme/media/favicon/site.webmanifest">
+
+    <style>
+        html:not([data-auth]) .nds-auth { display: none; }
+        html[data-auth] .nds-guest { display: none; }
+    </style>
+
+    <script>
+        (function () {
+            var t = localStorage.getItem('nds-theme');
+            if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+    <script>
+        (() => { try {
+            const s = JSON.parse(localStorage.getItem('nds-a11y') || '{}');
+            const R = {
+                'epilepsy-safe':        ['reduce-motion','low-saturation'],
+                'visually-impaired':    ['high-contrast'],
+                'cognitive-disability': ['highlight-titles','reduce-motion'],
+                'motor-impaired':       [],
+                'colorblind':           ['cvd-deutan'],
+                'dyslexia-friendly':    ['dyslexia','highlight-links'],
+                'adhd-friendly':        ['reduce-motion','highlight-titles','reading-mask'],
+            };
+            const t = new Set([
+                ...(s.modes || []),
+                ...(s.bundles || []).flatMap(b => b in R ? (R[b].length ? R[b] : [b]) : []),
+            ]);
+            (s.excluded || []).forEach(e => t.delete(e));
+            const c = s.settings || {};
+            const step = parseInt(c['font-step'], 10) || 0;
+            if (step > 0 && step < 4) t.add('font-step-' + step);
+            if (c['text-align'] && c['text-align'] !== 'default') t.add('text-align-' + c['text-align']);
+            if (t.size) document.documentElement.setAttribute('data-a11y', [...t].join(' '));
+        } catch {} })();
+    </script>
+    <script>
+        (function () {
+            if (document.cookie.indexOf('nds_auth=true') !== -1) {
+                document.documentElement.setAttribute('data-auth', 'true');
+            }
+        })();
+    </script>
+</head>
+
+<body class="wwf-resources-page">
+    <a class="skip-link" href="#main-content">تخطَّ إلى المحتوى الرئيسي</a>
+
+    <header>
+        <div id="shell-topbar"></div>
+        <div id="shell-mainnav"></div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <section class="nds-hero-section nds-sub wwf-sub-hero--illustrated wwf-resources-hero"
+            aria-label="ترويسة الموارد">
+            <nav class="nds-breadcrumb-nav" aria-label="مسار التنقل" hidden>
+                <ol class="nds-breadcrumb">
+                    <li><a href="index-ar.html">الرئيسية</a></li>
+                    <li class="nds-truncate" aria-current="page">الموارد</li>
+                </ol>
+            </nav>
+
+            <div class="nds-section-wrapper">
+                <div class="nds-section-head">
+                    <h1 class="nds-section-title">الموارد</h1>
+                    <p class="nds-section-description">
+                        اطّلع على الوثائق والإرشادات والمواد الأساسية لدعم مشاركتك في المنتدى العالمي الحادي عشر للمياه.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="nds-content-section wwf-resources-list" aria-label="الموارد المتاحة">
+            <div class="nds-section-wrapper">
+                <div class="nds-section-body">
+                    <div class="nds-grid wwf-resources-grid" style="--max-col: 2; --mid-col: 2; --min-col: 1;">
+                        <article class="nds-card nds-stroke wwf-resource-card">
+                            <div class="nds-card-header">
+                                <div class="nds-card-featured-icon">
+                                    <span class="nds-featured-icon nds-lg nds-circle wwf-resource-card__icon">
+                                        <i class="hgi hgi-stroke hgi-book-02" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h2 class="nds-card-title">الاختصاصات (TOR)</h2>
+                                    <p class="nds-card-description">
+                                        إرشادات شاملة لأدوار التنسيق ومسؤولياته والتوقعات الخاصة بالمنتدى.
+                                    </p>
+                                </div>
+                                <div class="nds-card-tags">
+                                    <span class="nds-tag nds-sm wwf-resource-card__tag">
+                                        <span class="nds-label">إرشادات</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nds-card-actions">
+                                <button class="nds-btn nds-secondary-outline wwf-resource-card__download" type="button">
+                                    <i class="hgi hgi-stroke hgi-download-01" aria-hidden="true"></i>
+                                    <span class="nds-label">تنزيل</span>
+                                </button>
+                            </div>
+                        </article>
+
+                        <article class="nds-card nds-stroke wwf-resource-card">
+                            <div class="nds-card-header">
+                                <div class="nds-card-featured-icon">
+                                    <span class="nds-featured-icon nds-lg nds-circle wwf-resource-card__icon">
+                                        <i class="hgi hgi-stroke hgi-files-01" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h2 class="nds-card-title">وثيقة الإطار الموضوعي</h2>
+                                    <p class="nds-card-description">
+                                        نظرة تفصيلية على المحاور الستة والموضوعات والنتائج المتوقعة.
+                                    </p>
+                                </div>
+                                <div class="nds-card-tags">
+                                    <span class="nds-tag nds-sm wwf-resource-card__tag">
+                                        <span class="nds-label">الإطار</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nds-card-actions">
+                                <button class="nds-btn nds-secondary-outline wwf-resource-card__download" type="button">
+                                    <i class="hgi hgi-stroke hgi-download-01" aria-hidden="true"></i>
+                                    <span class="nds-label">تنزيل</span>
+                                </button>
+                            </div>
+                        </article>
+
+                        <article class="nds-card nds-stroke wwf-resource-card">
+                            <div class="nds-card-header">
+                                <div class="nds-card-featured-icon">
+                                    <span class="nds-featured-icon nds-lg nds-circle wwf-resource-card__icon">
+                                        <i class="hgi hgi-stroke hgi-hierarchy" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h2 class="nds-card-title">إرشادات مقترحات الجلسات</h2>
+                                    <p class="nds-card-description">
+                                        تعليمات إعداد مقترحات الجلسات وتقديمها.
+                                    </p>
+                                </div>
+                                <div class="nds-card-tags">
+                                    <span class="nds-tag nds-sm wwf-resource-card__tag">
+                                        <span class="nds-label">إرشادات</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nds-card-actions">
+                                <button class="nds-btn nds-secondary-outline wwf-resource-card__download" type="button">
+                                    <i class="hgi hgi-stroke hgi-download-01" aria-hidden="true"></i>
+                                    <span class="nds-label">قريبًا</span>
+                                </button>
+                            </div>
+                        </article>
+
+                        <article class="nds-card nds-stroke wwf-resource-card">
+                            <div class="nds-card-header">
+                                <div class="nds-card-featured-icon">
+                                    <span class="nds-featured-icon nds-lg nds-circle wwf-resource-card__icon">
+                                        <i class="hgi hgi-stroke hgi-waving-hand-01" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nds-card-content">
+                                <div class="nds-card-text">
+                                    <h2 class="nds-card-title">فيديوهات تعريفية للمنسقين</h2>
+                                    <p class="nds-card-description">
+                                        دروس فيديو تشرح مسار المنتدى وآلية التنسيق.
+                                    </p>
+                                </div>
+                                <div class="nds-card-tags">
+                                    <span class="nds-tag nds-sm wwf-resource-card__tag">
+                                        <span class="nds-label">تدريب</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="nds-card-actions">
+                                <button class="nds-btn nds-secondary-outline wwf-resource-card__download" type="button">
+                                    <i class="hgi hgi-stroke hgi-download-01" aria-hidden="true"></i>
+                                    <span class="nds-label">تنزيل</span>
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="nds-content-section nds-oncolor wwf-stay-connected wwf-resources-contact"
+            aria-labelledby="resources-contact-title">
+            <img class="wwf-stay-connected__linework" src="theme/media/global-dialogue-linework.svg" alt=""
+                aria-hidden="true">
+
+            <div class="nds-section-wrapper wwf-stay-connected__wrapper">
+                <div class="wwf-stay-connected__content">
+                    <h2 id="resources-contact-title" class="nds-section-title">هل تحتاج إلى مزيد من المعلومات؟</h2>
+                    <p class="nds-section-description">
+                        تواصل مع أمانة المنتدى للحصول على موارد إضافية أو إيضاحات أو دعم.
+                    </p>
+                </div>
+
+                <div class="wwf-resources-contact__action">
+                    <a class="nds-btn nds-primary nds-oncolor wwf-resources-contact__button"
+                        href="mailto:secretariat@worldwaterforum.org">
+                        <span class="nds-label">تواصل معنا</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="shell-footer"></div>
+    <div id="shell-cookie"></div>
+    <div id="shell-a11y"></div>
+
+    <script src="assets/js/nds-main.min.js" defer></script>
+    <script src="assets/js/nds-accessibility.min.js" defer></script>
+    <script src="js/site.js" defer></script>
+</body>
+
+</html>

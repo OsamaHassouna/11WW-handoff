@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="سجّل في الاجتماع التشاوري الثاني لأصحاب المصلحة للمنتدى العالمي الحادي عشر للمياه.">
+    <title>التسجيل | المنتدى العالمي الحادي عشر للمياه</title>
+    <base href="../">
+
+    <link rel="stylesheet" href="theme/theme-layered.css">
+
+    <link rel="icon" type="image/png" href="theme/media/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="theme/media/favicon/favicon.svg">
+    <link rel="shortcut icon" href="theme/media/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="theme/media/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="11th World Water Forum">
+    <link rel="manifest" href="theme/media/favicon/site.webmanifest">
+
+    <style>
+        html:not([data-auth]) .nds-auth { display: none; }
+        html[data-auth] .nds-guest { display: none; }
+    </style>
+
+    <script>
+        (function () {
+            var t = localStorage.getItem('nds-theme');
+            if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
+    <script>
+        (() => { try {
+            const s = JSON.parse(localStorage.getItem('nds-a11y') || '{}');
+            const R = {
+                'epilepsy-safe':        ['reduce-motion','low-saturation'],
+                'visually-impaired':    ['high-contrast'],
+                'cognitive-disability': ['highlight-titles','reduce-motion'],
+                'motor-impaired':       [],
+                'colorblind':           ['cvd-deutan'],
+                'dyslexia-friendly':    ['dyslexia','highlight-links'],
+                'adhd-friendly':        ['reduce-motion','highlight-titles','reading-mask'],
+            };
+            const t = new Set([
+                ...(s.modes || []),
+                ...(s.bundles || []).flatMap(b => b in R ? (R[b].length ? R[b] : [b]) : []),
+            ]);
+            (s.excluded || []).forEach(e => t.delete(e));
+            const c = s.settings || {};
+            const step = parseInt(c['font-step'], 10) || 0;
+            if (step > 0 && step < 4) t.add('font-step-' + step);
+            if (c['text-align'] && c['text-align'] !== 'default') t.add('text-align-' + c['text-align']);
+            if (t.size) document.documentElement.setAttribute('data-a11y', [...t].join(' '));
+        } catch {} })();
+    </script>
+    <script>
+        (function () {
+            if (document.cookie.indexOf('nds_auth=true') !== -1) {
+                document.documentElement.setAttribute('data-auth', 'true');
+            }
+        })();
+    </script>
+</head>
+
+<body class="wwf-registration-page">
+    <a class="skip-link" href="#main-content">تخطَّ إلى المحتوى الرئيسي</a>
+
+    <header>
+        <div id="shell-topbar"></div>
+        <div id="shell-mainnav"></div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <div class="nds-content-layout nds-wSideInfo wwf-registration-layout">
+            <div class="nds-main-content">
+                <section class="nds-content-section nds-sideinfo-section wwf-registration-section"
+                    aria-labelledby="registration-title">
+                    <div class="nds-section-body">
+                        <div class="nds-info-content">
+                            <nav class="nds-breadcrumb-nav" aria-label="مسار التنقل" hidden>
+                                <ol class="nds-breadcrumb">
+                                    <li><a href="index-ar.html">الرئيسية</a></li>
+                                    <li><a href="pages/2nd-stakeholders-consultation-meeting-ar.html">الاجتماع التشاوري الثاني لأصحاب المصلحة</a></li>
+                                    <li class="nds-truncate" aria-current="page">التسجيل</li>
+                                </ol>
+                            </nav>
+
+                            <div class="wwf-registration-intro">
+                                <h1 id="registration-title" class="nds-section-title">التسجيل</h1>
+                                <p class="nds-section-description">
+                                    سجّل في فعاليات المنتدى واضمن مشاركتك في صياغة مستقبل حوكمة المياه العالمية.
+                                </p>
+                            </div>
+
+                            <div class="nds-alert nds-card wwf-registration-alert" role="note"
+                                aria-labelledby="registration-alert-title">
+                                <span class="nds-featured-icon nds-circle nds-feedback-icon" aria-hidden="true">
+                                    <span class="wwf-registration-clock-icon"></span>
+                                </span>
+                                <div class="nds-alert-content">
+                                    <div class="nds-alert-text">
+                                        <h2 id="registration-alert-title" class="nds-alert-title">التسجيل مفتوح الآن</h2>
+                                        <p class="nds-alert-description">
+                                            يوصى بالتسجيل المبكر. قد تستغرق معالجة التأشيرة من أسبوعين إلى ٤ أسابيع.<br>
+                                            نوصي بالتقديم قبل الفعالية بـ٦ أسابيع على الأقل.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="nds-required-notice wwf-registration-required">
+                                <span class="nds-label">*معلومات مطلوبة</span>
+                            </p>
+
+                            <form id="registration-form" class="nds-form wwf-registration-form" novalidate data-ajax
+                                data-success-url="pages/registration-successful-ar.html">
+                                <section class="nds-card nds-stroke wwf-registration-card"
+                                    aria-labelledby="personal-information-title">
+                                    <div class="wwf-registration-card__heading">
+                                        <h2 id="personal-information-title" class="wwf-registration-card__title">
+                                            <i class="hgi hgi-stroke hgi-user" aria-hidden="true"></i>
+                                            <span>المعلومات الشخصية</span>
+                                        </h2>
+                                        <span class="nds-tag nds-sm nds-rounded wwf-registration-primary-tag">
+                                            <span class="nds-label">أساسي</span>
+                                        </span>
+                                    </div>
+
+                                    <div class="nds-grid nds-form-grid wwf-registration-fields"
+                                        style="--min-col: 1; --mid-col: 2; --max-col: 2;">
+                                        <div class="nds-form-container nds-select" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="registration-title-select"><span class="nds-label">اللقب</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <select id="registration-title-select" name="title" class="nds-input" required>
+                                                    <option value="" selected disabled>اختر اللقب</option>
+                                                    <option value="mr">السيد</option>
+                                                    <option value="ms">السيدة</option>
+                                                    <option value="dr">الدكتور/الدكتورة</option>
+                                                    <option value="prof">الأستاذ/الأستاذة</option>
+                                                </select>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </div>
+
+                                        <div class="nds-form-container" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="registration-first-name"><span class="nds-label">الاسم الأول</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="text" id="registration-first-name" name="firstName" class="nds-input"
+                                                    placeholder="أدخل الاسم الأول" autocomplete="given-name" required>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </div>
+
+                                        <div class="nds-form-container">
+                                            <div class="nds-form-header">
+                                                <label for="registration-father-name"><span class="nds-label">اسم الأب (اختياري)</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="text" id="registration-father-name" name="fatherName" class="nds-input"
+                                                    placeholder="أدخل اسم الأب" autocomplete="additional-name">
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </div>
+
+                                        <div class="nds-form-container">
+                                            <div class="nds-form-header">
+                                                <label for="registration-middle-name"><span class="nds-label">الاسم الأوسط (اختياري)</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="text" id="registration-middle-name" name="middleName" class="nds-input"
+                                                    placeholder="أدخل الاسم الأوسط" autocomplete="additional-name">
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </div>
+
+                                        <div class="nds-form-container" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="registration-last-name"><span class="nds-label">اسم العائلة</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="text" id="registration-last-name" name="lastName" class="nds-input"
+                                                    placeholder="أدخل اسم العائلة" autocomplete="family-name" required>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </div>
+
+                                        <div class="nds-form-container" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="registration-email"><span class="nds-label">البريد الإلكتروني</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="email" id="registration-email" name="email" class="nds-input"
+                                                    placeholder="e.g@email.com" autocomplete="email" required>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </div>
+
+                                        <div class="nds-form-container nds-select" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="registration-nationality"><span class="nds-label">الجنسية</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <select id="registration-nationality" name="nationality" class="nds-input" required>
+                                                    <option value="" selected disabled>اختر الجنسية</option>
+                                                    <option value="saudi">سعودي/سعودية</option>
+                                                    <option value="other">أخرى</option>
+                                                </select>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </div>
+
+                                        <div class="nds-form-container nds-select" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="registration-residence"><span class="nds-label">دولة الإقامة</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <select id="registration-residence" name="countryOfResidence" class="nds-input" required>
+                                                    <option value="" selected disabled>اختر الدولة</option>
+                                                    <option value="saudi-arabia">المملكة العربية السعودية</option>
+                                                    <option value="other">أخرى</option>
+                                                </select>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section class="nds-card nds-stroke wwf-registration-card"
+                                    aria-labelledby="organization-information-title">
+                                    <div class="wwf-registration-card__heading">
+                                        <h2 id="organization-information-title" class="wwf-registration-card__title">
+                                            <i class="hgi hgi-stroke hgi-building-03" aria-hidden="true"></i>
+                                            <span>معلومات الجهة</span>
+                                        </h2>
+                                    </div>
+
+                                    <div class="nds-grid nds-form-grid wwf-registration-fields"
+                                        style="--min-col: 1; --mid-col: 2; --max-col: 2;">
+                                        <div class="nds-form-container" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="registration-organization"><span class="nds-label">اسم الجهة</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="text" id="registration-organization" name="organization" class="nds-input"
+                                                    placeholder="أدخل اسم الجهة" autocomplete="organization" required>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </div>
+
+                                        <div class="nds-form-container nds-select" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="registration-organization-type"><span class="nds-label">نوع الجهة</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <select id="registration-organization-type" name="organizationType" class="nds-input" required>
+                                                    <option value="" selected disabled>اختر النوع</option>
+                                                    <option value="government">حكومية</option>
+                                                    <option value="private-sector">القطاع الخاص</option>
+                                                    <option value="non-profit">منظمة غير ربحية</option>
+                                                    <option value="academic">مؤسسة أكاديمية</option>
+                                                    <option value="other">أخرى</option>
+                                                </select>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </div>
+
+                                        <div class="nds-form-container" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="registration-position"><span class="nds-label">المنصب / المسمى الوظيفي</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="text" id="registration-position" name="position" class="nds-input"
+                                                    placeholder="منصبك" autocomplete="organization-title" required>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </div>
+
+                                        <div class="nds-form-container nds-select" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="registration-country"><span class="nds-label">الدولة</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <select id="registration-country" name="country" class="nds-input" required>
+                                                    <option value="" selected disabled>اختر الدولة</option>
+                                                    <option value="saudi-arabia">المملكة العربية السعودية</option>
+                                                    <option value="other">أخرى</option>
+                                                </select>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </div>
+
+                                        <div class="nds-form-container wwf-registration-field--full" data-required>
+                                            <div class="nds-form-header">
+                                                <label for="registration-city"><span class="nds-label">المدينة</span></label>
+                                            </div>
+                                            <div class="nds-form-control">
+                                                <input type="text" id="registration-city" name="city" class="nds-input"
+                                                    placeholder="أدخل المدينة" autocomplete="address-level2" required>
+                                            </div>
+                                            <div class="nds-form-footer" data-feedback-target hidden></div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section class="nds-card nds-stroke wwf-registration-card"
+                                    aria-labelledby="registration-survey-title">
+                                    <div class="wwf-registration-card__heading">
+                                        <h2 id="registration-survey-title" class="wwf-registration-card__title">
+                                            <i class="hgi hgi-stroke hgi-clipboard" aria-hidden="true"></i>
+                                            <span>استبيان أولي للتسجيل في الاجتماع التشاوري الثاني</span>
+                                        </h2>
+                                    </div>
+
+                                    <fieldset class="nds-form-group nds-check-group wwf-registration-choice-group"
+                                        data-required>
+                                        <legend><span aria-hidden="true">*</span> ما المسارات التي ترغب في المشاركة فيها؟</legend>
+                                        <div class="wwf-registration-checks">
+                                            <div class="nds-form-container nds-check-container nds-md">
+                                                <div class="nds-form-header">
+                                                    <label for="process-thematic"><span class="nds-label">المسار الموضوعي</span></label>
+                                                </div>
+                                                <div class="nds-form-control">
+                                                    <input type="checkbox" id="process-thematic" name="processes" value="thematic">
+                                                </div>
+                                            </div>
+                                            <div class="nds-form-container nds-check-container nds-md">
+                                                <div class="nds-form-header">
+                                                    <label for="process-regional"><span class="nds-label">المسار الإقليمي</span></label>
+                                                </div>
+                                                <div class="nds-form-control">
+                                                    <input type="checkbox" id="process-regional" name="processes" value="regional">
+                                                </div>
+                                            </div>
+                                            <div class="nds-form-container nds-check-container nds-md">
+                                                <div class="nds-form-header">
+                                                    <label for="process-political"><span class="nds-label">المسار السياسي</span></label>
+                                                </div>
+                                                <div class="nds-form-control">
+                                                    <input type="checkbox" id="process-political" name="processes" value="political">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="nds-form-footer" data-feedback-target hidden></div>
+                                    </fieldset>
+                                </section>
+
+                                <section class="nds-card nds-stroke wwf-registration-card"
+                                    aria-labelledby="visa-information-title">
+                                    <div class="wwf-registration-card__heading">
+                                        <h2 id="visa-information-title" class="wwf-registration-card__title">
+                                            <i class="hgi hgi-stroke hgi-passport" aria-hidden="true"></i>
+                                            <span>معلومات التأشيرة</span>
+                                        </h2>
+                                    </div>
+
+                                    <fieldset class="nds-form-group nds-radio-group wwf-registration-choice-group"
+                                        data-required>
+                                        <legend><span aria-hidden="true">*</span> هل تحتاج إلى تأشيرة لدخول المملكة العربية السعودية لحضور هذه الفعالية؟</legend>
+                                        <div class="wwf-registration-radios">
+                                            <div class="nds-form-container nds-radio-container nds-lg wwf-registration-radio-option">
+                                                <div class="nds-form-header">
+                                                    <label for="visa-required"><span class="nds-label">نعم، أحتاج إلى تأشيرة</span></label>
+                                                </div>
+                                                <div class="nds-form-control">
+                                                    <input type="radio" id="visa-required" name="visaRequired" value="yes">
+                                                </div>
+                                            </div>
+                                            <div class="nds-form-container nds-radio-container nds-lg wwf-registration-radio-option">
+                                                <div class="nds-form-header">
+                                                    <label for="visa-not-required"><span class="nds-label">لا، لا أحتاج إلى تأشيرة</span></label>
+                                                </div>
+                                                <div class="nds-form-control">
+                                                    <input type="radio" id="visa-not-required" name="visaRequired" value="no">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="nds-form-footer" data-feedback-target hidden></div>
+                                    </fieldset>
+                                </section>
+
+                                <div class="nds-flex nds-row nds-form-actions wwf-registration-actions">
+                                    <button type="submit" class="nds-btn nds-primary nds-lg wwf-registration-submit">
+                                        <span class="nds-label">سجّل الآن</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <aside class="nds-card nds-sticky wwf-registration-stepper-panel"
+                            aria-label="تقدم التسجيل">
+                            <div class="nds-stepper nds-radial nds-vertical-lg" id="registration-stepper"
+                                data-current="1" data-total="2">
+                                <div class="nds-progress-circle">
+                                    <svg width="64" height="64" viewBox="0 0 24 24" aria-hidden="true">
+                                        <circle class="nds-progress-bg" cx="12" cy="12" r="10" fill="none" stroke-width="3"></circle>
+                                        <circle class="nds-progress-track" cx="12" cy="12" r="10" fill="none" stroke-width="3"
+                                            stroke-dasharray="62.83" stroke-dashoffset="62.83" stroke-linecap="round"></circle>
+                                    </svg>
+                                    <div class="nds-progress-info"><span class="nds-progress-steps"></span></div>
+                                </div>
+                                <div class="nds-stepper-step">
+                                    <div class="nds-stepper-base">
+                                        <div class="nds-stepper-circle" data-step-text="1"></div>
+                                    </div>
+                                    <div class="nds-stepper-content">
+                                        <div class="nds-stepper-text">
+                                            <span class="nds-stepper-title">التسجيل</span>
+                                            <span class="nds-stepper-description">التسجيل في المنتدى</span>
+                                            <span class="nds-stepper-next">التالي: التأكيد</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nds-stepper-step">
+                                    <div class="nds-stepper-base">
+                                        <div class="nds-stepper-circle" data-step-text="2"></div>
+                                    </div>
+                                    <div class="nds-stepper-content">
+                                        <div class="nds-stepper-text">
+                                            <span class="nds-stepper-title">التأكيد</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <div id="shell-footer"></div>
+    <div id="shell-cookie"></div>
+    <div id="shell-a11y"></div>
+
+    <script src="assets/js/nds-main.min.js" defer></script>
+    <script src="assets/js/nds-accessibility.min.js" defer></script>
+    <script src="js/site.js" defer></script>
+</body>
+
+</html>
