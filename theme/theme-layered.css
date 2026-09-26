@@ -140,6 +140,7 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
+
         .nds-main-nav,
         .skip-link {
             transition: none;
@@ -227,15 +228,10 @@
         }
     }
 
-    /* RTL moves the art to the left edge but never mirrors it: the banners
-       carry the Saudi flag (shahada), a globe and the Riyadh skyline, which
-       must not render reversed. Only the fade direction flips. */
-    :is(html[dir="rtl"], .rtl) .wwf-sub-hero--illustrated {
-        --wwf-sub-hero-mask: linear-gradient(to right, black 0%, black 50%, transparent 100%);
-    }
-
     :is(html[dir="rtl"], .rtl) .wwf-sub-hero--illustrated::after {
+        /* The shared mask reverses with the mirrored RTL artwork. */
         background-position: left center;
+        scale: -1 1;
     }
 
     :root:is([data-a11y~="font-step-2"], [data-a11y~="font-step-3"]) .wwf-sub-hero--illustrated::after {
@@ -3484,11 +3480,25 @@
             justify-self: stretch;
         }
 
-        .wwf-intersectoral-metric--renewables { grid-area: renew; }
-        .wwf-intersectoral-metric--capacity { grid-area: capacity; }
-        .wwf-intersectoral-metric--water { grid-area: water; }
-        .wwf-intersectoral-metric--assets { grid-area: assets; }
-        .wwf-intersectoral-metric--countries { grid-area: countries; }
+        .wwf-intersectoral-metric--renewables {
+            grid-area: renew;
+        }
+
+        .wwf-intersectoral-metric--capacity {
+            grid-area: capacity;
+        }
+
+        .wwf-intersectoral-metric--water {
+            grid-area: water;
+        }
+
+        .wwf-intersectoral-metric--assets {
+            grid-area: assets;
+        }
+
+        .wwf-intersectoral-metric--countries {
+            grid-area: countries;
+        }
 
         .wwf-intersectoral-metrics__brand,
         :is(html[dir="rtl"], .rtl) .wwf-intersectoral-metrics__brand {
@@ -3543,11 +3553,25 @@
         min-block-size: 71px;
     }
 
-    html[data-a11y~="font-step-3"] .wwf-intersectoral-metric--renewables { grid-area: renew; }
-    html[data-a11y~="font-step-3"] .wwf-intersectoral-metric--capacity { grid-area: capacity; }
-    html[data-a11y~="font-step-3"] .wwf-intersectoral-metric--water { grid-area: water; }
-    html[data-a11y~="font-step-3"] .wwf-intersectoral-metric--assets { grid-area: assets; }
-    html[data-a11y~="font-step-3"] .wwf-intersectoral-metric--countries { grid-area: countries; }
+    html[data-a11y~="font-step-3"] .wwf-intersectoral-metric--renewables {
+        grid-area: renew;
+    }
+
+    html[data-a11y~="font-step-3"] .wwf-intersectoral-metric--capacity {
+        grid-area: capacity;
+    }
+
+    html[data-a11y~="font-step-3"] .wwf-intersectoral-metric--water {
+        grid-area: water;
+    }
+
+    html[data-a11y~="font-step-3"] .wwf-intersectoral-metric--assets {
+        grid-area: assets;
+    }
+
+    html[data-a11y~="font-step-3"] .wwf-intersectoral-metric--countries {
+        grid-area: countries;
+    }
 
     html[data-a11y~="font-step-3"] .wwf-intersectoral-metrics__brand,
     :is(html[dir="rtl"], .rtl)[data-a11y~="font-step-3"] .wwf-intersectoral-metrics__brand {
@@ -3565,6 +3589,7 @@
     }
 
     @media (max-width: 600px) {
+
         html[data-a11y~="font-step-3"] .wwf-intersectoral-metrics__brand,
         :is(html[dir="rtl"], .rtl)[data-a11y~="font-step-3"] .wwf-intersectoral-metrics__brand {
             margin-block: 49px;
@@ -6196,13 +6221,11 @@
         max-inline-size: var(--spacing-180, 720px);
     }
 
-    .wwf-side-event-page .nds-form-container:not([hidden])[data-required]
-        .nds-form-header .nds-label::before {
+    .wwf-side-event-page .nds-form-container:not([hidden])[data-required] .nds-form-header .nds-label::before {
         content: none;
     }
 
-    .wwf-side-event-page .nds-form-container:not([hidden])[data-required]
-        .nds-form-header .nds-label::after {
+    .wwf-side-event-page .nds-form-container:not([hidden])[data-required] .nds-form-header .nds-label::after {
         color: var(--controls-control-text-error);
         content: " *";
     }
@@ -6253,13 +6276,11 @@
         max-inline-size: var(--spacing-160, 640px);
     }
 
-    .wwf-country-pavilion-page .nds-form-container:not([hidden])[data-required]
-        .nds-form-header .nds-label::before {
+    .wwf-country-pavilion-page .nds-form-container:not([hidden])[data-required] .nds-form-header .nds-label::before {
         content: none;
     }
 
-    .wwf-country-pavilion-page .nds-form-container:not([hidden])[data-required]
-        .nds-form-header .nds-label::after {
+    .wwf-country-pavilion-page .nds-form-container:not([hidden])[data-required] .nds-form-header .nds-label::after {
         color: var(--controls-control-text-error);
         content: " *";
     }
@@ -6607,13 +6628,11 @@
         line-height: var(--typo-text-sm-LH);
     }
 
-    .wwf-sponsorship-page .nds-form-container:not([hidden])[data-required]
-        .nds-form-header .nds-label::before {
+    .wwf-sponsorship-page .nds-form-container:not([hidden])[data-required] .nds-form-header .nds-label::before {
         content: none;
     }
 
-    .wwf-sponsorship-page .nds-form-container:not([hidden])[data-required]
-        .nds-form-header .nds-label::after {
+    .wwf-sponsorship-page .nds-form-container:not([hidden])[data-required] .nds-form-header .nds-label::after {
         color: var(--controls-control-text-error);
         content: " *";
     }
