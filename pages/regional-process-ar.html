@@ -8,6 +8,14 @@
     <title>المسار الإقليمي</title>
     <base href="../">
     <link rel="stylesheet" href="theme/theme-layered.css">
+    <!-- Preload what theme-layered.css @imports, so these download in parallel
+         with it instead of after it. Keep in sync with its @import list. -->
+    <link rel="preload" as="style" href="assets/css/nds.critical.min.css">
+    <link rel="preload" as="style" href="assets/css/nds-icons.min.css">
+    <link rel="preload" as="style" href="assets/css/nds-main.min.css">
+    <link rel="preload" as="style" href="assets/css/nds-accessibility.min.css">
+    <link rel="preload" as="style" href="assets/css/hgi-rounded-stroke-min.css">
+    <link rel="preload" as="style" href="theme/tokens.css">
     <link rel="icon" type="image/png" href="theme/media/favicon/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/svg+xml" href="theme/media/favicon/favicon.svg">
     <link rel="shortcut icon" href="theme/media/favicon/favicon.ico">

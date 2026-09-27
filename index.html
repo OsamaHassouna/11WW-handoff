@@ -26,6 +26,16 @@
 
     <!-- DGA vendor styles, project tokens, and project components. -->
     <link rel="stylesheet" href="theme/theme-layered.css">
+    <!-- Preload what theme-layered.css @imports, so these download in parallel
+         with it instead of after it. Keep in sync with its @import list. -->
+    <link rel="preload" as="style" href="assets/css/nds.critical.min.css">
+    <link rel="preload" as="style" href="assets/css/nds-icons.min.css">
+    <link rel="preload" as="style" href="assets/css/nds-main.min.css">
+    <link rel="preload" as="style" href="assets/css/nds-accessibility.min.css">
+    <link rel="preload" as="style" href="assets/css/hgi-rounded-stroke-min.css">
+    <link rel="preload" as="style" href="theme/tokens.css">
+    <!-- Hero poster is the LCP image but arrives in a fetched partial; start it early. -->
+    <link rel="preload" as="image" href="theme/media/hero-poster.webp" fetchpriority="high">
 
     <!-- FAV Icon -->
     <link rel="icon" type="image/png" href="theme/media/favicon/favicon-96x96.png" sizes="96x96" />
