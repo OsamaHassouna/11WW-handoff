@@ -138,7 +138,11 @@ The accessibility panel is the one exception: both languages load it from
 Render the partials into the template server-side and delete the loader block
 at the top of `site.js`. That removes the fetch waterfall and the second sweep.
 Keep the page behaviour further down: language links, search, countdown, hero
-video, modals, gallery viewer, and the sticky and mobile nav.
+video, modals, gallery viewer, and the sticky, mobile and overflow nav.
+
+Keep the nav collapse id as `shellNavCollapse`. The NDS bundle looks for
+`ndsNavCollapse`, and if it finds one in a server-rendered nav, its own nav module
+binds on top of `site.js`, so every nav control fires twice.
 
 ---
 

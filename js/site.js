@@ -15,7 +15,8 @@
  * pages are rendered server-side, include the partials in the template instead
  * and delete the loader block below: it removes the fetch waterfall and the
  * re-init entirely. The page behaviour further down (language links, search,
- * countdown, hero video, modals, gallery, sticky and mobile nav) should be kept.
+ * countdown, hero video, modals, gallery, sticky, mobile and overflow nav)
+ * should be kept.
  *
  * NOTE: fetch() requires http(s). Opening index.html from the filesystem will
  * leave the placeholders empty. Serve the folder over HTTP.
@@ -106,6 +107,7 @@
         bindMobileNav();
         bindDigitalStamp();
         bindMinimalNavResize();
+        initNavOverflow();
         bindFormSuccessNavigation();
     });
 
@@ -693,6 +695,306 @@
                 delete el.dataset.origPos;
             });
         }
+    }
+
+    /* --- primary nav overflow (the DGA "show more" scroll) ------------------
+       Same story as the breakpoint above: this lives in NDS.Mainnav, which is
+       dead here, and the vendor's own nds-includes.js loader never ported it
+       either. So when the items outgrow the bar, the list overflows with no
+       arrow and the last items can't be reached.
+
+       Ported from the vendor's overflow check (b.check / b.checkEnd), its
+       width fit D(), and the show-more click, scroll, wheel and drag
+       handlers. The CSS is all vendor: `has-more` shows the arrow, and
+       `at-start` / `at-end` flip it. Keep it that way.
+
+       Keep the collapse id as shellNavCollapse. With the vendor id, a
+       server-rendered nav would bring NDS.Mainnav back to life and both
+       would bind the same arrow.
+
+       One deliberate deviation: when has-more flips, the fit is forced to
+       recalculate so the arrow's width is taken out of the list. The vendor
+       leaves that to a later ResizeObserver tick.                           */
+    function initNavOverflow() {
+        var nav = document.querySelector('.nds-main-nav');
+        var primary = nav && nav.querySelector('.nds-nav-primary');
+        if (!primary || primary.hasAttribute('data-overflow-bound')) return;
+        primary.setAttribute('data-overflow-bound', '');
+
+        var container = nav.querySelector('.nds-nav-container');
+        var brand = nav.querySelector('.nds-brand');
+        var secondary = nav.querySelector('.nds-nav-actions');
+        var minimalWrap = nav.querySelector('.nds-nav-minimal');
+        var collapse = document.getElementById('shellNavCollapse');
+        var content = nav.querySelector('.nds-collapse-content');
+        var showMore = content && content.querySelector('.nds-show-more');
+        var isRTL = document.documentElement.dir === 'rtl';
+        var reducedMotion = window.matchMedia &&
+            window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        var lastContainerW = 0;
+        var layout = null;
+        var checkTimer = null;
+        var overDropdown = false;
+
+        function drawerClosed() {
+            return isMinimalWidth() && !(collapse && hasState(collapse, 'open'));
+        }
+
+        function schedule(delay) {
+            clearTimeout(checkTimer);
+            if (delay === 'immediate') {
+                checkTimer = null;
+                requestAnimationFrame(check);
+                return;
+            }
+            checkTimer = setTimeout(function () {
+                checkTimer = null;
+                check();
+            }, reducedMotion ? 0 : delay);
+        }
+
+        function check() {
+            if (drawerClosed()) {
+                removeStateToken(primary, 'has-more');
+                removeStateToken(primary, 'at-start');
+                removeStateToken(primary, 'at-end');
+                return;
+            }
+
+            var minimal = isMinimalWidth();
+            var had = hasState(primary, 'has-more');
+            var more = false;
+
+            if (minimal) {
+                var maxH = parseFloat(getComputedStyle(primary).maxHeight);
+                if (primary.scrollHeight === 0) return schedule(50);
+                more = isFinite(maxH) && maxH > 0 && primary.scrollHeight > maxH + 2;
+            } else {
+                if (primary.scrollWidth === 0 && primary.clientWidth === 0) return schedule(50);
+                more = primary.scrollWidth > primary.clientWidth;
+            }
+
+            if (more === had) return;
+
+            if (more) addStateToken(primary, 'has-more');
+            else removeStateToken(primary, 'has-more');
+
+            if (!minimal) {
+                lastContainerW = 0;
+                fitPrimary();
+            }
+
+            if (more) {
+                requestAnimationFrame(checkEnd);
+            } else {
+                removeStateToken(primary, 'at-start');
+                removeStateToken(primary, 'at-end');
+            }
+        }
+
+        function checkEnd() {
+            if (!hasState(primary, 'has-more')) return;
+            var atStart, atEnd;
+
+            if (isMinimalWidth()) {
+                atStart = primary.scrollTop <= 1;
+                atEnd = primary.scrollTop + primary.clientHeight >= primary.scrollHeight - 1;
+            } else {
+                var max = primary.scrollWidth - primary.clientWidth;
+                // RTL scrollLeft runs negative, hence the abs().
+                atStart = Math.abs(primary.scrollLeft) <= 2;
+                atEnd = max <= 1 || Math.abs(primary.scrollLeft) >= max - 2;
+            }
+
+            if (atStart) addStateToken(primary, 'at-start');
+            else removeStateToken(primary, 'at-start');
+            if (atEnd) addStateToken(primary, 'at-end');
+            else removeStateToken(primary, 'at-end');
+        }
+
+        // Port of D(): cap the list at whatever the bar has left after the
+        // brand, the actions and (when showing) the arrow.
+        function fitPrimary() {
+            if (isMinimalWidth()) {
+                primary.style.maxWidth = '';
+                schedule('immediate');
+                return;
+            }
+
+            var containerW = container ? container.offsetWidth : 0;
+            if (containerW === lastContainerW) return;
+            lastContainerW = containerW;
+
+            if (!layout || layout.containerW !== containerW) {
+                var cs = container ? getComputedStyle(container) : null;
+                var kids = container ? Array.prototype.slice.call(container.children) : [];
+                layout = {
+                    containerW: containerW,
+                    padding: cs ? (parseFloat(cs.paddingLeft) || 0) + (parseFloat(cs.paddingRight) || 0) : 0,
+                    gap: cs ? (parseFloat(cs.gap || cs.columnGap) || 0) : 0,
+                    visible: kids.filter(function (k) { return k.offsetWidth > 0 || k.offsetHeight > 0; }).length
+                };
+            }
+
+            var used = (brand ? brand.offsetWidth : 0) +
+                (secondary ? secondary.offsetWidth : 0) +
+                (minimalWrap ? minimalWrap.offsetWidth : 0) +
+                (showMore && hasState(primary, 'has-more') ? showMore.offsetWidth : 0) +
+                layout.padding + layout.gap * Math.max(0, layout.visible - 1);
+            var room = Math.min(nav.offsetWidth, containerW || 1280) - used;
+            var maxWidth = room > 0 ? room + 'px' : '';
+
+            if (primary.style.maxWidth !== maxWidth) {
+                primary.style.maxWidth = maxWidth;
+                layout = null;
+                schedule('immediate');
+            }
+        }
+
+        function refresh() {
+            layout = null;
+            lastContainerW = 0;
+            fitPrimary();
+            schedule(50);
+        }
+
+        // Arrow click: page 80% forward, or back to the start from the end.
+        (content || primary).addEventListener('click', function (e) {
+            if (!e.target.closest('.nds-nav-item.nds-show-more')) return;
+            e.preventDefault();
+            e.stopPropagation();
+
+            var atEnd = hasState(primary, 'at-end');
+            if (isMinimalWidth()) {
+                nav.querySelectorAll('.nds-nav-actions .nds-dropdown[data-state~="open"]')
+                    .forEach(closeDropdown);
+                primary.scrollTo({
+                    top: atEnd ? 0 : primary.scrollTop + 0.8 * primary.clientHeight,
+                    behavior: 'smooth'
+                });
+            } else {
+                primary.scrollTo({
+                    left: atEnd ? 0 : primary.scrollLeft + 0.8 * primary.clientWidth * (isRTL ? -1 : 1),
+                    behavior: 'smooth'
+                });
+            }
+            setTimeout(checkEnd, 300);
+        });
+
+        var scrollFrame = null;
+        primary.addEventListener('scroll', function () {
+            if (scrollFrame !== null) return;
+            scrollFrame = requestAnimationFrame(function () {
+                scrollFrame = null;
+                if (!drawerClosed()) checkEnd();
+            });
+        }, { passive: true });
+        if ('onscrollend' in primary) {
+            primary.addEventListener('scrollend', function () {
+                if (!drawerClosed()) requestAnimationFrame(checkEnd);
+            });
+        }
+        primary.style.scrollBehavior = 'smooth';
+
+        // Vertical wheel over the bar scrolls it sideways, eased over 150ms.
+        var wheeling = false;
+        primary.addEventListener('wheel', function (e) {
+            if (overDropdown || isMinimalWidth() ||
+                Math.abs(e.deltaX) >= Math.abs(e.deltaY) ||
+                !hasState(primary, 'has-more')) return;
+            e.preventDefault();
+            if (wheeling) return;
+            wheeling = true;
+            primary.style.scrollBehavior = 'auto';
+
+            var from = primary.scrollLeft;
+            var delta = e.deltaY * (isRTL ? -0.8 : 0.8);
+            var elapsed = 0;
+            (function step() {
+                elapsed += 16;
+                var p = Math.min(elapsed / 150, 1);
+                primary.scrollLeft = from + delta * (1 - Math.pow(1 - p, 3));
+                if (p < 1) {
+                    requestAnimationFrame(step);
+                } else {
+                    wheeling = false;
+                    primary.style.scrollBehavior = 'smooth';
+                }
+            })();
+        }, { passive: false });
+
+        // Mouse drag to scroll.
+        var drag = { startX: 0, scrollLeft: 0 };
+        function onDragMove(e) {
+            if (isMinimalWidth()) return onDragEnd();
+            e.preventDefault();
+            primary.scrollLeft = drag.scrollLeft - (e.pageX - drag.startX);
+        }
+        function onDragEnd() {
+            document.removeEventListener('mousemove', onDragMove);
+            document.removeEventListener('mouseup', onDragEnd);
+            primary.style.cursor = '';
+            primary.style.userSelect = '';
+            primary.style.scrollBehavior = 'smooth';
+        }
+        primary.addEventListener('mousedown', function (e) {
+            if (isMinimalWidth() || !hasState(primary, 'has-more')) return;
+            drag = { startX: e.pageX, scrollLeft: primary.scrollLeft };
+            primary.style.cursor = 'grabbing';
+            primary.style.userSelect = 'none';
+            primary.style.scrollBehavior = 'auto';
+            e.preventDefault();
+            document.addEventListener('mousemove', onDragMove);
+            document.addEventListener('mouseup', onDragEnd);
+        });
+
+        // The wheel handler stands down while the pointer is in a dropdown.
+        nav.querySelectorAll('.nds-dropdown-menu').forEach(function (menu) {
+            menu.addEventListener('mouseenter', function () { overDropdown = true; });
+            menu.addEventListener('mouseleave', function () { overDropdown = false; });
+        });
+
+        // Re-fit on viewport resize, and on real size changes of the bar
+        // (sticky state, a11y font steps), ignoring sub-5px jitter.
+        var resizeFrame = null;
+        window.addEventListener('resize', function () {
+            if (resizeFrame !== null) return;
+            resizeFrame = requestAnimationFrame(function () {
+                resizeFrame = null;
+                refresh();
+            });
+        });
+        if (window.ResizeObserver) {
+            var roTimer = null;
+            var ro = new ResizeObserver(function (entries) {
+                // Baseline only moves on a real change (as the vendor does), so
+                // a slow sub-5px-per-frame drift still adds up to a refresh.
+                var changed = entries.filter(function (entry) {
+                    var r = entry.contentRect;
+                    var last = entry.target._wwfLastSize;
+                    if (last && Math.abs(r.width - last.w) <= 5 && Math.abs(r.height - last.h) <= 5) return false;
+                    entry.target._wwfLastSize = { w: r.width, h: r.height };
+                    return true;
+                }).length > 0;
+                if (!changed) return;
+                clearTimeout(roTimer);
+                roTimer = setTimeout(refresh, 100);
+            });
+            ro.observe(nav);
+            ro.observe(primary);
+        }
+
+        // The drawer's vertical overflow can only be measured once it's open.
+        if (collapse && window.MutationObserver) {
+            new MutationObserver(function () {
+                if (!isMinimalWidth()) return;
+                if (hasState(collapse, 'opened')) schedule(10);
+                else if (!hasState(collapse, 'open')) check();
+            }).observe(collapse, { attributes: true, attributeFilter: ['data-state'] });
+        }
+
+        requestAnimationFrame(refresh);
     }
 
     /* =========================================================================
