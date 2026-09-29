@@ -29,7 +29,7 @@ both languages (same ids, classes and fragment targets); only the text and
 | Draft Concept Notes: Regional | `pages/draft-concept-notes.html` |
 | Draft Concept Notes: Thematic | `pages/draft-concept-notes-thematic.html` |
 | Youth Engagement Program | `pages/youth-program.html` |
-| Intersectoral Program | `pages/intersectoral-program.html` |
+| Intersectoral Collaboration Program | `pages/intersectoral-program.html` |
 | Participation Opportunities | `pages/participation-opportunities.html` |
 | Official Side Event Submission | `pages/side-event-submission.html` |
 | Country Pavilion Expression of Interest | `pages/country-pavilion-eoi.html` |
@@ -147,15 +147,12 @@ video, modals, gallery viewer, and the sticky and mobile nav.
 A few destinations don't exist yet and are marked `href="#"`:
 
 - the news items, "view all" and the Global Water Dialogue actions on the home page
-- the 2nd Stakeholder Meeting "Learn More" on About the Forum
+- the three social icons in "Stay Connected" on the home page
 - the Forum Framework link and the five social icons in the footer
 - the Terms and Privacy links in the cookie bar
 - the digital stamp's registration link in the topbar
 
 Point them at real routes during the CMS build.
-
-The "2nd Stakeholder Meeting" nav item is commented out in both `mainnav.html`
-partials on purpose. It's hidden until the next meeting is published.
 
 ---
 

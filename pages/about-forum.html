@@ -27,8 +27,13 @@
     <link rel="manifest" href="theme/media/favicon/site.webmanifest">
 
     <style>
-        html:not([data-auth]) .nds-auth { display: none; }
-        html[data-auth] .nds-guest { display: none; }
+        html:not([data-auth]) .nds-auth {
+            display: none;
+        }
+
+        html[data-auth] .nds-guest {
+            display: none;
+        }
     </style>
 
     <script>
@@ -38,28 +43,30 @@
         })();
     </script>
     <script>
-        (() => { try {
-            const s = JSON.parse(localStorage.getItem('nds-a11y') || '{}');
-            const R = {
-                'epilepsy-safe':        ['reduce-motion','low-saturation'],
-                'visually-impaired':    ['high-contrast'],
-                'cognitive-disability': ['highlight-titles','reduce-motion'],
-                'motor-impaired':       [],
-                'colorblind':           ['cvd-deutan'],
-                'dyslexia-friendly':    ['dyslexia','highlight-links'],
-                'adhd-friendly':        ['reduce-motion','highlight-titles','reading-mask'],
-            };
-            const t = new Set([
-                ...(s.modes || []),
-                ...(s.bundles || []).flatMap(b => b in R ? (R[b].length ? R[b] : [b]) : []),
-            ]);
-            (s.excluded || []).forEach(e => t.delete(e));
-            const c = s.settings || {};
-            const step = parseInt(c['font-step'], 10) || 0;
-            if (step > 0 && step < 4) t.add('font-step-' + step);
-            if (c['text-align'] && c['text-align'] !== 'default') t.add('text-align-' + c['text-align']);
-            if (t.size) document.documentElement.setAttribute('data-a11y', [...t].join(' '));
-        } catch {} })();
+        (() => {
+            try {
+                const s = JSON.parse(localStorage.getItem('nds-a11y') || '{}');
+                const R = {
+                    'epilepsy-safe': ['reduce-motion', 'low-saturation'],
+                    'visually-impaired': ['high-contrast'],
+                    'cognitive-disability': ['highlight-titles', 'reduce-motion'],
+                    'motor-impaired': [],
+                    'colorblind': ['cvd-deutan'],
+                    'dyslexia-friendly': ['dyslexia', 'highlight-links'],
+                    'adhd-friendly': ['reduce-motion', 'highlight-titles', 'reading-mask'],
+                };
+                const t = new Set([
+                    ...(s.modes || []),
+                    ...(s.bundles || []).flatMap(b => b in R ? (R[b].length ? R[b] : [b]) : []),
+                ]);
+                (s.excluded || []).forEach(e => t.delete(e));
+                const c = s.settings || {};
+                const step = parseInt(c['font-step'], 10) || 0;
+                if (step > 0 && step < 4) t.add('font-step-' + step);
+                if (c['text-align'] && c['text-align'] !== 'default') t.add('text-align-' + c['text-align']);
+                if (t.size) document.documentElement.setAttribute('data-a11y', [...t].join(' '));
+            } catch { }
+        })();
     </script>
     <script>
         (function () {
@@ -92,11 +99,11 @@
                     <div class="wwf-about-hero__actions">
                         <a class="nds-btn nds-primary wwf-about-hero__framework" href="#forum-platform">
                             <span class="nds-label">Forum Framework</span>
-                            <i class="nds-icon nds-hgi-arrow-left-01" aria-hidden="true"></i>
                         </a>
-                        <a class="nds-btn nds-secondary nds-oncolor wwf-about-hero__inquiry"
-                            href="pages/inquiry.html">
-                            <span class="nds-label">Exhibition Inquiry</span>
+                        <a href="pages/participation-opportunities.html"
+                            class="nds-btn nds-primary nds-oncolor nds-lg wwf-hero__cta">
+                            <span class="nds-label">Register Now</span>
+                            <i class="nds-icon nds-hgi-arrow-left-02" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
@@ -107,9 +114,6 @@
             aria-labelledby="forum-platform-title">
             <div class="nds-section-wrapper">
                 <div class="nds-section-head wwf-about-section__head">
-                    <span class="nds-tag nds-sm wwf-about-section-tag">
-                        <span class="nds-label">The Global Water Platform</span>
-                    </span>
                     <h2 id="forum-platform-title" class="nds-section-title">What is the World Water Forum?</h2>
                     <p class="nds-section-description">
                         <strong>A global, long-term, process-based gathering</strong> that brings together all
@@ -136,10 +140,24 @@
                                 </div>
                             </div>
                             <div class="nds-card-actions">
-                                <a class="nds-btn nds-transparent wwf-about-card-action" href="#journey-to-riyadh">
-                                    <span class="nds-label">Expand</span>
-                                    <i class="nds-icon nds-hgi-arrow-left-01" aria-hidden="true"></i>
-                                </a>
+                                <div class="nds-accordion wwf-about-card-disclosure">
+                                    <button class="nds-btn nds-transparent nds-accordion-btn wwf-about-card-action"
+                                        type="button" aria-expanded="false" aria-controls="about-dialogue-details">
+                                        <span class="nds-label wwf-about-card-action__collapsed">Expand</span>
+                                        <span class="nds-label wwf-about-card-action__expanded">Collapse</span>
+                                        <i class="nds-icon nds-hgi-arrow-down-01" aria-hidden="true"></i>
+                                    </button>
+                                    <div class="nds-accordion-collapse wwf-about-card-details"
+                                        id="about-dialogue-details">
+                                        <div class="nds-accordion-content">
+                                            <div class="nds-accordion-body">
+                                                <p>Bring together governments, utilities, academia, civil society, and
+                                                    business to create meaningful conversations around water
+                                                    challenges.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </article>
 
@@ -158,10 +176,23 @@
                                 </div>
                             </div>
                             <div class="nds-card-actions">
-                                <a class="nds-btn nds-transparent wwf-about-card-action" href="#journey-to-riyadh">
-                                    <span class="nds-label">Expand</span>
-                                    <i class="nds-icon nds-hgi-arrow-left-01" aria-hidden="true"></i>
-                                </a>
+                                <div class="nds-accordion wwf-about-card-disclosure">
+                                    <button class="nds-btn nds-transparent nds-accordion-btn wwf-about-card-action"
+                                        type="button" aria-expanded="false" aria-controls="about-alignment-details">
+                                        <span class="nds-label wwf-about-card-action__collapsed">Expand</span>
+                                        <span class="nds-label wwf-about-card-action__expanded">Collapse</span>
+                                        <i class="nds-icon nds-hgi-arrow-down-01" aria-hidden="true"></i>
+                                    </button>
+                                    <div class="nds-accordion-collapse wwf-about-card-details"
+                                        id="about-alignment-details">
+                                        <div class="nds-accordion-content">
+                                            <div class="nds-accordion-body">
+                                                <p>Build consensus on priorities and coordinate actions across
+                                                    thematic areas, geographic regions, and political levels.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </article>
 
@@ -180,10 +211,23 @@
                                 </div>
                             </div>
                             <div class="nds-card-actions">
-                                <a class="nds-btn nds-transparent wwf-about-card-action" href="#journey-to-riyadh">
-                                    <span class="nds-label">Expand</span>
-                                    <i class="nds-icon nds-hgi-arrow-left-01" aria-hidden="true"></i>
-                                </a>
+                                <div class="nds-accordion wwf-about-card-disclosure">
+                                    <button class="nds-btn nds-transparent nds-accordion-btn wwf-about-card-action"
+                                        type="button" aria-expanded="false" aria-controls="about-action-details">
+                                        <span class="nds-label wwf-about-card-action__collapsed">Expand</span>
+                                        <span class="nds-label wwf-about-card-action__expanded">Collapse</span>
+                                        <i class="nds-icon nds-hgi-arrow-down-01" aria-hidden="true"></i>
+                                    </button>
+                                    <div class="nds-accordion-collapse wwf-about-card-details"
+                                        id="about-action-details">
+                                        <div class="nds-accordion-content">
+                                            <div class="nds-accordion-body">
+                                                <p>Turn discussions into concrete deliverables, voluntary commitments,
+                                                    and policy directions that drive real-world impact.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </article>
                     </div>
@@ -210,7 +254,7 @@
             aria-labelledby="journey-title">
             <div class="nds-section-wrapper">
                 <div class="nds-section-head wwf-about-section__head">
-                    <span class="nds-tag nds-sm wwf-about-section-tag">
+                    <span class="nds-tag nds-rounded wwf-section-tag wwf-milestones__tag">
                         <span class="nds-label">The Road Ahead</span>
                     </span>
                     <h2 id="journey-title" class="nds-section-title">Journey to Riyadh 2027</h2>
@@ -237,7 +281,8 @@
                                                 <i class="hgi hgi-stroke hgi-location-01" aria-hidden="true"></i>
                                                 <span class="nds-label">Riyadh</span>
                                             </span>
-                                            <span class="nds-tag nds-sm wwf-about-status-tag wwf-about-status-tag--completed">
+                                            <span
+                                                class="nds-tag nds-sm wwf-about-status-tag wwf-about-status-tag--completed">
                                                 <span class="nds-label">Completed</span>
                                             </span>
                                         </div>
@@ -257,7 +302,8 @@
                                                 <i class="hgi hgi-stroke hgi-global" aria-hidden="true"></i>
                                                 <span class="nds-label">Global</span>
                                             </span>
-                                            <span class="nds-tag nds-sm wwf-about-status-tag wwf-about-status-tag--completed">
+                                            <span
+                                                class="nds-tag nds-sm wwf-about-status-tag wwf-about-status-tag--completed">
                                                 <span class="nds-label">Completed</span>
                                             </span>
                                         </div>
@@ -277,7 +323,8 @@
                                                 <i class="hgi hgi-stroke hgi-location-01" aria-hidden="true"></i>
                                                 <span class="nds-label">Riyadh</span>
                                             </span>
-                                            <span class="nds-tag nds-sm wwf-about-status-tag wwf-about-status-tag--completed">
+                                            <span
+                                                class="nds-tag nds-sm wwf-about-status-tag wwf-about-status-tag--completed">
                                                 <span class="nds-label">Completed</span>
                                             </span>
                                         </div>
@@ -286,8 +333,7 @@
                             </li>
                         </ol>
 
-                        <ol
-                            class="nds-stepper nds-dot nds-vertical wwf-about-timeline__column wwf-about-timeline__column--staggered"
+                        <ol class="nds-stepper nds-dot nds-vertical wwf-about-timeline__column wwf-about-timeline__column--staggered"
                             aria-label="Upcoming forum milestones" start="4">
                             <li class="nds-stepper-step" data-state="upcoming" data-milestone-state="upcoming">
                                 <div class="nds-stepper-base">
@@ -302,7 +348,8 @@
                                                 <i class="hgi hgi-stroke hgi-global" aria-hidden="true"></i>
                                                 <span class="nds-label">Global</span>
                                             </span>
-                                            <span class="nds-tag nds-sm wwf-about-status-tag wwf-about-status-tag--upcoming">
+                                            <span
+                                                class="nds-tag nds-sm wwf-about-status-tag wwf-about-status-tag--upcoming">
                                                 <span class="nds-label">Upcoming</span>
                                             </span>
                                         </div>
@@ -322,7 +369,8 @@
                                                 <i class="hgi hgi-stroke hgi-location-01" aria-hidden="true"></i>
                                                 <span class="nds-label">Riyadh</span>
                                             </span>
-                                            <span class="nds-tag nds-sm wwf-about-status-tag wwf-about-status-tag--upcoming">
+                                            <span
+                                                class="nds-tag nds-sm wwf-about-status-tag wwf-about-status-tag--upcoming">
                                                 <span class="nds-label">Upcoming</span>
                                             </span>
                                         </div>
@@ -342,7 +390,8 @@
                                                 <i class="hgi hgi-stroke hgi-global" aria-hidden="true"></i>
                                                 <span class="nds-label">Global</span>
                                             </span>
-                                            <span class="nds-tag nds-sm wwf-about-status-tag wwf-about-status-tag--future">
+                                            <span
+                                                class="nds-tag nds-sm wwf-about-status-tag wwf-about-status-tag--future">
                                                 <span class="nds-label">Future</span>
                                             </span>
                                         </div>
@@ -359,7 +408,7 @@
             aria-labelledby="about-organizers-title">
             <div class="nds-section-wrapper">
                 <div class="nds-section-head wwf-about-section__head">
-                    <span class="nds-tag nds-sm wwf-about-section-tag">
+                    <span class="nds-tag nds-rounded wwf-section-tag wwf-milestones__tag">
                         <span class="nds-label">Leadership</span>
                     </span>
                     <h2 id="about-organizers-title" class="nds-section-title">Governance and Organizers</h2>
@@ -387,8 +436,10 @@
                             </div>
                             <div class="nds-card-actions">
                                 <a class="nds-btn nds-transparent wwf-organizer-card__action"
-                                    href="https://www.mewa.gov.sa/EN" target="_blank" rel="noopener noreferrer">
+                                    href="https://www.mewa.gov.sa/EN" target="_blank" rel="noopener noreferrer"
+                                    data-no-external>
                                     <span class="nds-label">Learn More About MEWA</span>
+                                    <i class="nds-icon nds-hgi-arrow-left-02" aria-hidden="true"></i>
                                     <span class="nds-sr-only">(opens in a new tab)</span>
                                 </a>
                             </div>
@@ -410,9 +461,10 @@
                             </div>
                             <div class="nds-card-actions">
                                 <a class="nds-btn nds-transparent wwf-organizer-card__action"
-                                    href="https://www.worldwatercouncil.org/" target="_blank"
-                                    rel="noopener noreferrer">
+                                    href="https://www.worldwatercouncil.org/" target="_blank" rel="noopener noreferrer"
+                                    data-no-external>
                                     <span class="nds-label">Learn More About WWC</span>
+                                    <i class="nds-icon nds-hgi-arrow-left-02" aria-hidden="true"></i>
                                     <span class="nds-sr-only">(opens in a new tab)</span>
                                 </a>
                             </div>
@@ -456,8 +508,7 @@
             </div>
         </section>
 
-        <section class="nds-content-section wwf-about-section wwf-about-explore"
-            aria-labelledby="explore-more-title">
+        <section class="nds-content-section wwf-about-section wwf-about-explore" aria-labelledby="explore-more-title">
             <div class="nds-section-wrapper">
                 <div class="nds-section-head wwf-about-section__head">
                     <h2 id="explore-more-title" class="nds-section-title">Explore More</h2>
@@ -472,10 +523,12 @@
                             <i class="hgi hgi-stroke hgi-workflow-square-01"></i>
                         </span>
                         <div class="wwf-about-explore-row__content">
-                            <h3>Processes</h3>
-                            <p>Full details on Themes, Regions, and Political Tracks.</p>
+                            <h3>Processes & Programs</h3>
+                            <p>Full details on the Political, Regional, and Thematic, Processes, and the Youth and
+                                Intersectoral Collaboration Program</p>
                         </div>
-                        <a class="nds-btn nds-secondary wwf-about-explore-row__action" href="pages/forum-processes.html">
+                        <a class="nds-btn nds-secondary wwf-about-explore-row__action"
+                            href="pages/forum-processes.html">
                             <span class="nds-label">Learn More</span>
                         </a>
                     </article>
@@ -485,10 +538,11 @@
                             <i class="hgi hgi-stroke hgi-calendar-03"></i>
                         </span>
                         <div class="wwf-about-explore-row__content">
-                            <h3>2nd Stakeholder Meeting</h3>
-                            <p>Venue and program information for June 2026.</p>
+                            <h3>Forum Participation Opportunities</h3>
+                            <p>Details on how to participate and contribute to the 11th World Water Forum.</p>
                         </div>
-                        <a class="nds-btn nds-secondary wwf-about-explore-row__action" href="#">
+                        <a class="nds-btn nds-secondary wwf-about-explore-row__action"
+                            href="pages/participation-opportunities.html">
                             <span class="nds-label">Learn More</span>
                         </a>
                     </article>
@@ -501,8 +555,7 @@
                             <h3>Knowledge Hub</h3>
                             <p>Announcements, publications, and multimedia.</p>
                         </div>
-                        <a class="nds-btn nds-secondary wwf-about-explore-row__action"
-                            href="pages/knowledge-hub.html">
+                        <a class="nds-btn nds-secondary wwf-about-explore-row__action" href="pages/knowledge-hub.html">
                             <span class="nds-label">Learn More</span>
                         </a>
                     </article>
